@@ -45,7 +45,7 @@
     <!-- Header Bar -->
     <rect x="0" y="15" width="700" height="50" rx="8" fill="#334155"/>
     <rect x="0" y="57" width="700" height="8" fill="#334155"/>
-    <text x="20" y="47" class="heading" font-size="16">Billing & Payments</text>
+    <text x="20" y="47" class="heading" font-size="16">Billing &amp; Payments</text>
 
     <!-- Tabs -->
     <g transform="translate(300, 30)">
