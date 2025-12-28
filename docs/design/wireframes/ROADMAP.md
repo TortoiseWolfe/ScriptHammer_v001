@@ -1,0 +1,59 @@
+# Wireframe Roadmap: User Journey SVGs from Specs
+
+This document tracks the wireframe generation progress following the user's journey through the application.
+
+## Current Progress
+
+| # | Section | Wireframes | Status |
+|---|---------|------------|--------|
+| 00 | Brand Identity | animated-logo | Done |
+| 01 | Public Landing | landing-hero, features, public-blog | Done |
+| 02 | User Authentication | sign-in, sign-up, email-verification, password-reset | Done |
+| 03 | User Profile | account-settings, avatar-upload, avatar-states | Done |
+| 04 | User Messaging | conversation-list, chat-window, connections, message-actions | Done |
+| 05 | Blog & Content | blog-editor, blog-post-view, content-dashboard | Done |
+| 06 | Payments | pricing-plans, checkout-flow, billing-history | Pending |
+| 07 | PWA & Offline | offline-mode, sync-status, install-prompt | Pending |
+| 08 | Calendar | calendar-view, event-create, event-notifications | Pending |
+| 09 | Maps & Location | location-picker, nearby-search, directions | Pending |
+
+## Section Details
+
+### 05 - Blog & Content (specs: 019, 020, 021) ✅
+- [x] blog-editor.svg - Rich text editor, markdown support
+- [x] blog-post-view.svg - Single post with comments
+- [x] content-dashboard.svg - User's published content
+
+### 06 - Payments (spec: 015-payment-integration)
+- [ ] pricing-plans.svg - Subscription tiers
+- [ ] checkout-flow.svg - Payment form, Stripe integration
+- [ ] billing-history.svg - Invoices, receipts
+
+### 07 - PWA & Offline (spec: 011-pwa-background-sync)
+- [ ] offline-mode.svg - Cached content indicator
+- [ ] sync-status.svg - Background sync progress
+- [ ] install-prompt.svg - Add to homescreen
+
+### 08 - Calendar (spec: 013-calendar-integration)
+- [ ] calendar-view.svg - Month/week/day views
+- [ ] event-create.svg - New event form
+- [ ] event-notifications.svg - Reminders
+
+### 09 - Maps & Location (specs: 014, 015-enhanced-geolocation)
+- [ ] location-picker.svg - Map with markers
+- [ ] nearby-search.svg - Location-based results
+- [ ] directions.svg - Route display
+
+## Reference Locations
+
+**Specs:** `/home/turtle_wolfe/repos/000_Mega_Plates/ScriptHammer_v_001/docs/specs/`
+
+**Wireframes:** `/home/turtle_wolfe/repos/000_Mega_Plates/ScriptHammer/docs/design/wireframes/`
+
+## Process for Each New Section
+
+1. Create folder: `0X-section-name/`
+2. Read corresponding spec.md for requirements
+3. Generate SVGs using `/wireframe` command (dark theme)
+4. Update `index.html` wireframes array + nav section
+5. Update this ROADMAP.md to mark section as Done
