@@ -1,0 +1,369 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#d946ef"/>
+    </linearGradient>
+    <!-- Colorblind simulation filters -->
+    <filter id="protanopia-demo">
+      <feColorMatrix type="matrix" values="0.567 0.433 0 0 0  0.558 0.442 0 0 0  0 0.242 0.758 0 0  0 0 0 1 0"/>
+    </filter>
+    <filter id="deuteranopia-demo">
+      <feColorMatrix type="matrix" values="0.625 0.375 0 0 0  0.7 0.3 0 0 0  0 0.3 0.7 0 0  0 0 0 1 0"/>
+    </filter>
+    <filter id="tritanopia-demo">
+      <feColorMatrix type="matrix" values="0.95 0.05 0 0 0  0 0.433 0.567 0 0  0 0.475 0.525 0 0  0 0 0 1 0"/>
+    </filter>
+    <filter id="achromatopsia-demo">
+      <feColorMatrix type="matrix" values="0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0 0 0 1 0"/>
+    </filter>
+    <style>
+      .heading { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 14px; font-weight: bold; }
+      .text-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 10px; }
+      .text-md { fill: #cbd5e1; font-family: system-ui, sans-serif; font-size: 12px; }
+      .text-muted { fill: #64748b; font-family: system-ui, sans-serif; font-size: 10px; }
+      .annotation { fill: #8b5cf6; font-family: monospace; font-size: 10px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+
+  <!-- Dot grid pattern -->
+  <g opacity="0.05">
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1" fill="#fff"/>
+    </pattern>
+    <rect width="1200" height="800" fill="url(#dots)"/>
+  </g>
+
+  <!-- Accent line top -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#accentGrad)"/>
+
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#64748b" letter-spacing="1">COLORBLIND MODE - COLOR VISION SETTINGS</text>
+
+  <!-- ==================== SETTINGS PANEL ==================== -->
+  <text x="20" y="60" class="heading" font-size="12">COLOR VISION SETTINGS</text>
+
+  <rect x="20" y="75" width="280" height="420" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+
+  <!-- Eye icon header -->
+  <g transform="translate(160, 105)">
+    <circle cx="0" cy="0" r="20" fill="#334155"/>
+    <circle cx="0" cy="0" r="12" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+    <circle cx="0" cy="0" r="5" fill="#8b5cf6"/>
+  </g>
+  <text x="160" y="140" text-anchor="middle" class="heading">Color Vision Mode</text>
+  <text x="160" y="158" text-anchor="middle" class="text-sm">Select your color vision type</text>
+
+  <!-- Dropdown selector -->
+  <rect x="40" y="175" width="240" height="44" rx="6" fill="#334155" stroke="#475569" stroke-width="1"/>
+  <text x="55" y="202" class="text-md" fill="#fff">Deuteranopia (Green-Blind)</text>
+  <text x="260" y="202" text-anchor="end" fill="#94a3b8" font-size="14">▼</text>
+
+  <!-- Vision type options -->
+  <text x="40" y="245" class="text-muted">COMMON TYPES</text>
+
+  <g transform="translate(40, 260)">
+    <!-- Normal -->
+    <rect x="0" y="0" width="240" height="36" rx="4" fill="#334155"/>
+    <circle cx="20" cy="18" r="10" fill="#22c55e" opacity="0.2"/>
+    <circle cx="20" cy="18" r="6" fill="#22c55e"/>
+    <text x="40" y="22" class="text-md" fill="#fff">Normal Vision</text>
+    <text x="220" y="22" text-anchor="end" class="text-muted">Default</text>
+
+    <!-- Protanopia -->
+    <rect x="0" y="42" width="240" height="36" rx="4" fill="#334155"/>
+    <circle cx="20" cy="60" r="10" fill="#dc2626" opacity="0.2"/>
+    <circle cx="20" cy="60" r="6" fill="#dc2626"/>
+    <text x="40" y="64" class="text-md" fill="#fff">Protanopia</text>
+    <text x="220" y="64" text-anchor="end" class="text-muted">Red-blind</text>
+
+    <!-- Deuteranopia (selected) -->
+    <rect x="0" y="84" width="240" height="36" rx="4" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="2"/>
+    <circle cx="20" cy="102" r="10" fill="#22c55e" opacity="0.2"/>
+    <circle cx="20" cy="102" r="6" fill="#22c55e"/>
+    <text x="40" y="106" class="text-md" fill="#fff">Deuteranopia</text>
+    <text x="220" y="106" text-anchor="end" fill="#8b5cf6">Green-blind</text>
+
+    <!-- Tritanopia -->
+    <rect x="0" y="126" width="240" height="36" rx="4" fill="#334155"/>
+    <circle cx="20" cy="144" r="10" fill="#3b82f6" opacity="0.2"/>
+    <circle cx="20" cy="144" r="6" fill="#3b82f6"/>
+    <text x="40" y="148" class="text-md" fill="#fff">Tritanopia</text>
+    <text x="220" y="148" text-anchor="end" class="text-muted">Blue-blind</text>
+
+    <!-- Achromatopsia -->
+    <rect x="0" y="168" width="240" height="36" rx="4" fill="#334155"/>
+    <circle cx="20" cy="186" r="10" fill="#6b7280" opacity="0.2"/>
+    <circle cx="20" cy="186" r="6" fill="#6b7280"/>
+    <text x="40" y="190" class="text-md" fill="#fff">Achromatopsia</text>
+    <text x="220" y="190" text-anchor="end" class="text-muted">No color</text>
+  </g>
+
+  <!-- Pattern toggle -->
+  <rect x="40" y="475" width="240" height="50" rx="6" fill="#334155"/>
+  <text x="55" y="497" class="text-md" fill="#fff">Enable Patterns</text>
+  <text x="55" y="513" class="text-muted">Add patterns to distinguish colors</text>
+  <rect x="220" y="490" width="44" height="24" rx="12" fill="#8b5cf6"/>
+  <circle cx="252" cy="502" r="9" fill="#fff"/>
+
+  <!-- ==================== PREVIEW COMPARISON ==================== -->
+  <text x="320" y="60" class="heading" font-size="12">PREVIEW COMPARISON</text>
+
+  <!-- Normal vision preview -->
+  <rect x="320" y="75" width="200" height="140" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="420" y="95" text-anchor="middle" class="text-sm">NORMAL VISION</text>
+
+  <g transform="translate(335, 105)">
+    <!-- Sample UI elements -->
+    <rect x="0" y="0" width="170" height="95" rx="4" fill="#334155"/>
+    <rect x="10" y="10" width="60" height="24" rx="4" fill="#22c55e"/>
+    <text x="40" y="26" text-anchor="middle" fill="#fff" font-size="10">Success</text>
+    <rect x="80" y="10" width="60" height="24" rx="4" fill="#ef4444"/>
+    <text x="110" y="26" text-anchor="middle" fill="#fff" font-size="10">Error</text>
+    <rect x="10" y="42" width="60" height="24" rx="4" fill="#eab308"/>
+    <text x="40" y="58" text-anchor="middle" fill="#000" font-size="10">Warning</text>
+    <rect x="80" y="42" width="60" height="24" rx="4" fill="#3b82f6"/>
+    <text x="110" y="58" text-anchor="middle" fill="#fff" font-size="10">Info</text>
+    <!-- Color bar -->
+    <rect x="10" y="75" width="30" height="12" fill="#ef4444"/>
+    <rect x="40" y="75" width="30" height="12" fill="#f97316"/>
+    <rect x="70" y="75" width="30" height="12" fill="#eab308"/>
+    <rect x="100" y="75" width="30" height="12" fill="#22c55e"/>
+    <rect x="130" y="75" width="30" height="12" fill="#3b82f6"/>
+  </g>
+
+  <!-- Simulated vision preview -->
+  <rect x="540" y="75" width="200" height="140" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="640" y="95" text-anchor="middle" class="text-sm" fill="#eab308">DEUTERANOPIA VIEW</text>
+
+  <g transform="translate(555, 105)" filter="url(#deuteranopia-demo)">
+    <!-- Same UI elements with filter -->
+    <rect x="0" y="0" width="170" height="95" rx="4" fill="#334155"/>
+    <rect x="10" y="10" width="60" height="24" rx="4" fill="#22c55e"/>
+    <text x="40" y="26" text-anchor="middle" fill="#fff" font-size="10">Success</text>
+    <rect x="80" y="10" width="60" height="24" rx="4" fill="#ef4444"/>
+    <text x="110" y="26" text-anchor="middle" fill="#fff" font-size="10">Error</text>
+    <rect x="10" y="42" width="60" height="24" rx="4" fill="#eab308"/>
+    <text x="40" y="58" text-anchor="middle" fill="#000" font-size="10">Warning</text>
+    <rect x="80" y="42" width="60" height="24" rx="4" fill="#3b82f6"/>
+    <text x="110" y="58" text-anchor="middle" fill="#fff" font-size="10">Info</text>
+    <!-- Color bar -->
+    <rect x="10" y="75" width="30" height="12" fill="#ef4444"/>
+    <rect x="40" y="75" width="30" height="12" fill="#f97316"/>
+    <rect x="70" y="75" width="30" height="12" fill="#eab308"/>
+    <rect x="100" y="75" width="30" height="12" fill="#22c55e"/>
+    <rect x="130" y="75" width="30" height="12" fill="#3b82f6"/>
+  </g>
+
+  <!-- ==================== PATTERN OVERLAYS DEMO ==================== -->
+  <text x="320" y="235" class="heading" font-size="12">PATTERN OVERLAYS (ENHANCED MODE)</text>
+
+  <rect x="320" y="250" width="420" height="120" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+
+  <g transform="translate(340, 270)">
+    <!-- Success with checkmark pattern -->
+    <rect x="0" y="0" width="90" height="40" rx="6" fill="#22c55e"/>
+    <text x="18" y="25" fill="#fff" font-size="16" opacity="0.3">✓</text>
+    <text x="45" y="26" text-anchor="middle" fill="#fff" font-size="11">Success</text>
+
+    <!-- Error with X pattern -->
+    <rect x="100" y="0" width="90" height="40" rx="6" fill="#ef4444"/>
+    <text x="118" y="25" fill="#fff" font-size="16" opacity="0.3">✗</text>
+    <text x="145" y="26" text-anchor="middle" fill="#fff" font-size="11">Error</text>
+
+    <!-- Warning with ! pattern -->
+    <rect x="200" y="0" width="90" height="40" rx="6" fill="#eab308"/>
+    <text x="218" y="25" fill="#000" font-size="16" opacity="0.3">⚠</text>
+    <text x="245" y="26" text-anchor="middle" fill="#000" font-size="11">Warning</text>
+
+    <!-- Info with i pattern -->
+    <rect x="300" y="0" width="90" height="40" rx="6" fill="#3b82f6"/>
+    <text x="318" y="25" fill="#fff" font-size="16" opacity="0.3">i</text>
+    <text x="345" y="26" text-anchor="middle" fill="#fff" font-size="11">Info</text>
+  </g>
+
+  <!-- Pattern legend -->
+  <g transform="translate(340, 330)">
+    <text x="0" y="0" class="text-sm" fill="#64748b">Patterns help distinguish colors without relying on hue alone</text>
+
+    <g transform="translate(0, 15)">
+      <rect x="0" y="0" width="16" height="16" rx="2" fill="#22c55e"/>
+      <text x="5" y="12" fill="#fff" font-size="10" opacity="0.5">✓</text>
+      <text x="24" y="12" class="text-sm">Checkmark = Success</text>
+
+      <rect x="120" y="0" width="16" height="16" rx="2" fill="#ef4444"/>
+      <text x="125" y="12" fill="#fff" font-size="10" opacity="0.5">✗</text>
+      <text x="144" y="12" class="text-sm">X = Error</text>
+
+      <rect x="220" y="0" width="16" height="16" rx="2" fill="#eab308"/>
+      <text x="225" y="12" fill="#000" font-size="10" opacity="0.5">⚠</text>
+      <text x="244" y="12" class="text-sm">Triangle = Warning</text>
+    </g>
+  </g>
+
+  <!-- ==================== ALL VISION TYPES ==================== -->
+  <text x="760" y="60" class="heading" font-size="12">COLOR VISION TYPES</text>
+
+  <rect x="760" y="75" width="420" height="295" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+
+  <!-- Grid of vision types -->
+  <g transform="translate(780, 95)">
+    <!-- Row 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="90" height="60" rx="4" fill="#334155"/>
+      <g transform="translate(5, 5)">
+        <rect x="0" y="0" width="20" height="10" fill="#ef4444"/>
+        <rect x="22" y="0" width="20" height="10" fill="#22c55e"/>
+        <rect x="44" y="0" width="20" height="10" fill="#3b82f6"/>
+      </g>
+      <text x="45" y="35" text-anchor="middle" class="text-sm" fill="#fff">Normal</text>
+      <text x="45" y="50" text-anchor="middle" class="text-muted" font-size="8">Full color</text>
+    </g>
+
+    <g transform="translate(100, 0)">
+      <rect x="0" y="0" width="90" height="60" rx="4" fill="#334155"/>
+      <g transform="translate(5, 5)" filter="url(#protanopia-demo)">
+        <rect x="0" y="0" width="20" height="10" fill="#ef4444"/>
+        <rect x="22" y="0" width="20" height="10" fill="#22c55e"/>
+        <rect x="44" y="0" width="20" height="10" fill="#3b82f6"/>
+      </g>
+      <text x="45" y="35" text-anchor="middle" class="text-sm" fill="#fff">Protanopia</text>
+      <text x="45" y="50" text-anchor="middle" class="text-muted" font-size="8">1% males</text>
+    </g>
+
+    <g transform="translate(200, 0)">
+      <rect x="0" y="0" width="90" height="60" rx="4" fill="#334155"/>
+      <g transform="translate(5, 5)" filter="url(#deuteranopia-demo)">
+        <rect x="0" y="0" width="20" height="10" fill="#ef4444"/>
+        <rect x="22" y="0" width="20" height="10" fill="#22c55e"/>
+        <rect x="44" y="0" width="20" height="10" fill="#3b82f6"/>
+      </g>
+      <text x="45" y="35" text-anchor="middle" class="text-sm" fill="#fff">Deuteranopia</text>
+      <text x="45" y="50" text-anchor="middle" class="text-muted" font-size="8">5% males</text>
+    </g>
+
+    <g transform="translate(300, 0)">
+      <rect x="0" y="0" width="90" height="60" rx="4" fill="#334155"/>
+      <g transform="translate(5, 5)" filter="url(#tritanopia-demo)">
+        <rect x="0" y="0" width="20" height="10" fill="#ef4444"/>
+        <rect x="22" y="0" width="20" height="10" fill="#22c55e"/>
+        <rect x="44" y="0" width="20" height="10" fill="#3b82f6"/>
+      </g>
+      <text x="45" y="35" text-anchor="middle" class="text-sm" fill="#fff">Tritanopia</text>
+      <text x="45" y="50" text-anchor="middle" class="text-muted" font-size="8">0.001%</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(0, 70)">
+      <rect x="0" y="0" width="90" height="60" rx="4" fill="#334155"/>
+      <g transform="translate(5, 5)" filter="url(#achromatopsia-demo)">
+        <rect x="0" y="0" width="20" height="10" fill="#ef4444"/>
+        <rect x="22" y="0" width="20" height="10" fill="#22c55e"/>
+        <rect x="44" y="0" width="20" height="10" fill="#3b82f6"/>
+      </g>
+      <text x="45" y="35" text-anchor="middle" class="text-sm" fill="#fff">Achromat</text>
+      <text x="45" y="50" text-anchor="middle" class="text-muted" font-size="8">0.003%</text>
+    </g>
+  </g>
+
+  <!-- Statistics -->
+  <g transform="translate(780, 240)">
+    <rect x="0" y="0" width="380" height="60" rx="6" fill="#334155"/>
+    <text x="20" y="25" class="heading" font-size="12">Global Impact</text>
+    <text x="20" y="45" class="text-sm">~300 million people affected worldwide (8% males, 0.5% females)</text>
+  </g>
+
+  <!-- Filter info -->
+  <g transform="translate(780, 315)">
+    <rect x="0" y="0" width="380" height="40" rx="6" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="1"/>
+    <text x="20" y="25" class="annotation">SVG feColorMatrix filters - GPU accelerated, &lt;10ms impact</text>
+  </g>
+
+  <!-- ==================== MOBILE VIEW ==================== -->
+  <text x="20" y="520" class="heading" font-size="12">MOBILE - COLOR VISION TOGGLE</text>
+
+  <!-- Phone frame -->
+  <rect x="20" y="535" width="180" height="240" rx="20" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+
+  <!-- Status bar -->
+  <text x="40" y="556" class="text-muted" font-size="9">9:41</text>
+  <text x="180" y="556" text-anchor="end" class="text-muted" font-size="9">100%</text>
+
+  <!-- Header -->
+  <rect x="20" y="565" width="180" height="44" fill="#1e293b"/>
+  <text x="32" y="591" fill="#94a3b8" font-size="16">&lt;</text>
+  <text x="110" y="592" text-anchor="middle" class="heading" font-size="12">Color Vision</text>
+
+  <!-- Compact selector -->
+  <rect x="35" y="620" width="150" height="40" rx="6" fill="#334155" stroke="#475569" stroke-width="1"/>
+  <circle cx="55" cy="640" r="10" fill="#8b5cf6" opacity="0.3"/>
+  <circle cx="55" cy="640" r="6" fill="#8b5cf6"/>
+  <text x="75" y="637" class="text-sm" fill="#fff">Deuteranopia</text>
+  <text x="75" y="652" class="text-muted" font-size="8">Green-blind</text>
+  <text x="170" y="644" text-anchor="end" fill="#94a3b8" font-size="12">▼</text>
+
+  <!-- Pattern toggle mobile -->
+  <rect x="35" y="670" width="150" height="36" rx="6" fill="#334155"/>
+  <text x="50" y="692" class="text-sm" fill="#fff">Patterns</text>
+  <rect x="145" y="680" width="32" height="18" rx="9" fill="#8b5cf6"/>
+  <circle cx="168" cy="689" r="7" fill="#fff"/>
+
+  <!-- Preview swatch mobile -->
+  <rect x="35" y="715" width="150" height="50" rx="6" fill="#334155"/>
+  <text x="50" y="732" class="text-muted" font-size="9">Preview</text>
+  <g transform="translate(50, 740)">
+    <rect x="0" y="0" width="28" height="16" rx="3" fill="#22c55e"/>
+    <rect x="33" y="0" width="28" height="16" rx="3" fill="#ef4444"/>
+    <rect x="66" y="0" width="28" height="16" rx="3" fill="#eab308"/>
+    <rect x="99" y="0" width="28" height="16" rx="3" fill="#3b82f6"/>
+  </g>
+
+  <!-- ==================== SIMULATION MODE ==================== -->
+  <text x="220" y="520" class="heading" font-size="12">DEVELOPER SIMULATION MODE</text>
+
+  <rect x="220" y="535" width="350" height="180" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+
+  <text x="240" y="560" class="text-sm" fill="#eab308">FOR TESTING ONLY</text>
+  <text x="240" y="580" class="text-md" fill="#fff">Simulate color vision deficiencies</text>
+  <text x="240" y="598" class="text-sm">Test how your UI looks to colorblind users</text>
+
+  <!-- Simulation buttons -->
+  <g transform="translate(240, 615)">
+    <rect x="0" y="0" width="100" height="30" rx="4" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <text x="50" y="20" text-anchor="middle" class="text-sm">Protanopia</text>
+
+    <rect x="110" y="0" width="100" height="30" rx="4" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <text x="160" y="20" text-anchor="middle" class="text-sm">Deuteranopia</text>
+
+    <rect x="220" y="0" width="100" height="30" rx="4" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <text x="270" y="20" text-anchor="middle" class="text-sm">Tritanopia</text>
+  </g>
+
+  <g transform="translate(240, 655)">
+    <rect x="0" y="0" width="100" height="30" rx="4" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <text x="50" y="20" text-anchor="middle" class="text-sm">Achromatopsia</text>
+
+    <rect x="110" y="0" width="100" height="30" rx="4" fill="#8b5cf6"/>
+    <text x="160" y="20" text-anchor="middle" fill="#fff" font-size="11">Reset</text>
+  </g>
+
+  <!-- ==================== ANNOTATIONS ==================== -->
+  <rect x="590" y="400" width="280" height="100" rx="4" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="605" y="425" class="annotation">CSS filter: url(#colorblind-filter)</text>
+  <text x="605" y="445" class="annotation">Persisted in localStorage</text>
+  <text x="605" y="465" class="annotation">Works with all 32 themes</text>
+  <text x="605" y="485" class="annotation">Pattern overlays for semantic distinction</text>
+
+  <rect x="890" y="400" width="280" height="80" rx="4" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="905" y="425" class="annotation">Simulation mode for developers</text>
+  <text x="905" y="445" class="annotation">Test with Storybook a11y addon</text>
+  <text x="905" y="465" class="annotation">Color Oracle integration</text>
+
+</svg>

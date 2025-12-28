@@ -1,0 +1,347 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#d946ef"/>
+    </linearGradient>
+    <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#22c55e"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+    <style>
+      .heading { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 14px; font-weight: bold; }
+      .text-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 10px; }
+      .text-md { fill: #cbd5e1; font-family: system-ui, sans-serif; font-size: 12px; }
+      .text-muted { fill: #64748b; font-family: system-ui, sans-serif; font-size: 10px; }
+      .annotation { fill: #8b5cf6; font-family: monospace; font-size: 10px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+
+  <!-- Dot grid pattern -->
+  <g opacity="0.05">
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1" fill="#fff"/>
+    </pattern>
+    <rect width="1200" height="800" fill="url(#dots)"/>
+  </g>
+
+  <!-- Accent line top -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#accentGrad)"/>
+
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#64748b" letter-spacing="1">WCAG AA COMPLIANCE DASHBOARD</text>
+
+  <!-- ==================== MAIN DASHBOARD ==================== -->
+  <text x="20" y="60" class="heading" font-size="12">ACCESSIBILITY DASHBOARD</text>
+
+  <!-- Score ring (large) -->
+  <g transform="translate(120, 180)">
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#334155" stroke-width="12"/>
+    <circle cx="0" cy="0" r="70" fill="none" stroke="url(#successGrad)" stroke-width="12"
+            stroke-dasharray="396" stroke-dashoffset="40" stroke-linecap="round"
+            transform="rotate(-90)"/>
+    <text x="0" y="-10" text-anchor="middle" class="heading" font-size="28">91%</text>
+    <text x="0" y="10" text-anchor="middle" class="text-sm">WCAG AA</text>
+    <text x="0" y="25" text-anchor="middle" class="text-muted">Compliant</text>
+  </g>
+
+  <!-- Stats cards row -->
+  <g transform="translate(220, 90)">
+    <!-- Pages Tested -->
+    <rect x="0" y="0" width="100" height="70" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="50" y="25" text-anchor="middle" class="text-muted">PAGES</text>
+    <text x="50" y="50" text-anchor="middle" class="heading" font-size="20">12</text>
+    <text x="50" y="65" text-anchor="middle" class="text-sm" fill="#22c55e">All tested</text>
+
+    <!-- Errors -->
+    <rect x="110" y="0" width="100" height="70" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="160" y="25" text-anchor="middle" class="text-muted">ERRORS</text>
+    <text x="160" y="50" text-anchor="middle" class="heading" font-size="20" fill="#ef4444">3</text>
+    <text x="160" y="65" text-anchor="middle" class="text-sm" fill="#ef4444">Critical</text>
+
+    <!-- Warnings -->
+    <rect x="220" y="0" width="100" height="70" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="270" y="25" text-anchor="middle" class="text-muted">WARNINGS</text>
+    <text x="270" y="50" text-anchor="middle" class="heading" font-size="20" fill="#eab308">8</text>
+    <text x="270" y="65" text-anchor="middle" class="text-sm" fill="#eab308">Should fix</text>
+
+    <!-- Notices -->
+    <rect x="330" y="0" width="100" height="70" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="380" y="25" text-anchor="middle" class="text-muted">NOTICES</text>
+    <text x="380" y="50" text-anchor="middle" class="heading" font-size="20" fill="#3b82f6">14</text>
+    <text x="380" y="65" text-anchor="middle" class="text-sm" fill="#3b82f6">Review</text>
+  </g>
+
+  <!-- Page scores table -->
+  <rect x="220" y="175" width="330" height="200" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="235" y="198" class="heading" font-size="11">PAGE SCORES</text>
+
+  <!-- Table header -->
+  <rect x="230" y="210" width="310" height="24" rx="4" fill="#334155"/>
+  <text x="245" y="226" class="text-sm" fill="#94a3b8">Page</text>
+  <text x="395" y="226" class="text-sm" fill="#94a3b8">Score</text>
+  <text x="455" y="226" class="text-sm" fill="#94a3b8">Issues</text>
+  <text x="505" y="226" class="text-sm" fill="#94a3b8">Status</text>
+
+  <!-- Table rows -->
+  <g transform="translate(230, 240)">
+    <text x="15" y="14" class="text-md">/home</text>
+    <rect x="165" y="2" width="60" height="16" rx="3" fill="#334155"/>
+    <rect x="165" y="2" width="57" height="16" rx="3" fill="#22c55e" opacity="0.3"/>
+    <text x="195" y="14" text-anchor="middle" class="text-sm" fill="#22c55e">95%</text>
+    <text x="225" y="14" class="text-sm">0</text>
+    <circle cx="285" cy="9" r="6" fill="#22c55e"/>
+
+    <text x="15" y="38" class="text-md">/auth/login</text>
+    <rect x="165" y="26" width="60" height="16" rx="3" fill="#334155"/>
+    <rect x="165" y="26" width="54" height="16" rx="3" fill="#22c55e" opacity="0.3"/>
+    <text x="195" y="38" text-anchor="middle" class="text-sm" fill="#22c55e">90%</text>
+    <text x="225" y="38" class="text-sm">1</text>
+    <circle cx="285" cy="33" r="6" fill="#eab308"/>
+
+    <text x="15" y="62" class="text-md">/dashboard</text>
+    <rect x="165" y="50" width="60" height="16" rx="3" fill="#334155"/>
+    <rect x="165" y="50" width="50" height="16" rx="3" fill="#eab308" opacity="0.3"/>
+    <text x="195" y="62" text-anchor="middle" class="text-sm" fill="#eab308">83%</text>
+    <text x="225" y="62" class="text-sm">2</text>
+    <circle cx="285" cy="57" r="6" fill="#eab308"/>
+
+    <text x="15" y="86" class="text-md">/settings</text>
+    <rect x="165" y="74" width="60" height="16" rx="3" fill="#334155"/>
+    <rect x="165" y="74" width="45" height="16" rx="3" fill="#ef4444" opacity="0.3"/>
+    <text x="195" y="86" text-anchor="middle" class="text-sm" fill="#ef4444">75%</text>
+    <text x="225" y="86" class="text-sm">3</text>
+    <circle cx="285" cy="81" r="6" fill="#ef4444"/>
+
+    <text x="15" y="110" class="text-md">/profile</text>
+    <rect x="165" y="98" width="60" height="16" rx="3" fill="#334155"/>
+    <rect x="165" y="98" width="56" height="16" rx="3" fill="#22c55e" opacity="0.3"/>
+    <text x="195" y="110" text-anchor="middle" class="text-sm" fill="#22c55e">93%</text>
+    <text x="225" y="110" class="text-sm">0</text>
+    <circle cx="285" cy="105" r="6" fill="#22c55e"/>
+  </g>
+
+  <!-- ==================== ISSUE DETAILS ==================== -->
+  <text x="570" y="60" class="heading" font-size="12">CRITICAL ISSUES</text>
+
+  <rect x="570" y="75" width="320" height="300" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+
+  <!-- Issue 1 -->
+  <rect x="585" y="90" width="290" height="85" rx="6" fill="#334155"/>
+  <rect x="585" y="90" width="4" height="85" rx="2" fill="#ef4444"/>
+  <circle cx="605" cy="108" r="10" fill="#ef4444" opacity="0.2"/>
+  <text x="605" y="112" text-anchor="middle" fill="#ef4444" font-size="12" font-weight="bold">!</text>
+  <text x="625" y="110" class="text-md" fill="#fff">Missing alt text on images</text>
+  <text x="625" y="126" class="text-sm">WCAG 1.1.1 - Non-text Content</text>
+  <text x="625" y="145" class="text-muted">Page: /dashboard - 3 occurrences</text>
+  <rect x="625" y="155" width="80" height="16" rx="4" fill="#8b5cf6"/>
+  <text x="665" y="167" text-anchor="middle" fill="#fff" font-size="9">View Details</text>
+
+  <!-- Issue 2 -->
+  <rect x="585" y="185" width="290" height="85" rx="6" fill="#334155"/>
+  <rect x="585" y="185" width="4" height="85" rx="2" fill="#ef4444"/>
+  <circle cx="605" cy="203" r="10" fill="#ef4444" opacity="0.2"/>
+  <text x="605" y="207" text-anchor="middle" fill="#ef4444" font-size="12" font-weight="bold">!</text>
+  <text x="625" y="205" class="text-md" fill="#fff">Low contrast ratio</text>
+  <text x="625" y="221" class="text-sm">WCAG 1.4.3 - Contrast (Minimum)</text>
+  <text x="625" y="240" class="text-muted">Page: /settings - Ratio: 3.2:1 (needs 4.5:1)</text>
+  <rect x="625" y="250" width="80" height="16" rx="4" fill="#8b5cf6"/>
+  <text x="665" y="262" text-anchor="middle" fill="#fff" font-size="9">View Details</text>
+
+  <!-- Issue 3 -->
+  <rect x="585" y="280" width="290" height="85" rx="6" fill="#334155"/>
+  <rect x="585" y="280" width="4" height="85" rx="2" fill="#eab308"/>
+  <circle cx="605" cy="298" r="10" fill="#eab308" opacity="0.2"/>
+  <text x="605" y="302" text-anchor="middle" fill="#eab308" font-size="12" font-weight="bold">⚠</text>
+  <text x="625" y="300" class="text-md" fill="#fff">Missing form labels</text>
+  <text x="625" y="316" class="text-sm">WCAG 1.3.1 - Info and Relationships</text>
+  <text x="625" y="335" class="text-muted">Page: /auth/login - 2 inputs affected</text>
+  <rect x="625" y="345" width="80" height="16" rx="4" fill="#8b5cf6"/>
+  <text x="665" y="357" text-anchor="middle" fill="#fff" font-size="9">View Details</text>
+
+  <!-- ==================== TEST RUNNER ==================== -->
+  <text x="910" y="60" class="heading" font-size="12">TEST RUNNER</text>
+
+  <rect x="910" y="75" width="270" height="180" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+
+  <!-- Test tools -->
+  <g transform="translate(925, 95)">
+    <rect x="0" y="0" width="115" height="50" rx="6" fill="#334155"/>
+    <text x="57" y="22" text-anchor="middle" class="text-md" fill="#fff">Pa11y CI</text>
+    <rect x="30" y="32" width="55" height="14" rx="3" fill="#22c55e" opacity="0.2"/>
+    <text x="57" y="42" text-anchor="middle" fill="#22c55e" font-size="8">Active</text>
+
+    <rect x="125" y="0" width="115" height="50" rx="6" fill="#334155"/>
+    <text x="182" y="22" text-anchor="middle" class="text-md" fill="#fff">axe-core</text>
+    <rect x="155" y="32" width="55" height="14" rx="3" fill="#22c55e" opacity="0.2"/>
+    <text x="182" y="42" text-anchor="middle" fill="#22c55e" font-size="8">Active</text>
+  </g>
+
+  <!-- Run button -->
+  <rect x="925" y="160" width="240" height="36" rx="6" fill="url(#accentGrad)"/>
+  <text x="1045" y="183" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">Run Full Audit</text>
+
+  <!-- Last run info -->
+  <text x="925" y="215" class="text-muted">Last run: 2 hours ago</text>
+  <text x="1070" y="215" class="text-sm" fill="#22c55e">Passed</text>
+  <text x="925" y="235" class="text-muted">Duration: 45 seconds</text>
+  <text x="1070" y="235" class="text-sm">12 pages</text>
+
+  <!-- ==================== WCAG GUIDELINES CHECKLIST ==================== -->
+  <text x="910" y="275" class="heading" font-size="12">WCAG 2.1 AA CHECKLIST</text>
+
+  <rect x="910" y="290" width="270" height="180" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+
+  <!-- Perceivable -->
+  <g transform="translate(920, 308)">
+    <text x="0" y="0" class="text-sm" fill="#8b5cf6">1. PERCEIVABLE</text>
+    <g transform="translate(0, 12)">
+      <rect x="0" y="0" width="12" height="12" rx="2" fill="#22c55e"/>
+      <text x="5" y="9" fill="#fff" font-size="8">✓</text>
+      <text x="18" y="10" class="text-sm">1.1 Text alternatives</text>
+    </g>
+    <g transform="translate(0, 28)">
+      <rect x="0" y="0" width="12" height="12" rx="2" fill="#eab308"/>
+      <text x="5" y="9" fill="#fff" font-size="8">!</text>
+      <text x="18" y="10" class="text-sm">1.4 Color contrast</text>
+    </g>
+  </g>
+
+  <!-- Operable -->
+  <g transform="translate(920, 368)">
+    <text x="0" y="0" class="text-sm" fill="#8b5cf6">2. OPERABLE</text>
+    <g transform="translate(0, 12)">
+      <rect x="0" y="0" width="12" height="12" rx="2" fill="#22c55e"/>
+      <text x="5" y="9" fill="#fff" font-size="8">✓</text>
+      <text x="18" y="10" class="text-sm">2.1 Keyboard accessible</text>
+    </g>
+    <g transform="translate(0, 28)">
+      <rect x="0" y="0" width="12" height="12" rx="2" fill="#22c55e"/>
+      <text x="5" y="9" fill="#fff" font-size="8">✓</text>
+      <text x="18" y="10" class="text-sm">2.4 Focus visible</text>
+    </g>
+  </g>
+
+  <!-- Understandable -->
+  <g transform="translate(920, 428)">
+    <text x="0" y="0" class="text-sm" fill="#8b5cf6">3. UNDERSTANDABLE</text>
+    <g transform="translate(0, 12)">
+      <rect x="0" y="0" width="12" height="12" rx="2" fill="#ef4444"/>
+      <text x="5" y="9" fill="#fff" font-size="8">✗</text>
+      <text x="18" y="10" class="text-sm">3.3 Input assistance</text>
+    </g>
+  </g>
+
+  <!-- ==================== MOBILE VIEW ==================== -->
+  <text x="20" y="410" class="heading" font-size="12">MOBILE - QUICK STATUS</text>
+
+  <!-- Phone frame -->
+  <rect x="20" y="425" width="180" height="350" rx="20" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+
+  <!-- Status bar -->
+  <text x="40" y="446" class="text-muted" font-size="9">9:41</text>
+  <text x="180" y="446" text-anchor="end" class="text-muted" font-size="9">100%</text>
+
+  <!-- Header -->
+  <rect x="20" y="455" width="180" height="44" fill="#1e293b"/>
+  <text x="110" y="482" text-anchor="middle" class="heading" font-size="13">Accessibility</text>
+
+  <!-- Score card mobile -->
+  <rect x="35" y="510" width="150" height="100" rx="8" fill="#334155"/>
+  <circle cx="75" cy="560" r="30" fill="none" stroke="#334155" stroke-width="6"/>
+  <circle cx="75" cy="560" r="30" fill="none" stroke="#22c55e" stroke-width="6"
+          stroke-dasharray="170" stroke-dashoffset="15" stroke-linecap="round"
+          transform="rotate(-90 75 560)"/>
+  <text x="75" y="565" text-anchor="middle" class="heading" font-size="14">91%</text>
+
+  <g transform="translate(115, 535)">
+    <text x="0" y="0" class="text-muted" font-size="9">Errors</text>
+    <text x="0" y="14" fill="#ef4444" font-size="14" font-weight="bold">3</text>
+    <text x="0" y="30" class="text-muted" font-size="9">Warnings</text>
+    <text x="0" y="44" fill="#eab308" font-size="14" font-weight="bold">8</text>
+  </g>
+
+  <!-- Quick actions mobile -->
+  <rect x="35" y="620" width="150" height="36" rx="6" fill="#8b5cf6"/>
+  <text x="110" y="643" text-anchor="middle" fill="#fff" font-size="11">Run Quick Test</text>
+
+  <rect x="35" y="665" width="150" height="36" rx="6" fill="#334155" stroke="#475569" stroke-width="1"/>
+  <text x="110" y="688" text-anchor="middle" class="text-sm">View All Issues</text>
+
+  <!-- Issue badges mobile -->
+  <g transform="translate(35, 715)">
+    <rect x="0" y="0" width="48" height="40" rx="6" fill="#ef4444" opacity="0.2"/>
+    <text x="24" y="18" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="bold">3</text>
+    <text x="24" y="32" text-anchor="middle" fill="#ef4444" font-size="8">Critical</text>
+
+    <rect x="53" y="0" width="48" height="40" rx="6" fill="#eab308" opacity="0.2"/>
+    <text x="77" y="18" text-anchor="middle" fill="#eab308" font-size="14" font-weight="bold">8</text>
+    <text x="77" y="32" text-anchor="middle" fill="#eab308" font-size="8">Warning</text>
+
+    <rect x="106" y="0" width="48" height="40" rx="6" fill="#22c55e" opacity="0.2"/>
+    <text x="130" y="18" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="bold">✓</text>
+    <text x="130" y="32" text-anchor="middle" fill="#22c55e" font-size="8">Passing</text>
+  </g>
+
+  <!-- ==================== CI/CD INTEGRATION ==================== -->
+  <text x="220" y="410" class="heading" font-size="12">CI/CD PIPELINE INTEGRATION</text>
+
+  <rect x="220" y="425" width="330" height="140" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+
+  <!-- Pipeline stages -->
+  <g transform="translate(240, 450)">
+    <!-- Build -->
+    <rect x="0" y="0" width="60" height="40" rx="6" fill="#22c55e" opacity="0.2"/>
+    <text x="30" y="18" text-anchor="middle" fill="#22c55e" font-size="16">✓</text>
+    <text x="30" y="32" text-anchor="middle" fill="#22c55e" font-size="9">Build</text>
+
+    <line x1="65" y1="20" x2="80" y2="20" stroke="#475569" stroke-width="2"/>
+
+    <!-- Test -->
+    <rect x="85" y="0" width="60" height="40" rx="6" fill="#22c55e" opacity="0.2"/>
+    <text x="115" y="18" text-anchor="middle" fill="#22c55e" font-size="16">✓</text>
+    <text x="115" y="32" text-anchor="middle" fill="#22c55e" font-size="9">Test</text>
+
+    <line x1="150" y1="20" x2="165" y2="20" stroke="#475569" stroke-width="2"/>
+
+    <!-- A11y -->
+    <rect x="170" y="0" width="60" height="40" rx="6" fill="#8b5cf6" stroke="#8b5cf6" stroke-width="2"/>
+    <circle cx="200" cy="18" r="8" fill="none" stroke="#fff" stroke-width="2">
+      <animate attributeName="stroke-dasharray" values="0 50;50 0" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <text x="200" y="32" text-anchor="middle" fill="#fff" font-size="9">A11y</text>
+
+    <line x1="235" y1="20" x2="250" y2="20" stroke="#475569" stroke-width="2" stroke-dasharray="4 2"/>
+
+    <!-- Deploy -->
+    <rect x="255" y="0" width="60" height="40" rx="6" fill="#334155"/>
+    <text x="285" y="18" text-anchor="middle" fill="#64748b" font-size="16">⏸</text>
+    <text x="285" y="32" text-anchor="middle" fill="#64748b" font-size="9">Deploy</text>
+  </g>
+
+  <!-- Status message -->
+  <rect x="240" y="505" width="290" height="45" rx="6" fill="#334155"/>
+  <circle cx="260" cy="527" r="8" fill="#8b5cf6">
+    <animate attributeName="opacity" values="1;0.5;1" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <text x="278" y="522" class="text-md" fill="#fff">Running accessibility tests...</text>
+  <text x="278" y="540" class="text-sm">Pa11y CI scanning 12 pages</text>
+
+  <!-- ==================== ANNOTATIONS ==================== -->
+  <rect x="570" y="400" width="320" height="80" rx="4" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="585" y="425" class="annotation">Pa11y CI: Automated WCAG testing</text>
+  <text x="585" y="445" class="annotation">axe-core: Component-level a11y</text>
+  <text x="585" y="465" class="annotation">CI/CD blocks deploy on critical errors</text>
+
+  <rect x="570" y="495" width="320" height="60" rx="4" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="585" y="520" class="annotation">Real-time dev watcher (scripts/accessibility/watch.js)</text>
+  <text x="585" y="540" class="annotation">Storybook @storybook/addon-a11y integration</text>
+
+</svg>

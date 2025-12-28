@@ -16,6 +16,8 @@ This document tracks the wireframe generation progress following the user's jour
 | 07 | PWA & Offline | offline-mode, sync-status, install-prompt | Done |
 | 08 | Calendar | calendar-view, event-create, event-notifications | Done |
 | 09 | Maps & Location | location-picker, nearby-search, directions | Done |
+| 10 | Accessibility | wcag-compliance, colorblind-mode, font-switcher | Done |
+| 11 | Analytics & Privacy | cookie-consent, google-analytics | Done |
 
 ## Section Details
 
@@ -48,6 +50,15 @@ This document tracks the wireframe generation progress following the user's jour
 - [x] location-picker.svg - Map with markers, geolocation permissions, accuracy indicators
 - [x] nearby-search.svg - Location-based search results, filters, radius display
 - [x] directions.svg - Route navigation with turn-by-turn directions
+
+### 10 - Accessibility (specs: 100, 101, 102) ✅
+- [x] wcag-compliance.svg - Accessibility dashboard, Pa11y CI, axe-core testing, WCAG 2.1 AA checklist
+- [x] colorblind-mode.svg - Color vision settings, simulation filters, pattern overlays
+- [x] font-switcher.svg - Font selection, accessibility fonts (OpenDyslexic, Atkinson Hyperlegible)
+
+### 11 - Analytics & Privacy (specs: 110, 111) ✅
+- [x] cookie-consent.svg - GDPR consent banner, category toggles, privacy controls, data export
+- [x] google-analytics.svg - GA4 dashboard, Web Vitals tracking, consent-based activation, custom events
 
 ## Reference Locations
 
