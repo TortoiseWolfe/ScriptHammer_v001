@@ -12,7 +12,7 @@ This document tracks the wireframe generation progress following the user's jour
 | 03 | User Profile | account-settings, avatar-upload, avatar-states | Done |
 | 04 | User Messaging | conversation-list, chat-window, connections, message-actions | Done |
 | 05 | Blog & Content | blog-editor, blog-post-view, content-dashboard | Done |
-| 06 | Payments | pricing-plans, checkout-flow, billing-history | Pending |
+| 06 | Payments | pricing-plans, checkout-flow, billing-history | Done |
 | 07 | PWA & Offline | offline-mode, sync-status, install-prompt | Pending |
 | 08 | Calendar | calendar-view, event-create, event-notifications | Pending |
 | 09 | Maps & Location | location-picker, nearby-search, directions | Pending |
@@ -24,10 +24,10 @@ This document tracks the wireframe generation progress following the user's jour
 - [x] blog-post-view.svg - Single post with comments
 - [x] content-dashboard.svg - User's published content
 
-### 06 - Payments (spec: 015-payment-integration)
-- [ ] pricing-plans.svg - Subscription tiers
-- [ ] checkout-flow.svg - Payment form, Stripe integration
-- [ ] billing-history.svg - Invoices, receipts
+### 06 - Payments (spec: 015-payment-integration) ✅
+- [x] pricing-plans.svg - Subscription tiers
+- [x] checkout-flow.svg - Payment form, Stripe integration
+- [x] billing-history.svg - Invoices, receipts
 
 ### 07 - PWA & Offline (spec: 011-pwa-background-sync)
 - [ ] offline-mode.svg - Cached content indicator
