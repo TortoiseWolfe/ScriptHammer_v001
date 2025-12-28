@@ -14,7 +14,7 @@ This document tracks the wireframe generation progress following the user's jour
 | 05 | Blog & Content | blog-editor, blog-post-view, content-dashboard | Done |
 | 06 | Payments | pricing-plans, checkout-flow, billing-history | Done |
 | 07 | PWA & Offline | offline-mode, sync-status, install-prompt | Done |
-| 08 | Calendar | calendar-view, event-create, event-notifications | Pending |
+| 08 | Calendar | calendar-view, event-create, event-notifications | Done |
 | 09 | Maps & Location | location-picker, nearby-search, directions | Pending |
 
 ## Section Details
@@ -39,10 +39,10 @@ This document tracks the wireframe generation progress following the user's jour
 - [x] sync-status.svg - Syncing, success, retry, failed states
 - [x] install-prompt.svg - Desktop banner, mobile sheet, iOS instructions
 
-### 08 - Calendar (spec: 080-calendar-integration)
-- [ ] calendar-view.svg - Month/week/day views
-- [ ] event-create.svg - New event form
-- [ ] event-notifications.svg - Reminders
+### 08 - Calendar (spec: 080-calendar-integration) ✅
+- [x] calendar-view.svg - Calendly/Cal.com embed, month/week views, time slots
+- [x] event-create.svg - Booking form, confirmation, consent states
+- [x] event-notifications.svg - Email, in-app, push notifications
 
 ### 09 - Maps & Location (specs: 090, 091-enhanced-geolocation)
 - [ ] location-picker.svg - Map with markers
