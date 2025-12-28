@@ -167,7 +167,7 @@
     </g>
 
     <!-- LAYER 2: Printing Mallet (MIDDLE - STATIC, offset down-right) -->
-    <g transform="translate(-60, 45) rotate(42) scale(0.75)" filter="url(#metalShadow)">
+    <g transform="translate(-40, 45) rotate(42) scale(0.75)" filter="url(#metalShadow)">
       <!-- Mallet Head (cylindrical) -->
       <ellipse cx="0" cy="-120" rx="70" ry="20" fill="url(#oakGradient)" stroke="#5B4637" stroke-width="1.5"/>
       <rect x="-70" y="-120" width="140" height="85" fill="url(#oakGradient)" stroke="#5B4637" stroke-width="1.5"/>
