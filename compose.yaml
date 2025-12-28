@@ -1,0 +1,37 @@
+services:
+  speckit:
+    image: python:3.12-slim
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    environment:
+      - UV_TOOL_DIR=/workspace/.speckit
+      - UV_TOOL_BIN_DIR=/workspace/.speckit/bin
+      - PATH=/workspace/.speckit/bin:/usr/local/bin:/usr/bin:/bin
+
+  scripthammer:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: dev
+    ports:
+      - '3000:3000'
+      - '24678:24678'  # Next.js HMR websocket
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+      - next_cache:/app/.next
+    env_file:
+      - .env
+    environment:
+      - WATCHPACK_POLLING=true
+      - CHOKIDAR_USEPOLLING=true
+      - GIT_AUTHOR_NAME=${GIT_AUTHOR_NAME:-}
+      - GIT_AUTHOR_EMAIL=${GIT_AUTHOR_EMAIL:-}
+      - GIT_COMMITTER_NAME=${GIT_AUTHOR_NAME:-}
+      - GIT_COMMITTER_EMAIL=${GIT_AUTHOR_EMAIL:-}
+    restart: unless-stopped
+
+volumes:
+  node_modules:
+  next_cache:

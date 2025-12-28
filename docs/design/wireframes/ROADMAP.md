@@ -15,7 +15,7 @@ This document tracks the wireframe generation progress following the user's jour
 | 06 | Payments | pricing-plans, checkout-flow, billing-history | Done |
 | 07 | PWA & Offline | offline-mode, sync-status, install-prompt | Done |
 | 08 | Calendar | calendar-view, event-create, event-notifications | Done |
-| 09 | Maps & Location | location-picker, nearby-search, directions | Pending |
+| 09 | Maps & Location | location-picker, nearby-search, directions | Done |
 
 ## Section Details
 
@@ -44,10 +44,10 @@ This document tracks the wireframe generation progress following the user's jour
 - [x] event-create.svg - Booking form, confirmation, consent states
 - [x] event-notifications.svg - Email, in-app, push notifications
 
-### 09 - Maps & Location (specs: 090, 091-enhanced-geolocation)
-- [ ] location-picker.svg - Map with markers
-- [ ] nearby-search.svg - Location-based results
-- [ ] directions.svg - Route display
+### 09 - Maps & Location (specs: 090, 091-enhanced-geolocation) ✅
+- [x] location-picker.svg - Map with markers, geolocation permissions, accuracy indicators
+- [x] nearby-search.svg - Location-based search results, filters, radius display
+- [x] directions.svg - Route navigation with turn-by-turn directions
 
 ## Reference Locations
 
