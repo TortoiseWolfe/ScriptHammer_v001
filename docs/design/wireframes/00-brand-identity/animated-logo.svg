@@ -190,7 +190,7 @@
         dur="20s"
         repeatCount="indefinite"/>
       <!-- Curved "ScriptHammer.com" text (vector paths from production, rotates with gear) -->
-      <g transform="scale(0.36) translate(-600, -600)">
+      <g id="silver-text-paths" transform="scale(0.36) translate(-600, -600)">
         <g transform="translate(0.000000,1200.000000) scale(0.100000,-0.100000)"
            fill="url(#silverGradient)" stroke="none" filter="url(#metalShadow)">
           <path d="M5150 10288 c-124 -27 -149 -38 -166 -70 -12 -24 -14 -36 -5 -54 9
@@ -505,9 +505,8 @@ c76 -41 141 -79 143 -85 11 -33 -132 -42 -200 -12 -71 30 -136 123 -113 161
 
   <!-- Layer 2.5 diagram -->
   <rect x="800" y="280" width="80" height="70" rx="4" fill="#0f172a" stroke="#C0C0C0" stroke-width="2"/>
-  <!-- Curved text preview (simplified arc representation) -->
-  <path d="M 815 320 Q 840 300 865 320" fill="none" stroke="url(#silverGradient)" stroke-width="1.5"/>
-  <text x="840" y="330" text-anchor="middle" fill="url(#silverGradient)" font-size="7" font-style="italic">ScriptHammer.com</text>
+  <!-- Reference actual silver text paths, scaled to fit preview box -->
+  <use href="#silver-text-paths" transform="translate(840, 315) scale(0.2)"/>
   <text x="895" y="295" class="text-sm">Layer 2.5: Silver Text</text>
   <text x="895" y="310" class="text-muted">"ScriptHammer.com" curved</text>
   <text x="895" y="325" fill="#22c55e" font-size="10">ROTATES (in front of mallet)</text>
