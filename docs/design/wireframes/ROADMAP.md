@@ -18,6 +18,7 @@ This document tracks the wireframe generation progress following the user's jour
 | 09 | Maps & Location | location-picker, nearby-search, directions | Done |
 | 10 | Accessibility | wcag-compliance, colorblind-mode, font-switcher | Done |
 | 11 | Analytics & Privacy | cookie-consent, google-analytics | Done |
+| 12 | Integrations | web3forms, emailjs | Done |
 
 ## Section Details
 
@@ -59,6 +60,10 @@ This document tracks the wireframe generation progress following the user's jour
 ### 11 - Analytics & Privacy (specs: 110, 111) ✅
 - [x] cookie-consent.svg - GDPR consent banner, category toggles, privacy controls, data export
 - [x] google-analytics.svg - GA4 dashboard, Web Vitals tracking, consent-based activation, custom events
+
+### 12 - Integrations (specs: 120, 121) ✅
+- [x] web3forms.svg - Serverless contact form, Zod validation, honeypot spam protection, offline queue
+- [x] emailjs.svg - Failover provider, exponential backoff retry, provider status dashboard, error logging
 
 ## Reference Locations
 
