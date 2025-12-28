@@ -13,7 +13,7 @@ This document tracks the wireframe generation progress following the user's jour
 | 04 | User Messaging | conversation-list, chat-window, connections, message-actions | Done |
 | 05 | Blog & Content | blog-editor, blog-post-view, content-dashboard | Done |
 | 06 | Payments | pricing-plans, checkout-flow, billing-history | Done |
-| 07 | PWA & Offline | offline-mode, sync-status, install-prompt | Pending |
+| 07 | PWA & Offline | offline-mode, sync-status, install-prompt | Done |
 | 08 | Calendar | calendar-view, event-create, event-notifications | Pending |
 | 09 | Maps & Location | location-picker, nearby-search, directions | Pending |
 
@@ -34,10 +34,10 @@ This document tracks the wireframe generation progress following the user's jour
 - [x] checkout-flow.svg - Payment form, Stripe integration
 - [x] billing-history.svg - Invoices, receipts
 
-### 07 - PWA & Offline (spec: 070-pwa-background-sync)
-- [ ] offline-mode.svg - Cached content indicator
-- [ ] sync-status.svg - Background sync progress
-- [ ] install-prompt.svg - Add to homescreen
+### 07 - PWA & Offline (spec: 070-pwa-background-sync) ✅
+- [x] offline-mode.svg - Cached content, queue panel, storage indicator
+- [x] sync-status.svg - Syncing, success, retry, failed states
+- [x] install-prompt.svg - Desktop banner, mobile sheet, iOS instructions
 
 ### 08 - Calendar (spec: 080-calendar-integration)
 - [ ] calendar-view.svg - Month/week/day views
