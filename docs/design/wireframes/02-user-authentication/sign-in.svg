@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#d946ef"/>
+    </linearGradient>
+    <style>
+      .heading { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 14px; font-weight: bold; }
+      .text-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 10px; }
+      .text-md { fill: #cbd5e1; font-family: system-ui, sans-serif; font-size: 12px; }
+      .text-muted { fill: #64748b; font-family: system-ui, sans-serif; font-size: 10px; }
+      .annotation { fill: #8b5cf6; font-family: monospace; font-size: 10px; }
+      .link { fill: #8b5cf6; font-family: system-ui, sans-serif; font-size: 11px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+
+  <!-- Dot grid pattern -->
+  <g opacity="0.05">
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1" fill="#fff"/>
+    </pattern>
+    <rect width="1200" height="800" fill="url(#dots)"/>
+  </g>
+
+  <!-- Accent line top -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#accentGrad)"/>
+
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#64748b" letter-spacing="1">SIGN IN</text>
+
+  <!-- Sign In Card -->
+  <rect x="400" y="80" width="400" height="620" rx="12" fill="#1e293b" stroke="#475569"/>
+
+  <!-- Logo placeholder -->
+  <circle cx="600" cy="140" r="40" fill="#334155" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="600" y="148" text-anchor="middle" fill="#8b5cf6" font-family="system-ui" font-size="24" font-weight="bold">SH</text>
+
+  <!-- Welcome text -->
+  <text x="600" y="210" text-anchor="middle" class="heading" font-size="20">Welcome Back</text>
+  <text x="600" y="235" text-anchor="middle" class="text-muted">Sign in to your account</text>
+
+  <!-- Email field -->
+  <text x="440" y="280" class="text-sm">Email</text>
+  <rect x="440" y="290" width="320" height="44" rx="6" fill="#0f172a" stroke="#475569"/>
+  <text x="460" y="318" class="text-muted">you@example.com</text>
+
+  <!-- Password field -->
+  <text x="440" y="360" class="text-sm">Password</text>
+  <rect x="440" y="370" width="320" height="44" rx="6" fill="#0f172a" stroke="#475569"/>
+  <text x="460" y="398" class="text-muted">••••••••</text>
+  <text x="740" y="398" class="text-muted">👁</text>
+
+  <!-- Remember me + Forgot password row -->
+  <rect x="440" y="430" width="16" height="16" rx="3" fill="#0f172a" stroke="#475569"/>
+  <text x="465" y="443" class="text-md">Remember me for 30 days</text>
+  <text x="760" y="443" text-anchor="end" class="link">Forgot password?</text>
+
+  <!-- Sign in button -->
+  <rect x="440" y="470" width="320" height="48" rx="6" fill="#8b5cf6"/>
+  <text x="600" y="500" text-anchor="middle" fill="white" font-family="system-ui" font-size="14" font-weight="600">Sign In</text>
+
+  <!-- Divider -->
+  <line x1="440" y1="545" x2="530" y2="545" stroke="#475569"/>
+  <text x="600" y="550" text-anchor="middle" class="text-muted">or continue with</text>
+  <line x1="670" y1="545" x2="760" y2="545" stroke="#475569"/>
+
+  <!-- OAuth buttons -->
+  <rect x="440" y="570" width="155" height="44" rx="6" fill="#334155" stroke="#475569"/>
+  <text x="517" y="598" text-anchor="middle" class="text-md">GitHub</text>
+
+  <rect x="605" y="570" width="155" height="44" rx="6" fill="#334155" stroke="#475569"/>
+  <text x="682" y="598" text-anchor="middle" class="text-md">Google</text>
+
+  <!-- Sign up link -->
+  <text x="600" y="660" text-anchor="middle" class="text-muted">Don't have an account? <tspan fill="#8b5cf6">Sign up</tspan></text>
+
+  <!-- Annotations -->
+  <rect x="50" y="280" width="180" height="60" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
+  <text x="60" y="300" class="annotation">FR-006: Sign in with</text>
+  <text x="60" y="315" class="annotation">verified email/password</text>
+  <text x="60" y="330" class="annotation">Rate limit: 5/15min</text>
+
+  <rect x="50" y="420" width="180" height="45" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
+  <text x="60" y="440" class="annotation">FR-015a: Remember Me</text>
+  <text x="60" y="455" class="annotation">extends to 30 days</text>
+
+  <rect x="50" y="560" width="180" height="60" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
+  <text x="60" y="580" class="annotation">FR-007, FR-008:</text>
+  <text x="60" y="595" class="annotation">GitHub &amp; Google OAuth</text>
+  <text x="60" y="610" class="annotation">third-party auth</text>
+
+  <rect x="970" y="280" width="180" height="75" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
+  <text x="980" y="300" class="annotation">Error states:</text>
+  <text x="980" y="315" class="annotation">• Invalid credentials</text>
+  <text x="980" y="330" class="annotation">• Account locked (5 fails)</text>
+  <text x="980" y="345" class="annotation">• Email not verified</text>
+
+</svg>

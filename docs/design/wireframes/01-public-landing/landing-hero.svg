@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#d946ef"/>
+    </linearGradient>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6" stop-opacity="0.2"/>
+      <stop offset="100%" style="stop-color:#d946ef" stop-opacity="0.1"/>
+    </linearGradient>
+    <style>
+      .heading { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 14px; font-weight: bold; }
+      .text-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 10px; }
+      .text-md { fill: #cbd5e1; font-family: system-ui, sans-serif; font-size: 12px; }
+      .text-muted { fill: #64748b; font-family: system-ui, sans-serif; font-size: 10px; }
+      .annotation { fill: #8b5cf6; font-family: monospace; font-size: 10px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+  <g opacity="0.05">
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1" fill="#fff"/>
+    </pattern>
+    <rect width="1200" height="800" fill="url(#dots)"/>
+  </g>
+  <rect x="0" y="0" width="1200" height="3" fill="url(#accentGrad)"/>
+
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#64748b" letter-spacing="1">LANDING PAGE - HERO SECTION</text>
+
+  <!-- ========================================== -->
+  <!-- Desktop Layout -->
+  <!-- ========================================== -->
+  <text x="400" y="60" text-anchor="middle" class="annotation" font-size="12">DESKTOP LAYOUT</text>
+
+  <!-- Desktop frame -->
+  <rect x="50" y="80" width="700" height="500" rx="8" fill="#1e293b" stroke="#475569"/>
+
+  <!-- Navigation bar -->
+  <rect x="50" y="80" width="700" height="55" rx="8" fill="#0f172a"/>
+
+  <!-- Logo -->
+  <circle cx="90" cy="108" r="18" fill="url(#accentGrad)"/>
+  <text x="120" y="113" class="heading" font-size="16">ScriptHammer</text>
+
+  <!-- Nav links (public) -->
+  <text x="350" y="113" text-anchor="middle" class="text-md">Features</text>
+  <text x="430" y="113" text-anchor="middle" class="text-md">Blog</text>
+  <text x="510" y="113" text-anchor="middle" class="text-md">Pricing</text>
+
+  <!-- Auth buttons -->
+  <rect x="610" y="93" width="60" height="30" rx="4" fill="transparent" stroke="#475569"/>
+  <text x="640" y="113" text-anchor="middle" class="text-md">Sign In</text>
+
+  <rect x="680" y="93" width="60" height="30" rx="4" fill="#8b5cf6"/>
+  <text x="710" y="113" text-anchor="middle" fill="white" class="text-md">Sign Up</text>
+
+  <!-- Hero section -->
+  <rect x="50" y="135" width="700" height="320" fill="url(#heroGrad)"/>
+
+  <!-- Hero content (left side) -->
+  <text x="90" y="200" fill="white" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">Build Better Apps,</text>
+  <text x="90" y="240" fill="white" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">Ship Faster</text>
+
+  <text x="90" y="285" class="text-md" font-size="14">The modern development platform with real-time</text>
+  <text x="90" y="305" class="text-md" font-size="14">collaboration, end-to-end encryption, and</text>
+  <text x="90" y="325" class="text-md" font-size="14">seamless offline support.</text>
+
+  <!-- CTA buttons -->
+  <rect x="90" y="355" width="140" height="44" rx="6" fill="#8b5cf6"/>
+  <text x="160" y="383" text-anchor="middle" fill="white" class="text-md">Get Started Free</text>
+
+  <rect x="245" y="355" width="120" height="44" rx="6" fill="transparent" stroke="#8b5cf6"/>
+  <text x="305" y="383" text-anchor="middle" fill="#8b5cf6" class="text-md">View Demo</text>
+
+  <!-- Social proof -->
+  <text x="90" y="430" class="text-muted">Trusted by 1,000+ developers worldwide</text>
+
+  <!-- Star rating -->
+  <text x="90" y="450" fill="#eab308" font-size="12">★★★★★</text>
+  <text x="160" y="450" class="text-sm">4.9/5 on Product Hunt</text>
+
+  <!-- Hero image placeholder (right side) -->
+  <rect x="420" y="170" width="300" height="220" rx="8" fill="#334155" stroke="#475569"/>
+  <text x="570" y="285" text-anchor="middle" class="text-muted">App Screenshot</text>
+  <text x="570" y="305" text-anchor="middle" class="text-muted">or Animation</text>
+
+  <!-- Feature badges -->
+  <rect x="435" y="405" width="80" height="24" rx="4" fill="#22c55e" opacity="0.2"/>
+  <text x="475" y="421" text-anchor="middle" fill="#22c55e" class="text-sm">Offline</text>
+
+  <rect x="525" y="405" width="80" height="24" rx="4" fill="#8b5cf6" opacity="0.2"/>
+  <text x="565" y="421" text-anchor="middle" fill="#8b5cf6" class="text-sm">Encrypted</text>
+
+  <rect x="615" y="405" width="90" height="24" rx="4" fill="#0891b2" opacity="0.2"/>
+  <text x="660" y="421" text-anchor="middle" fill="#0891b2" class="text-sm">Real-time</text>
+
+  <!-- Scroll indicator -->
+  <text x="400" y="560" text-anchor="middle" class="text-muted">Scroll to explore</text>
+  <text x="400" y="575" text-anchor="middle" fill="#64748b" font-size="16">↓</text>
+
+  <!-- ========================================== -->
+  <!-- Mobile Layout -->
+  <!-- ========================================== -->
+  <text x="950" y="60" text-anchor="middle" class="annotation" font-size="12">MOBILE LAYOUT</text>
+
+  <!-- Phone frame -->
+  <rect x="800" y="80" width="320" height="600" rx="20" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+
+  <!-- Status bar -->
+  <rect x="800" y="80" width="320" height="28" rx="20" fill="#0f172a"/>
+  <text x="960" y="98" text-anchor="middle" class="text-sm">9:41</text>
+
+  <!-- Mobile nav -->
+  <rect x="800" y="108" width="320" height="50" fill="#0f172a"/>
+  <circle cx="840" cy="133" r="14" fill="url(#accentGrad)"/>
+  <text x="865" y="138" class="heading" font-size="12">ScriptHammer</text>
+
+  <!-- Hamburger menu -->
+  <rect x="1080" y="123" width="20" height="2" fill="#94a3b8"/>
+  <rect x="1080" y="130" width="20" height="2" fill="#94a3b8"/>
+  <rect x="1080" y="137" width="20" height="2" fill="#94a3b8"/>
+
+  <!-- Mobile hero -->
+  <rect x="800" y="158" width="320" height="360" fill="url(#heroGrad)"/>
+
+  <!-- Centered headline (mobile) -->
+  <text x="960" y="210" text-anchor="middle" fill="white" font-family="system-ui, sans-serif" font-size="22" font-weight="bold">Build Better Apps,</text>
+  <text x="960" y="240" text-anchor="middle" fill="white" font-family="system-ui, sans-serif" font-size="22" font-weight="bold">Ship Faster</text>
+
+  <text x="960" y="280" text-anchor="middle" class="text-md">The modern development platform</text>
+  <text x="960" y="300" text-anchor="middle" class="text-md">with real-time collaboration.</text>
+
+  <!-- Full-width CTA (mobile) -->
+  <rect x="830" y="330" width="260" height="48" rx="6" fill="#8b5cf6"/>
+  <text x="960" y="360" text-anchor="middle" fill="white" class="text-md">Get Started Free</text>
+
+  <rect x="830" y="390" width="260" height="44" rx="6" fill="transparent" stroke="#8b5cf6"/>
+  <text x="960" y="418" text-anchor="middle" fill="#8b5cf6" class="text-md">View Demo</text>
+
+  <!-- Mobile feature badges -->
+  <rect x="840" y="455" width="70" height="22" rx="4" fill="#22c55e" opacity="0.2"/>
+  <text x="875" y="470" text-anchor="middle" fill="#22c55e" class="text-sm">Offline</text>
+
+  <rect x="920" y="455" width="80" height="22" rx="4" fill="#8b5cf6" opacity="0.2"/>
+  <text x="960" y="470" text-anchor="middle" fill="#8b5cf6" class="text-sm">Encrypted</text>
+
+  <rect x="1010" y="455" width="80" height="22" rx="4" fill="#0891b2" opacity="0.2"/>
+  <text x="1050" y="470" text-anchor="middle" fill="#0891b2" class="text-sm">Real-time</text>
+
+  <!-- Social proof (mobile) -->
+  <text x="960" y="505" text-anchor="middle" class="text-muted">Trusted by 1,000+ developers</text>
+  <text x="960" y="525" text-anchor="middle" fill="#eab308" font-size="12">★★★★★ 4.9/5</text>
+
+  <!-- Bottom nav hint -->
+  <rect x="800" y="630" width="320" height="50" rx="20" fill="#0f172a"/>
+  <text x="870" y="660" text-anchor="middle" class="text-muted">Home</text>
+  <text x="960" y="660" text-anchor="middle" class="text-muted">Blog</text>
+  <text x="1050" y="660" text-anchor="middle" class="text-muted">Sign In</text>
+
+  <!-- ========================================== -->
+  <!-- Annotations -->
+  <!-- ========================================== -->
+  <rect x="50" y="600" width="280" height="90" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
+  <text x="60" y="620" class="annotation">No auth required for public pages</text>
+  <text x="60" y="635" class="annotation">Constitution V: Progressive Enhancement</text>
+  <text x="60" y="650" class="annotation">Mobile-first responsive design</text>
+  <text x="60" y="665" class="annotation">Lighthouse Performance: 90+ target</text>
+  <text x="60" y="680" class="annotation">FCP under 2s, TTI under 3.5s</text>
+
+  <rect x="350" y="600" width="250" height="90" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
+  <text x="360" y="620" class="annotation">Clear value proposition above fold</text>
+  <text x="360" y="635" class="annotation">Primary CTA: Get Started Free</text>
+  <text x="360" y="650" class="annotation">Secondary CTA: View Demo</text>
+  <text x="360" y="665" class="annotation">Social proof for credibility</text>
+  <text x="360" y="680" class="annotation">Feature badges highlight key benefits</text>
+
+  <rect x="620" y="600" width="250" height="90" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
+  <text x="630" y="620" class="annotation">Constitution VI: Privacy First</text>
+  <text x="630" y="635" class="annotation">No tracking without consent</text>
+  <text x="630" y="650" class="annotation">Cookie consent before analytics</text>
+  <text x="630" y="665" class="annotation">See 007-cookie-consent spec</text>
+  <text x="630" y="680" class="annotation">GDPR compliance required</text>
+
+  <rect x="890" y="700" width="230" height="60" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
+  <text x="900" y="720" class="annotation">44px min touch targets</text>
+  <text x="900" y="735" class="annotation">WCAG 2.1 AA compliance</text>
+  <text x="900" y="750" class="annotation">Keyboard navigation enabled</text>
+
+</svg>

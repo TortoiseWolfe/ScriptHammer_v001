@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#d946ef"/>
+    </linearGradient>
+    <style>
+      .heading { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 14px; font-weight: bold; }
+      .text-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 10px; }
+      .text-md { fill: #cbd5e1; font-family: system-ui, sans-serif; font-size: 12px; }
+      .text-muted { fill: #64748b; font-family: system-ui, sans-serif; font-size: 10px; }
+      .annotation { fill: #8b5cf6; font-family: monospace; font-size: 10px; }
+      .link { fill: #8b5cf6; font-family: system-ui, sans-serif; font-size: 11px; }
+      .error { fill: #f87171; font-family: system-ui, sans-serif; font-size: 10px; }
+      .success { fill: #4ade80; font-family: system-ui, sans-serif; font-size: 10px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+
+  <!-- Dot grid pattern -->
+  <g opacity="0.05">
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1" fill="#fff"/>
+    </pattern>
+    <rect width="1200" height="800" fill="url(#dots)"/>
+  </g>
+
+  <!-- Accent line top -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#accentGrad)"/>
+
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#64748b" letter-spacing="1">SIGN UP</text>
+
+  <!-- Sign Up Card -->
+  <rect x="400" y="60" width="400" height="680" rx="12" fill="#1e293b" stroke="#475569"/>
+
+  <!-- Logo placeholder -->
+  <circle cx="600" cy="115" r="35" fill="#334155" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="600" y="123" text-anchor="middle" fill="#8b5cf6" font-family="system-ui" font-size="20" font-weight="bold">SH</text>
+
+  <!-- Welcome text -->
+  <text x="600" y="175" text-anchor="middle" class="heading" font-size="18">Create Account</text>
+  <text x="600" y="195" text-anchor="middle" class="text-muted">Start your journey with us</text>
+
+  <!-- Email field -->
+  <text x="440" y="230" class="text-sm">Email</text>
+  <rect x="440" y="240" width="320" height="40" rx="6" fill="#0f172a" stroke="#475569"/>
+  <text x="460" y="266" class="text-muted">you@example.com</text>
+
+  <!-- Password field -->
+  <text x="440" y="300" class="text-sm">Password</text>
+  <rect x="440" y="310" width="320" height="40" rx="6" fill="#0f172a" stroke="#475569"/>
+  <text x="460" y="336" class="text-muted">Create a strong password</text>
+
+  <!-- Password requirements -->
+  <rect x="440" y="360" width="320" height="70" rx="6" fill="#0f172a" opacity="0.5"/>
+  <text x="455" y="380" class="text-muted">Password requirements:</text>
+  <text x="455" y="395" class="success">✓ 8+ characters</text>
+  <text x="455" y="410" class="text-muted">○ Uppercase letter</text>
+  <text x="560" y="395" class="text-muted">○ Lowercase letter</text>
+  <text x="560" y="410" class="text-muted">○ Number</text>
+  <text x="660" y="395" class="text-muted">○ Special char</text>
+
+  <!-- Confirm Password field -->
+  <text x="440" y="455" class="text-sm">Confirm Password</text>
+  <rect x="440" y="465" width="320" height="40" rx="6" fill="#0f172a" stroke="#475569"/>
+  <text x="460" y="491" class="text-muted">Confirm your password</text>
+
+  <!-- Terms checkbox -->
+  <rect x="440" y="525" width="16" height="16" rx="3" fill="#0f172a" stroke="#475569"/>
+  <text x="465" y="537" class="text-sm">I agree to the <tspan fill="#8b5cf6">Terms of Service</tspan></text>
+  <text x="465" y="552" class="text-sm">and <tspan fill="#8b5cf6">Privacy Policy</tspan></text>
+
+  <!-- Sign up button -->
+  <rect x="440" y="575" width="320" height="44" rx="6" fill="#8b5cf6"/>
+  <text x="600" y="603" text-anchor="middle" fill="white" font-family="system-ui" font-size="14" font-weight="600">Create Account</text>
+
+  <!-- Divider -->
+  <line x1="440" y1="645" x2="530" y2="645" stroke="#475569"/>
+  <text x="600" y="650" text-anchor="middle" class="text-muted">or sign up with</text>
+  <line x1="670" y1="645" x2="760" y2="645" stroke="#475569"/>
+
+  <!-- OAuth buttons -->
+  <rect x="440" y="665" width="155" height="40" rx="6" fill="#334155" stroke="#475569"/>
+  <text x="517" y="690" text-anchor="middle" class="text-md">GitHub</text>
+
+  <rect x="605" y="665" width="155" height="40" rx="6" fill="#334155" stroke="#475569"/>
+  <text x="682" y="690" text-anchor="middle" class="text-md">Google</text>
+
+  <!-- Sign in link -->
+  <text x="600" y="730" text-anchor="middle" class="text-muted">Already have an account? <tspan fill="#8b5cf6">Sign in</tspan></text>
+
+  <!-- Annotations -->
+  <rect x="50" y="230" width="180" height="45" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
+  <text x="60" y="250" class="annotation">FR-001, FR-002:</text>
+  <text x="60" y="265" class="annotation">Email validation on input</text>
+
+  <rect x="50" y="300" width="180" height="75" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
+  <text x="60" y="320" class="annotation">FR-003: Password rules</text>
+  <text x="60" y="335" class="annotation">• Min 8 characters</text>
+  <text x="60" y="350" class="annotation">• Upper + lower + num</text>
+  <text x="60" y="365" class="annotation">• Special character</text>
+
+  <rect x="970" y="230" width="180" height="60" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
+  <text x="980" y="250" class="annotation">Edge case:</text>
+  <text x="980" y="265" class="annotation">Email already exists →</text>
+  <text x="980" y="280" class="annotation">"Please sign in or reset"</text>
+
+  <rect x="970" y="575" width="180" height="45" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
+  <text x="980" y="595" class="annotation">FR-004: On submit →</text>
+  <text x="980" y="610" class="annotation">verification email sent</text>
+
+</svg>
