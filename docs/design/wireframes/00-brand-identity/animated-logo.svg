@@ -97,8 +97,8 @@
   <!-- LAYERED LOGO COMPOSITION -->
   <g transform="translate(500, 260)">
 
-    <!-- LAYER 1: Rotating Gear Ring (BACK) -->
-    <g>
+    <!-- LAYER 1: Rotating Gear Ring (BACK) - EXPERIMENT: hidden -->
+    <g display="none">
       <animateTransform
         attributeName="transform"
         type="rotate"
@@ -458,7 +458,7 @@ c76 -41 141 -79 143 -85 11 -33 -132 -42 -200 -12 -71 30 -136 123 -113 161
   </g>
 
   <!-- Caption only - no duplicate logo text -->
-  <text x="500" y="455" text-anchor="middle" class="text-muted">Gear &amp; text rotate | Mallet &amp; brackets stay static</text>
+  <text x="500" y="455" text-anchor="middle" class="text-muted">Text rotates | Mallet &amp; brackets stay static | Gear hidden</text>
 
   <!-- ========================================== -->
   <!-- Layer Breakdown -->
@@ -467,9 +467,9 @@ c76 -41 141 -79 143 -85 11 -33 -132 -42 -200 -12 -71 30 -136 123 -113 161
 
   <rect x="780" y="100" width="350" height="440" rx="8" fill="#1e293b" stroke="#475569"/>
 
-  <!-- Layer 1 diagram -->
-  <rect x="800" y="120" width="80" height="70" rx="4" fill="#0f172a" stroke="#CD853F" stroke-width="2"/>
-  <g transform="translate(840, 155) scale(0.14)">
+  <!-- Layer 1 diagram - HIDDEN -->
+  <rect x="800" y="120" width="80" height="70" rx="4" fill="#0f172a" stroke="#64748b" stroke-width="2" stroke-dasharray="4" opacity="0.5"/>
+  <g transform="translate(840, 155) scale(0.14)" opacity="0.3">
     <circle cx="0" cy="0" r="175" fill="none" stroke="url(#ringGradient)" stroke-width="10"/>
     <g fill="url(#metalGradient)" stroke="#8B4513" stroke-width="0.5">
       <path d="M -10,-179 L -15,-195 L 15,-195 L 10,-179 Z" transform="rotate(0)"/>
@@ -482,9 +482,9 @@ c76 -41 141 -79 143 -85 11 -33 -132 -42 -200 -12 -71 30 -136 123 -113 161
       <path d="M -10,-179 L -15,-195 L 15,-195 L 10,-179 Z" transform="rotate(315)"/>
     </g>
   </g>
-  <text x="895" y="135" class="text-sm">Layer 1: Gear Ring</text>
-  <text x="895" y="150" class="text-muted">Bronze gear teeth + rim</text>
-  <text x="895" y="165" fill="#22c55e" font-size="10">ROTATES (20s/rev)</text>
+  <text x="895" y="135" class="text-sm" opacity="0.5"><tspan text-decoration="line-through">Layer 1: Gear Ring</tspan></text>
+  <text x="895" y="150" class="text-muted" opacity="0.5">Bronze gear teeth + rim</text>
+  <text x="895" y="165" fill="#ef4444" font-size="10">HIDDEN (experiment)</text>
 
   <!-- Layer 2 diagram -->
   <rect x="800" y="200" width="80" height="70" rx="4" fill="#0f172a" stroke="#8B6F47" stroke-width="2"/>
