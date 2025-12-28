@@ -458,37 +458,18 @@ c76 -41 141 -79 143 -85 11 -33 -132 -42 -200 -12 -71 30 -136 123 -113 161
   </g>
 
   <!-- Caption only - no duplicate logo text -->
-  <text x="500" y="455" text-anchor="middle" class="text-muted">Text rotates | Mallet &amp; brackets stay static | Gear hidden</text>
+  <text x="500" y="455" text-anchor="middle" class="text-muted">Silver text rotates | Mallet &amp; brackets stay static</text>
 
   <!-- ========================================== -->
   <!-- Layer Breakdown -->
   <!-- ========================================== -->
   <text x="950" y="80" text-anchor="middle" class="annotation" font-size="12">LAYER COMPOSITION</text>
 
-  <rect x="780" y="100" width="350" height="440" rx="8" fill="#1e293b" stroke="#475569"/>
+  <rect x="780" y="100" width="350" height="360" rx="8" fill="#1e293b" stroke="#475569"/>
 
-  <!-- Layer 1 diagram - HIDDEN -->
-  <rect x="800" y="120" width="80" height="70" rx="4" fill="#0f172a" stroke="#64748b" stroke-width="2" stroke-dasharray="4" opacity="0.5"/>
-  <g transform="translate(840, 155) scale(0.14)" opacity="0.3">
-    <circle cx="0" cy="0" r="175" fill="none" stroke="url(#ringGradient)" stroke-width="10"/>
-    <g fill="url(#metalGradient)" stroke="#8B4513" stroke-width="0.5">
-      <path d="M -10,-179 L -15,-195 L 15,-195 L 10,-179 Z" transform="rotate(0)"/>
-      <path d="M -10,-179 L -15,-195 L 15,-195 L 10,-179 Z" transform="rotate(45)"/>
-      <path d="M -10,-179 L -15,-195 L 15,-195 L 10,-179 Z" transform="rotate(90)"/>
-      <path d="M -10,-179 L -15,-195 L 15,-195 L 10,-179 Z" transform="rotate(135)"/>
-      <path d="M -10,-179 L -15,-195 L 15,-195 L 10,-179 Z" transform="rotate(180)"/>
-      <path d="M -10,-179 L -15,-195 L 15,-195 L 10,-179 Z" transform="rotate(225)"/>
-      <path d="M -10,-179 L -15,-195 L 15,-195 L 10,-179 Z" transform="rotate(270)"/>
-      <path d="M -10,-179 L -15,-195 L 15,-195 L 10,-179 Z" transform="rotate(315)"/>
-    </g>
-  </g>
-  <text x="895" y="135" class="text-sm" opacity="0.5"><tspan text-decoration="line-through">Layer 1: Gear Ring</tspan></text>
-  <text x="895" y="150" class="text-muted" opacity="0.5">Bronze gear teeth + rim</text>
-  <text x="895" y="165" fill="#ef4444" font-size="10">HIDDEN (experiment)</text>
-
-  <!-- Layer 2 diagram -->
-  <rect x="800" y="200" width="80" height="70" rx="4" fill="#0f172a" stroke="#8B6F47" stroke-width="2"/>
-  <g transform="translate(840, 235) scale(0.18)">
+  <!-- Layer 1: Mallet diagram -->
+  <rect x="800" y="120" width="80" height="70" rx="4" fill="#0f172a" stroke="#8B6F47" stroke-width="2"/>
+  <g transform="translate(840, 155) scale(0.18)">
     <g transform="translate(-40, 45) rotate(42) scale(0.75)">
       <ellipse cx="0" cy="-120" rx="70" ry="20" fill="url(#oakGradient)" stroke="#5B4637" stroke-width="1.5"/>
       <rect x="-70" y="-120" width="140" height="85" fill="url(#oakGradient)" stroke="#5B4637" stroke-width="1.5"/>
@@ -499,21 +480,21 @@ c76 -41 141 -79 143 -85 11 -33 -132 -42 -200 -12 -71 30 -136 123 -113 161
       <path d="M-8,-10 L-9,140 L9,140 L8,-10 Z" fill="url(#oakGradient)" stroke="#5B4637" stroke-width="1.5"/>
     </g>
   </g>
-  <text x="895" y="215" class="text-sm">Layer 2: Mallet</text>
-  <text x="895" y="230" class="text-muted">Oak wood + iron bands</text>
-  <text x="895" y="245" fill="#8b5cf6" font-size="10">STATIC (centered)</text>
+  <text x="895" y="135" class="text-sm">Layer 1: Mallet</text>
+  <text x="895" y="150" class="text-muted">Oak wood + iron bands</text>
+  <text x="895" y="165" fill="#8b5cf6" font-size="10">STATIC (centered)</text>
 
-  <!-- Layer 2.5 diagram -->
-  <rect x="800" y="280" width="80" height="70" rx="4" fill="#0f172a" stroke="#C0C0C0" stroke-width="2"/>
+  <!-- Layer 2: Silver Text diagram -->
+  <rect x="800" y="200" width="80" height="70" rx="4" fill="#0f172a" stroke="#C0C0C0" stroke-width="2"/>
   <!-- Reference actual silver text paths, scaled to fit preview box -->
-  <use href="#silver-text-paths" transform="translate(840, 315) scale(0.2)"/>
-  <text x="895" y="295" class="text-sm">Layer 2.5: Silver Text</text>
-  <text x="895" y="310" class="text-muted">"ScriptHammer.com" curved</text>
-  <text x="895" y="325" fill="#22c55e" font-size="10">ROTATES (in front of mallet)</text>
+  <use href="#silver-text-paths" transform="translate(840, 235) scale(0.2)"/>
+  <text x="895" y="215" class="text-sm">Layer 2: Silver Text</text>
+  <text x="895" y="230" class="text-muted">"ScriptHammer.com" curved</text>
+  <text x="895" y="245" fill="#22c55e" font-size="10">ROTATES (in front of mallet)</text>
 
-  <!-- Layer 3 diagram -->
-  <rect x="800" y="360" width="80" height="70" rx="4" fill="#0f172a" stroke="#FFDF00" stroke-width="2"/>
-  <g transform="translate(840, 395) scale(0.16)">
+  <!-- Layer 3: Script Tags diagram -->
+  <rect x="800" y="280" width="80" height="70" rx="4" fill="#0f172a" stroke="#FFDF00" stroke-width="2"/>
+  <g transform="translate(840, 315) scale(0.16)">
     <!-- Script tag < -->
     <g transform="translate(-60, 0)">
       <path d="M 36 -96 L -36 0 L 36 96" stroke="url(#metalGradient)" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -523,13 +504,13 @@ c76 -41 141 -79 143 -85 11 -33 -132 -42 -200 -12 -71 30 -136 123 -113 161
       <path d="M -36 -96 L 36 0 L -36 96" stroke="url(#metalGradient)" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
   </g>
-  <text x="895" y="375" class="text-sm">Layer 3: Script Tags</text>
-  <text x="895" y="390" class="text-muted">&lt; &gt; brackets</text>
-  <text x="895" y="405" fill="#8b5cf6" font-size="10">STATIC (on top)</text>
+  <text x="895" y="295" class="text-sm">Layer 3: Script Tags</text>
+  <text x="895" y="310" class="text-muted">&lt; &gt; brackets</text>
+  <text x="895" y="325" fill="#8b5cf6" font-size="10">STATIC (on top)</text>
 
   <!-- Composition result -->
-  <rect x="800" y="445" width="310" height="40" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6"/>
-  <text x="955" y="470" text-anchor="middle" fill="#8b5cf6" font-size="11">Script + Hammer = ScriptHammer!</text>
+  <rect x="800" y="365" width="310" height="40" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6"/>
+  <text x="955" y="390" text-anchor="middle" fill="#8b5cf6" font-size="11">Script + Hammer = ScriptHammer!</text>
 
   <!-- ========================================== -->
   <!-- Animation States -->
@@ -540,17 +521,17 @@ c76 -41 141 -79 143 -85 11 -33 -132 -42 -200 -12 -71 30 -136 123 -113 161
 
   <rect x="70" y="545" width="150" height="70" rx="4" fill="#0f172a"/>
   <text x="145" y="565" text-anchor="middle" class="text-muted">Idle</text>
-  <text x="145" y="585" text-anchor="middle" class="text-sm">Gear rotates at 20s/rev</text>
+  <text x="145" y="585" text-anchor="middle" class="text-sm">Text rotates at 20s/rev</text>
   <text x="145" y="600" text-anchor="middle" class="text-sm">pauseOnHover: true</text>
 
   <rect x="240" y="545" width="150" height="70" rx="4" fill="#0f172a" stroke="#8b5cf6"/>
   <text x="315" y="565" text-anchor="middle" fill="#8b5cf6" class="text-md">Hover</text>
-  <text x="315" y="585" text-anchor="middle" class="text-sm">Gear pauses rotation</text>
-  <text x="315" y="600" text-anchor="middle" class="text-sm">Text letters pop</text>
+  <text x="315" y="585" text-anchor="middle" class="text-sm">Text pauses rotation</text>
+  <text x="315" y="600" text-anchor="middle" class="text-sm">Letters pop effect</text>
 
   <rect x="410" y="545" width="150" height="70" rx="4" fill="#0f172a"/>
   <text x="485" y="565" text-anchor="middle" class="text-muted">Loading</text>
-  <text x="485" y="585" text-anchor="middle" class="text-sm">Gear spins faster</text>
+  <text x="485" y="585" text-anchor="middle" class="text-sm">Text spins faster</text>
   <text x="485" y="600" text-anchor="middle" class="text-sm">speed: 'fast' (5s/rev)</text>
 
   <rect x="580" y="545" width="150" height="70" rx="4" fill="#0f172a"/>
@@ -566,13 +547,13 @@ c76 -41 141 -79 143 -85 11 -33 -132 -42 -200 -12 -71 30 -136 123 -113 161
   <text x="60" y="695" class="annotation">Bronze/copper metallic gradients</text>
   <text x="60" y="710" class="annotation">Oak wood mallet with grain</text>
   <text x="60" y="725" class="annotation">Iron bands on mallet head</text>
-  <text x="60" y="740" class="annotation">20-tooth gear with rivets</text>
+  <text x="60" y="740" class="annotation">Silver curved text ring</text>
 
   <rect x="290" y="660" width="220" height="90" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
   <text x="300" y="680" class="annotation">Implementation:</text>
   <text x="300" y="695" class="annotation">LayeredScriptHammerLogo.tsx</text>
-  <text x="300" y="710" class="annotation">3 separate SVG files layered</text>
-  <text x="300" y="725" class="annotation">SpinningLogo wraps gear only</text>
+  <text x="300" y="710" class="annotation">3 layers: mallet + text + tags</text>
+  <text x="300" y="725" class="annotation">SpinningLogo wraps text only</text>
   <text x="300" y="740" class="annotation">CSS transform for rotation</text>
 
   <rect x="530" y="660" width="220" height="90" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
@@ -584,8 +565,8 @@ c76 -41 141 -79 143 -85 11 -33 -132 -42 -200 -12 -71 30 -136 123 -113 161
 
   <rect x="770" y="660" width="220" height="90" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
   <text x="780" y="680" class="annotation">Files:</text>
-  <text x="780" y="695" class="annotation">/scripthammer-logo.svg (gear)</text>
-  <text x="780" y="710" class="annotation">/printing-mallet.svg (wood)</text>
+  <text x="780" y="695" class="annotation">/printing-mallet.svg (wood)</text>
+  <text x="780" y="710" class="annotation">/silver-text.svg (curved text)</text>
   <text x="780" y="725" class="annotation">/script-tags.svg (brackets)</text>
   <text x="780" y="740" class="annotation">Combined in React component</text>
 
