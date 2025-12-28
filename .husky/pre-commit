@@ -1,0 +1,21 @@
+#\!/bin/sh
+echo "🔐 Scanning staged files for secrets..."
+
+if [ -d "/app" ] && [ "$PWD" = "/app" ]; then
+  gitleaks protect --staged --config .gitleaks.toml --verbose
+elif command -v docker >/dev/null 2>&1 && docker compose ps 2>/dev/null | grep -q scripthammer; then
+  docker compose exec -T scripthammer gitleaks protect --staged --config .gitleaks.toml --verbose
+else
+  if command -v gitleaks >/dev/null 2>&1; then
+    gitleaks protect --staged --config .gitleaks.toml --verbose
+  else
+    echo "⚠️  gitleaks not found, skipping secret scan"
+    exit 0
+  fi
+fi
+
+GITLEAKS_EXIT=$?
+if [ $GITLEAKS_EXIT -ne 0 ]; then
+  echo "❌ Secrets detected\! Commit blocked."
+  exit 1
+fi

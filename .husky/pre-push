@@ -1,0 +1,14 @@
+#\!/bin/sh
+echo "🔐 Full repository scan before push..."
+
+if [ -d "/app" ] && [ "$PWD" = "/app" ]; then
+  gitleaks detect --source . --config .gitleaks.toml
+elif command -v docker >/dev/null 2>&1 && docker compose ps 2>/dev/null | grep -q scripthammer; then
+  docker compose exec -T scripthammer gitleaks detect --source . --config .gitleaks.toml
+else
+  if command -v gitleaks >/dev/null 2>&1; then
+    gitleaks detect --source . --config .gitleaks.toml
+  else
+    echo "⚠️  gitleaks not found, skipping secret scan"
+  fi
+fi
