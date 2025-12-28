@@ -1,8 +1,8 @@
 {
-  "name": "firstframe-wireframes",
-  "version": "1.0.0",
+  "name": "scripthammer-wireframes",
+  "version": "2.0.0",
   "private": true,
-  "description": "Interactive wireframe viewer for FirstFrame template",
+  "description": "ScriptHammer wireframe viewer - Docker first",
   "scripts": {
     "dev": "live-server --port=3000",
     "test": "playwright test",
