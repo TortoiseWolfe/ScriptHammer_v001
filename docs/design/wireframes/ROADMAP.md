@@ -19,27 +19,27 @@ This document tracks the wireframe generation progress following the user's jour
 
 ## Section Details
 
-### 05 - Blog & Content (specs: 019, 020, 021) ✅
+### 05 - Blog & Content (specs: 050, 051, 052) ✅
 - [x] blog-editor.svg - Rich text editor, markdown support
 - [x] blog-post-view.svg - Single post with comments
 - [x] content-dashboard.svg - User's published content
 
-### 06 - Payments (spec: 015-payment-integration) ✅
+### 06 - Payments (spec: 060-payment-integration) ✅
 - [x] pricing-plans.svg - Subscription tiers
 - [x] checkout-flow.svg - Payment form, Stripe integration
 - [x] billing-history.svg - Invoices, receipts
 
-### 07 - PWA & Offline (spec: 011-pwa-background-sync)
+### 07 - PWA & Offline (spec: 070-pwa-background-sync)
 - [ ] offline-mode.svg - Cached content indicator
 - [ ] sync-status.svg - Background sync progress
 - [ ] install-prompt.svg - Add to homescreen
 
-### 08 - Calendar (spec: 013-calendar-integration)
+### 08 - Calendar (spec: 080-calendar-integration)
 - [ ] calendar-view.svg - Month/week/day views
 - [ ] event-create.svg - New event form
 - [ ] event-notifications.svg - Reminders
 
-### 09 - Maps & Location (specs: 014, 015-enhanced-geolocation)
+### 09 - Maps & Location (specs: 090, 091-enhanced-geolocation)
 - [ ] location-picker.svg - Map with markers
 - [ ] nearby-search.svg - Location-based results
 - [ ] directions.svg - Route display
@@ -57,3 +57,24 @@ This document tracks the wireframe generation progress following the user's jour
 3. Generate SVGs using `/wireframe` command (dark theme)
 4. Update `index.html` wireframes array + nav section
 5. Update this ROADMAP.md to mark section as Done
+
+## Spec Numbering Scheme
+
+Specs are numbered to match user journey order:
+
+| Range | Category | Examples |
+|-------|----------|----------|
+| 00X | Infrastructure | methodology, component-structure, testing, mobile-first, security |
+| 02X | Authentication | user-authentication, signup-e2e-tests |
+| 03X | Profile | account-settings |
+| 04X | Messaging | user-messaging-system, unified-messaging-sidebar |
+| 05X | Blog/Content | blog-social-features, unified-blog-content, seo-editorial |
+| 06X | Payments | payment-integration |
+| 07X | PWA/Offline | pwa-background-sync |
+| 08X | Calendar | calendar-integration |
+| 09X | Maps/Location | geolocation-map, enhanced-geolocation |
+| 10X | Accessibility | wcag-aa-compliance, colorblind-mode, font-switcher |
+| 11X | Analytics/Privacy | cookie-consent, google-analytics |
+| 12X | Integrations | web3forms, emailjs |
+
+Bug fixes archived in `_fixes/`, planning specs in `_planning/`.
