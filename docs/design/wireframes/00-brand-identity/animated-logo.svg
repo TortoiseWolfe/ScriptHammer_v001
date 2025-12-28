@@ -458,44 +458,48 @@ c76 -41 141 -79 143 -85 11 -33 -132 -42 -200 -12 -71 30 -136 123 -113 161
   </g>
 
   <!-- Caption only - no duplicate logo text -->
-  <text x="500" y="455" text-anchor="middle" class="text-muted">Gear rotates | Mallet &amp; Script tags stay static</text>
+  <text x="500" y="455" text-anchor="middle" class="text-muted">Gear &amp; text rotate | Mallet &amp; brackets stay static</text>
 
   <!-- ========================================== -->
   <!-- Layer Breakdown -->
   <!-- ========================================== -->
   <text x="950" y="80" text-anchor="middle" class="annotation" font-size="12">LAYER COMPOSITION</text>
 
-  <rect x="780" y="100" width="350" height="350" rx="8" fill="#1e293b" stroke="#475569"/>
+  <rect x="780" y="100" width="350" height="440" rx="8" fill="#1e293b" stroke="#475569"/>
 
   <!-- Layer 1 diagram -->
-  <rect x="800" y="120" width="80" height="80" rx="4" fill="#0f172a" stroke="#CD853F" stroke-width="2"/>
-  <circle cx="840" cy="160" r="30" fill="none" stroke="url(#metalGradient)" stroke-width="4"/>
-  <text x="840" y="165" text-anchor="middle" fill="#64748b" font-size="10">GEAR</text>
-  <text x="895" y="140" class="text-sm">Layer 1: Gear Ring + Text</text>
-  <text x="895" y="155" class="text-muted">scripthammer-logo.svg</text>
-  <text x="895" y="170" fill="#22c55e" font-size="10">ROTATES (20s/rev)</text>
-  <text x="895" y="185" class="text-muted">"ScriptHammer.com" curved</text>
+  <rect x="800" y="120" width="80" height="70" rx="4" fill="#0f172a" stroke="#CD853F" stroke-width="2"/>
+  <circle cx="840" cy="155" r="25" fill="none" stroke="url(#metalGradient)" stroke-width="4"/>
+  <text x="840" y="160" text-anchor="middle" fill="#64748b" font-size="10">GEAR</text>
+  <text x="895" y="135" class="text-sm">Layer 1: Gear Ring</text>
+  <text x="895" y="150" class="text-muted">Bronze gear teeth + rim</text>
+  <text x="895" y="165" fill="#22c55e" font-size="10">ROTATES (20s/rev)</text>
 
   <!-- Layer 2 diagram -->
-  <rect x="800" y="210" width="80" height="80" rx="4" fill="#0f172a" stroke="#8B6F47" stroke-width="2"/>
-  <rect x="825" y="225" width="30" height="50" rx="2" fill="url(#oakGradient)" transform="rotate(42, 840, 250)"/>
-  <text x="895" y="235" class="text-sm">Layer 2: Mallet</text>
-  <text x="895" y="250" class="text-muted">printing-mallet.svg</text>
-  <text x="895" y="265" fill="#8b5cf6" font-size="10">STATIC (offset down-right)</text>
-  <text x="895" y="280" class="text-muted">45% size, opacity 0.9</text>
+  <rect x="800" y="200" width="80" height="70" rx="4" fill="#0f172a" stroke="#8B6F47" stroke-width="2"/>
+  <rect x="825" y="215" width="30" height="40" rx="2" fill="url(#oakGradient)" transform="rotate(42, 840, 235)"/>
+  <text x="895" y="215" class="text-sm">Layer 2: Mallet</text>
+  <text x="895" y="230" class="text-muted">Oak wood + iron bands</text>
+  <text x="895" y="245" fill="#8b5cf6" font-size="10">STATIC (centered)</text>
+
+  <!-- Layer 2.5 diagram -->
+  <rect x="800" y="280" width="80" height="70" rx="4" fill="#0f172a" stroke="#C0C0C0" stroke-width="2"/>
+  <text x="840" y="320" text-anchor="middle" fill="url(#silverGradient)" font-size="9" font-style="italic">Script</text>
+  <text x="895" y="295" class="text-sm">Layer 2.5: Silver Text</text>
+  <text x="895" y="310" class="text-muted">"ScriptHammer.com" curved</text>
+  <text x="895" y="325" fill="#22c55e" font-size="10">ROTATES (in front of mallet)</text>
 
   <!-- Layer 3 diagram -->
-  <rect x="800" y="300" width="80" height="80" rx="4" fill="#0f172a" stroke="#FFDF00" stroke-width="2"/>
-  <text x="820" y="350" fill="url(#metalGradient)" font-size="28" font-weight="bold">&lt;</text>
-  <text x="855" y="350" fill="url(#metalGradient)" font-size="28" font-weight="bold">&gt;</text>
-  <text x="895" y="325" class="text-sm">Layer 3: Script Tags</text>
-  <text x="895" y="340" class="text-muted">script-tags.svg</text>
-  <text x="895" y="355" fill="#8b5cf6" font-size="10">STATIC (centered, on top)</text>
-  <text x="895" y="370" class="text-muted">40% size</text>
+  <rect x="800" y="360" width="80" height="70" rx="4" fill="#0f172a" stroke="#FFDF00" stroke-width="2"/>
+  <text x="820" y="405" fill="url(#metalGradient)" font-size="24" font-weight="bold">&lt;</text>
+  <text x="855" y="405" fill="url(#metalGradient)" font-size="24" font-weight="bold">&gt;</text>
+  <text x="895" y="375" class="text-sm">Layer 3: Script Tags</text>
+  <text x="895" y="390" class="text-muted">&lt; &gt; brackets</text>
+  <text x="895" y="405" fill="#8b5cf6" font-size="10">STATIC (on top)</text>
 
   <!-- Composition result -->
-  <rect x="800" y="395" width="310" height="40" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6"/>
-  <text x="955" y="420" text-anchor="middle" fill="#8b5cf6" font-size="11">Script + Hammer = ScriptHammer!</text>
+  <rect x="800" y="445" width="310" height="40" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6"/>
+  <text x="955" y="470" text-anchor="middle" fill="#8b5cf6" font-size="11">Script + Hammer = ScriptHammer!</text>
 
   <!-- ========================================== -->
   <!-- Animation States -->

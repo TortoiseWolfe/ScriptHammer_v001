@@ -12,6 +12,14 @@
       <stop offset="0%" style="stop-color:#8b5cf6" stop-opacity="0.2"/>
       <stop offset="100%" style="stop-color:#d946ef" stop-opacity="0.1"/>
     </linearGradient>
+    <!-- Brand identity gradient (bronze/gold steampunk) -->
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFDF00"/>
+      <stop offset="30%" style="stop-color:#CD853F"/>
+      <stop offset="50%" style="stop-color:#8B4513"/>
+      <stop offset="70%" style="stop-color:#CD853F"/>
+      <stop offset="100%" style="stop-color:#FFDF00"/>
+    </linearGradient>
     <style>
       .heading { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 14px; font-weight: bold; }
       .text-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 10px; }
@@ -45,8 +53,12 @@
   <!-- Navigation bar -->
   <rect x="50" y="80" width="700" height="55" rx="8" fill="#0f172a"/>
 
-  <!-- Logo -->
-  <circle cx="90" cy="108" r="18" fill="url(#accentGrad)"/>
+  <!-- Logo (simplified gear + script tags) -->
+  <g transform="translate(90, 108)">
+    <circle r="16" fill="none" stroke="url(#metalGradient)" stroke-width="3"/>
+    <path d="M-6,-8 L-10,0 L-6,8" stroke="#FFDF00" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M6,-8 L10,0 L6,8" stroke="#FFDF00" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
   <text x="120" y="113" class="heading" font-size="16">ScriptHammer</text>
 
   <!-- Nav links (public) -->
