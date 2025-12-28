@@ -86,7 +86,7 @@
   <!-- Typing indicator -->
   <rect x="120" y="530" width="100" height="35" rx="12" fill="#334155"/>
   <circle cx="145" cy="548" r="5" fill="#64748b">
-    <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
   </circle>
   <circle cx="165" cy="548" r="5" fill="#64748b">
     <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" begin="0.2s" repeatCount="indefinite"/>
@@ -118,7 +118,7 @@
   <rect x="670" y="100" width="120" height="30" rx="6" fill="#8b5cf6" opacity="0.5"/>
   <text x="685" y="120" fill="white" class="text-sm">Sending...</text>
   <circle cx="775" cy="115" r="6" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="12,6">
-    <animateTransform attributeName="transform" type="rotate" from="0 775 115" to="360 775 115" dur="1s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" from="0 775 115" to="360 775 115" dur="2s" repeatCount="indefinite"/>
   </circle>
   <text x="800" y="120" class="annotation">FR-041: Queued</text>
 

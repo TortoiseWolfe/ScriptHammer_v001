@@ -105,7 +105,7 @@
   <!-- Processing states -->
   <rect x="770" y="100" width="260" height="70" rx="6" fill="#0f172a"/>
   <circle cx="810" cy="135" r="12" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="20,10">
-    <animateTransform attributeName="transform" type="rotate" from="0 810 135" to="360 810 135" dur="1s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" from="0 810 135" to="360 810 135" dur="2s" repeatCount="indefinite"/>
   </circle>
   <text x="835" y="130" class="text-md">Processing image...</text>
   <text x="835" y="148" class="text-muted">Resizing to 800x800 WebP</text>
