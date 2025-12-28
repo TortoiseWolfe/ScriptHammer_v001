@@ -45,6 +45,18 @@
       <stop offset="50%" style="stop-color:#7A7A7A"/>
       <stop offset="100%" style="stop-color:#4A4A4A"/>
     </linearGradient>
+    <!-- Silver gradient for text (stands out from bronze gear) -->
+    <linearGradient id="silverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8E8E8"/>
+      <stop offset="15%" style="stop-color:#D4D4D4"/>
+      <stop offset="30%" style="stop-color:#C0C0C0"/>
+      <stop offset="45%" style="stop-color:#A8A8A8"/>
+      <stop offset="50%" style="stop-color:#909090"/>
+      <stop offset="55%" style="stop-color:#A8A8A8"/>
+      <stop offset="70%" style="stop-color:#C0C0C0"/>
+      <stop offset="85%" style="stop-color:#D4D4D4"/>
+      <stop offset="100%" style="stop-color:#E8E8E8"/>
+    </linearGradient>
     <filter id="metalShadow">
       <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
       <feOffset dx="2" dy="2" result="offsetblur"/>
@@ -128,10 +140,59 @@
       <!-- Inner highlight -->
       <circle cx="0" cy="0" r="162" fill="none" stroke="url(#metalGradient)" stroke-width="0.5" opacity="0.6"/>
 
+
+      <!-- Rivets - positioned between gear teeth -->
+      <g>
+        <g transform="rotate(9)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(27)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(45)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(63)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(81)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(99)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(117)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(135)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(153)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(171)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(189)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(207)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(225)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(243)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(261)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(279)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(297)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(315)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(333)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+        <g transform="rotate(351)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
+      </g>
+    </g>
+
+    <!-- LAYER 2: Printing Mallet (MIDDLE - STATIC, offset down-right) -->
+    <g transform="translate(-60, 45) rotate(42) scale(0.75)" filter="url(#metalShadow)">
+      <!-- Mallet Head (cylindrical) -->
+      <ellipse cx="0" cy="-120" rx="70" ry="20" fill="url(#oakGradient)" stroke="#5B4637" stroke-width="1.5"/>
+      <rect x="-70" y="-120" width="140" height="85" fill="url(#oakGradient)" stroke="#5B4637" stroke-width="1.5"/>
+      <ellipse cx="0" cy="-35" rx="70" ry="20" fill="#6B5637" stroke="#5B4637" stroke-width="1.5"/>
+      <!-- Iron reinforcement bands -->
+      <rect x="-75" y="-110" width="150" height="8" fill="url(#ironGradient)" stroke="#3A3A3A" stroke-width="0.5"/>
+      <rect x="-75" y="-53" width="150" height="8" fill="url(#ironGradient)" stroke="#3A3A3A" stroke-width="0.5"/>
+      <!-- Handle -->
+      <rect x="-10" y="-35" width="20" height="25" fill="#6B5637" stroke="#5B4637" stroke-width="1"/>
+      <path d="M-8,-10 L-9,140 L9,140 L8,-10 Z" fill="url(#oakGradient)" stroke="#5B4637" stroke-width="1.5"/>
+    </g>
+
+    <!-- LAYER 2.5: Rotating Text (IN FRONT of mallet) -->
+    <g>
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0"
+        to="360"
+        dur="20s"
+        repeatCount="indefinite"/>
       <!-- Curved "ScriptHammer.com" text (vector paths from production, rotates with gear) -->
       <g transform="scale(0.36) translate(-600, -600)">
         <g transform="translate(0.000000,1200.000000) scale(0.100000,-0.100000)"
-           fill="url(#metalGradient)" stroke="none" filter="url(#metalShadow)">
+           fill="url(#silverGradient)" stroke="none" filter="url(#metalShadow)">
           <path d="M5150 10288 c-124 -27 -149 -38 -166 -70 -12 -24 -14 -36 -5 -54 9
 -20 18 -24 56 -24 l45 0 0 -85 c0 -79 -2 -86 -22 -94 -51 -21 -229 -63 -236
 -56 -4 3 -9 43 -10 88 l-4 82 36 13 c46 17 73 64 57 98 -14 32 -51 31 -160 -2
@@ -356,44 +417,6 @@ c76 -41 141 -79 143 -85 11 -33 -132 -42 -200 -12 -71 30 -136 123 -113 161
 227 110 4 1 18 -3 32 -9z"/>
         </g>
       </g>
-
-      <!-- Rivets - positioned between gear teeth -->
-      <g>
-        <g transform="rotate(9)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(27)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(45)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(63)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(81)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(99)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(117)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(135)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(153)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(171)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(189)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(207)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(225)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(243)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(261)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(279)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(297)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(315)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(333)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-        <g transform="rotate(351)"><circle cx="0" cy="-171" r="2.5" fill="url(#darkMetalGradient)"/><circle cx="0" cy="-171" r="1" fill="url(#metalGradient)"/></g>
-      </g>
-    </g>
-
-    <!-- LAYER 2: Printing Mallet (MIDDLE - STATIC, offset down-right) -->
-    <g transform="translate(-60, 45) rotate(42) scale(0.75)" filter="url(#metalShadow)">
-      <!-- Mallet Head (cylindrical) -->
-      <ellipse cx="0" cy="-120" rx="70" ry="20" fill="url(#oakGradient)" stroke="#5B4637" stroke-width="1.5"/>
-      <rect x="-70" y="-120" width="140" height="85" fill="url(#oakGradient)" stroke="#5B4637" stroke-width="1.5"/>
-      <ellipse cx="0" cy="-35" rx="70" ry="20" fill="#6B5637" stroke="#5B4637" stroke-width="1.5"/>
-      <!-- Iron reinforcement bands -->
-      <rect x="-75" y="-110" width="150" height="8" fill="url(#ironGradient)" stroke="#3A3A3A" stroke-width="0.5"/>
-      <rect x="-75" y="-53" width="150" height="8" fill="url(#ironGradient)" stroke="#3A3A3A" stroke-width="0.5"/>
-      <!-- Handle -->
-      <rect x="-10" y="-35" width="20" height="25" fill="#6B5637" stroke="#5B4637" stroke-width="1"/>
-      <path d="M-8,-10 L-9,140 L9,140 L8,-10 Z" fill="url(#oakGradient)" stroke="#5B4637" stroke-width="1.5"/>
     </g>
 
     <!-- LAYER 3: Script Tags < > (FRONT - STATIC, centered) -->
