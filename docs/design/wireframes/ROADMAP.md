@@ -19,6 +19,11 @@ This document tracks the wireframe generation progress following the user's jour
 
 ## Section Details
 
+### 01 - Public Landing (specs: 010, 011) ✅
+- [x] landing-hero.svg - Hero section, value proposition, CTAs
+- [x] features.svg - Feature grid with icons
+- [x] public-blog.svg - Blog listing for visitors
+
 ### 05 - Blog & Content (specs: 050, 051, 052) ✅
 - [x] blog-editor.svg - Rich text editor, markdown support
 - [x] blog-post-view.svg - Single post with comments
@@ -65,6 +70,7 @@ Specs are numbered to match user journey order:
 | Range | Category | Examples |
 |-------|----------|----------|
 | 00X | Infrastructure | methodology, component-structure, testing, mobile-first, security |
+| 01X | Public Landing | public-landing, public-blog-listing |
 | 02X | Authentication | user-authentication, signup-e2e-tests |
 | 03X | Profile | account-settings |
 | 04X | Messaging | user-messaging-system, unified-messaging-sidebar |
