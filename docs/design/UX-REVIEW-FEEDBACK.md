@@ -226,4 +226,113 @@ The wireframe collection demonstrates strong foundational UX work with consisten
 
 ---
 
+## Element Overlap Analysis
+
+**Reviewed:** December 2024
+**Method:** Visual inspection via Playwright browser automation
+
+This section documents potential element overlaps identified through visual inspection of wireframes at various zoom levels.
+
+### Overlap Issue 1: Toolbar Button Spacing (Blog Editor)
+**Location:** `05-blog-content/blog-editor.svg`
+**Elements:** Formatting toolbar buttons (B, I, H1, H2, </>, link, image icons)
+**Coordinates:** Buttons positioned at ~25px intervals starting at x=210
+**Problem:** Toolbar buttons are tightly packed with minimal spacing between them
+**Impact:** On mobile devices, touch targets may be too close together, causing mis-taps
+**Recommendation:** Increase button spacing to 32px minimum or group related buttons with visual separators
+
+### Overlap Issue 2: Utility Icon Groups (Multiple Wireframes)
+**Location:** `04-user-messaging/chat-window.svg`, `03-user-profile/account-settings.svg`
+**Elements:** Header utility icons (download, settings, visibility, document)
+**Coordinates:** Icons grouped at 20px intervals via `transform="translate(...)"`
+**Problem:** Four icons packed into ~80px horizontal space
+**Impact:** Difficult to tap individual icons on mobile; visual clutter on desktop
+**Recommendation:**
+- Increase icon spacing to 28-32px
+- Consider moving less-used actions to overflow menu (⋮)
+
+### Overlap Issue 3: Pricing Toggle Badge (Pricing Plans)
+**Location:** `06-payments/pricing-plans.svg`
+**Elements:** "Yearly" text and "-20%" discount badge
+**Coordinates:** Badge at x=155 adjacent to "Yearly" text ending at ~x=150
+**Problem:** Discount badge sits very close to toggle text
+**Impact:** Text may appear cramped; badge could overlap on smaller screens
+**Recommendation:** Add 8px margin between toggle labels and badges
+
+### Overlap Issue 4: Transaction Table Actions (Billing History)
+**Location:** `06-payments/billing-history.svg`
+**Elements:** Action column with view/download/receipt buttons
+**Coordinates:** Multiple action icons within 60px column width
+**Problem:** Dense action buttons in constrained table column
+**Impact:** Difficult to select specific actions; accidental clicks likely
+**Recommendation:**
+- Use icon-only buttons with tooltips
+- Consider row-click for primary action, overflow menu for secondary
+
+### Overlap Issue 5: Map Marker Clustering (Nearby Search)
+**Location:** `09-maps/nearby-search.svg`
+**Elements:** Numbered location markers (1-5)
+**Coordinates:** Markers at translate positions (160,200), (300,180), (280,340), (120,300), (340,250)
+**Problem:** While current positions are adequately spaced, real-world data may place markers closer
+**Impact:** Overlapping markers would hide information and be impossible to select
+**Recommendation:**
+- Implement marker clustering for nearby points
+- Add "spiderfy" behavior when markers overlap
+- Show count badge when multiple locations are at same point
+
+### Overlap Issue 6: Mobile Card Swipe Indicators (Pricing Plans)
+**Location:** `06-payments/pricing-plans.svg` (mobile view)
+**Elements:** Dot indicators and "Swipe for more" text
+**Coordinates:** Dots at cx=160, 180, 200 with text at x=250
+**Problem:** Indicator dots are small (4-5px radius) and close together
+**Impact:** Current page indicator may be hard to distinguish
+**Recommendation:** Increase dot size to 8px and spacing to 16px apart
+
+### Overlap Issue 7: Message Timestamp Positioning (Chat Window)
+**Location:** `04-user-messaging/chat-window.svg`
+**Elements:** Message bubbles and timestamp text
+**Coordinates:** Timestamps positioned at message bubble edges (e.g., x=385, x=465)
+**Problem:** Timestamps positioned close to message bubble boundaries
+**Impact:** Long timestamps or localized formats may extend beyond bubble
+**Recommendation:**
+- Position timestamps with 8px padding from bubble edge
+- Consider placing timestamps below messages on mobile
+
+### Overlap Issue 8: Frontmatter Tag Badges (Blog Editor)
+**Location:** `05-blog-content/blog-editor.svg`
+**Elements:** Category and tag badges ("TypeScript", "React", "Beginner")
+**Coordinates:** Badges in frontmatter section with minimal gaps
+**Problem:** Multiple tags displayed inline with tight spacing
+**Impact:** Tags may wrap unexpectedly or overlap on narrow screens
+**Recommendation:**
+- Use flex-wrap with 8px gap
+- Limit visible tags with "+N more" overflow
+
+---
+
+## Overlap Analysis Summary
+
+| Severity | Count | Primary Concern |
+|----------|-------|-----------------|
+| High | 2 | Touch target conflicts (toolbar, utility icons) |
+| Medium | 4 | Visual cramping (badges, table actions, tags, timestamps) |
+| Low | 2 | Edge cases (map markers, swipe indicators) |
+
+### Recommended Fixes by Priority
+
+**Immediate:**
+1. Increase toolbar button spacing in blog-editor.svg
+2. Expand utility icon group spacing in chat-window.svg and account-settings.svg
+
+**Before Implementation:**
+3. Add overflow menu pattern for dense action columns
+4. Define marker clustering behavior for maps
+
+**During Implementation:**
+5. Test all tight layouts at 320px mobile width
+6. Validate touch targets with 44px minimum hit areas
+7. Add flex-wrap to tag containers
+
+---
+
 *This review is based on static SVG analysis. Recommend usability testing with real users post-implementation.*

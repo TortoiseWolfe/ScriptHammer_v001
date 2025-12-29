@@ -51,22 +51,42 @@
   <text x="135" y="80" fill="#fff" font-size="14" font-family="system-ui">Getting Started with TypeScript...</text>
 
   <!-- Status indicators -->
-  <g transform="translate(540, 60)">
+  <g transform="translate(530, 60)">
     <!-- Autosave indicator -->
-    <circle cx="10" cy="15" r="5" fill="#22c55e"/>
-    <text x="22" y="19" class="text-sm">Saved</text>
+    <circle cx="8" cy="15" r="4" fill="#22c55e"/>
+    <text x="18" y="19" class="text-sm">Saved</text>
+    <!-- Online indicator -->
+    <circle cx="58" cy="15" r="4" fill="#facc15"/>
+    <text x="68" y="19" class="text-sm">Online</text>
+  </g>
 
-    <!-- Offline indicator -->
-    <rect x="70" y="5" width="70" height="20" rx="4" fill="#334155"/>
-    <text x="85" y="19" class="text-sm" fill="#facc15">⚡ Online</text>
+  <!-- Utility Icons Group (positioned with clear spacing from status) -->
+  <g transform="translate(650, 68)">
+    <g transform="translate(0, 0)">
+      <path d="M7 2v6m0 0L4.5 5.5M7 8l2.5-2.5M3 11h8" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+    <g transform="translate(20, 0)">
+      <path d="M2 3h2m3 0h3M2 7h4m3 0h1M2 11h1m3 0h4" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="5.5" cy="3" r="1.2" fill="#94a3b8"/>
+      <circle cx="7.5" cy="7" r="1.2" fill="#94a3b8"/>
+      <circle cx="4.5" cy="11" r="1.2" fill="#94a3b8"/>
+    </g>
+    <g transform="translate(40, 0)">
+      <path d="M1 7s2-4 6-4 6 4 6 4-2 4-6 4-6-4-6-4z" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
+      <circle cx="7" cy="7" r="2" fill="#94a3b8"/>
+    </g>
+    <g transform="translate(60, 0)">
+      <rect x="2" y="1" width="10" height="12" rx="1.5" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
+      <path d="M4.5 4h5M4.5 7h5M4.5 10h3" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+    </g>
   </g>
 
   <!-- Draft/Publish buttons -->
-  <rect x="700" y="60" width="70" height="30" rx="6" fill="#334155" stroke="#475569"/>
-  <text x="720" y="80" class="text-md">Draft</text>
+  <rect x="760" y="60" width="50" height="30" rx="6" fill="#334155" stroke="#475569"/>
+  <text x="770" y="80" class="text-md">Draft</text>
 
-  <rect x="780" y="60" width="90" height="30" rx="6" fill="#8b5cf6"/>
-  <text x="800" y="80" fill="#fff" font-size="12">Publish</text>
+  <rect x="820" y="60" width="60" height="30" rx="6" fill="#8b5cf6"/>
+  <text x="835" y="80" fill="#fff" font-size="12">Publish</text>
 
   <!-- ========================================== -->
   <!-- LEFT PANEL: Editor -->

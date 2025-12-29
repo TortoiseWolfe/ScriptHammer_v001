@@ -118,10 +118,32 @@
   <text x="300" y="110" class="text-md">Features</text>
   <text x="370" y="110" fill="#8b5cf6" class="text-md">Blog</text>
   <text x="430" y="110" class="text-md">Pricing</text>
-  <rect x="620" y="90" width="50" height="28" rx="4" fill="transparent" stroke="#475569"/>
-  <text x="645" y="108" text-anchor="middle" class="text-sm">Sign In</text>
-  <rect x="680" y="90" width="55" height="28" rx="4" fill="#8b5cf6"/>
-  <text x="707" y="108" text-anchor="middle" fill="white" class="text-sm">Sign Up</text>
+
+  <!-- Utility Icons Group -->
+  <g transform="translate(540, 97)">
+    <g transform="translate(0, 0)">
+      <path d="M7 2v6m0 0L4.5 5.5M7 8l2.5-2.5M3 11h8" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+    <g transform="translate(20, 0)">
+      <path d="M2 3h2m3 0h3M2 7h4m3 0h1M2 11h1m3 0h4" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="5.5" cy="3" r="1.2" fill="#94a3b8"/>
+      <circle cx="7.5" cy="7" r="1.2" fill="#94a3b8"/>
+      <circle cx="4.5" cy="11" r="1.2" fill="#94a3b8"/>
+    </g>
+    <g transform="translate(40, 0)">
+      <path d="M1 7s2-4 6-4 6 4 6 4-2 4-6 4-6-4-6-4z" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
+      <circle cx="7" cy="7" r="2" fill="#94a3b8"/>
+    </g>
+    <g transform="translate(60, 0)">
+      <rect x="2" y="1" width="10" height="12" rx="1.5" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
+      <path d="M4.5 4h5M4.5 7h5M4.5 10h3" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <rect x="640" y="90" width="50" height="28" rx="4" fill="transparent" stroke="#475569"/>
+  <text x="665" y="108" text-anchor="middle" class="text-sm">Sign In</text>
+  <rect x="700" y="90" width="55" height="28" rx="4" fill="#8b5cf6"/>
+  <text x="727" y="108" text-anchor="middle" fill="white" class="text-sm">Sign Up</text>
 
   <!-- Blog header -->
   <text x="400" y="165" text-anchor="middle" fill="white" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">Blog</text>
