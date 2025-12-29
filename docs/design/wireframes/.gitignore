@@ -5,6 +5,9 @@ node_modules/
 test-results/
 playwright-report/
 
+# Config with secrets (use config.example.js as template)
+config.js
+
 # OS files
 .DS_Store
 Thumbs.db

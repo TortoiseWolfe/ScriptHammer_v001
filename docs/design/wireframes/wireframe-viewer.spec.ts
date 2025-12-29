@@ -1,24 +1,45 @@
 import { test, expect } from '@playwright/test';
 import * as path from 'path';
 
+// Synced with index.html wireframes array - keep in sync!
 const wireframes = [
-  { path: '00-app-shell/desktop-layout.svg', title: 'Desktop Layout' },
-  { path: '00-app-shell/mobile-layout.svg', title: 'Mobile Layout' },
-  { path: '01-company-tracking/list-view.svg', title: 'List View' },
-  { path: '01-company-tracking/add-company.svg', title: 'Add Company' },
-  { path: '01-company-tracking/detail-panel.svg', title: 'Detail Panel' },
-  { path: '02-home-location/onboarding-prompt.svg', title: 'Onboarding Prompt' },
-  { path: '02-home-location/settings-update.svg', title: 'Settings Update' },
-  { path: '03-shared-registry/browse-filter.svg', title: 'Browse Filter' },
-  { path: '03-shared-registry/contribute-flow.svg', title: 'Contribute Flow' },
-  { path: '03-shared-registry/duplicate-warning.svg', title: 'Duplicate Warning' },
-  { path: '04-route-planning/route-list.svg', title: 'Route List' },
-  { path: '04-route-planning/create-route.svg', title: 'Create Route' },
-  { path: '04-route-planning/directions-view.svg', title: 'Directions View' },
-  { path: '05-employer-features/dashboard.svg', title: 'Dashboard' },
-  { path: '05-employer-features/claim-company.svg', title: 'Claim Company' },
-  { path: '05-employer-features/post-job.svg', title: 'Post Job' },
-  { path: '06-components/component-library.svg', title: 'Component Library' },
+  { path: '00-brand-identity/animated-logo.svg', title: 'Animated Logo' },
+  { path: '01-public-landing/landing-hero.svg', title: 'Landing Hero' },
+  { path: '01-public-landing/landing-features.svg', title: 'Features' },
+  { path: '01-public-landing/public-blog.svg', title: 'Public Blog' },
+  { path: '02-user-authentication/sign-in.svg', title: 'Sign In' },
+  { path: '02-user-authentication/sign-up.svg', title: 'Sign Up' },
+  { path: '02-user-authentication/email-verification.svg', title: 'Email Verification' },
+  { path: '02-user-authentication/password-reset.svg', title: 'Password Reset' },
+  { path: '03-user-profile/account-settings.svg', title: 'Account Settings' },
+  { path: '03-user-profile/avatar-upload.svg', title: 'Avatar Upload' },
+  { path: '03-user-profile/avatar-states.svg', title: 'Avatar States' },
+  { path: '04-user-messaging/conversation-list.svg', title: 'Conversation List' },
+  { path: '04-user-messaging/chat-window.svg', title: 'Chat Window' },
+  { path: '04-user-messaging/connection-management.svg', title: 'Connections' },
+  { path: '04-user-messaging/message-actions.svg', title: 'Message Actions' },
+  { path: '05-blog-content/blog-editor.svg', title: 'Blog Editor' },
+  { path: '05-blog-content/blog-post-view.svg', title: 'Blog Post View' },
+  { path: '05-blog-content/content-dashboard.svg', title: 'Content Dashboard' },
+  { path: '06-payments/pricing-plans.svg', title: 'Pricing Plans' },
+  { path: '06-payments/checkout-flow.svg', title: 'Checkout Flow' },
+  { path: '06-payments/billing-history.svg', title: 'Billing History' },
+  { path: '07-pwa-offline/offline-mode.svg', title: 'Offline Mode' },
+  { path: '07-pwa-offline/sync-status.svg', title: 'Sync Status' },
+  { path: '07-pwa-offline/install-prompt.svg', title: 'Install Prompt' },
+  { path: '08-calendar/calendar-view.svg', title: 'Calendar View' },
+  { path: '08-calendar/event-create.svg', title: 'Event Booking' },
+  { path: '08-calendar/event-notifications.svg', title: 'Event Notifications' },
+  { path: '09-maps/location-picker.svg', title: 'Location Picker' },
+  { path: '09-maps/nearby-search.svg', title: 'Nearby Search' },
+  { path: '09-maps/directions.svg', title: 'Directions' },
+  { path: '10-accessibility/wcag-compliance.svg', title: 'WCAG Compliance' },
+  { path: '10-accessibility/colorblind-mode.svg', title: 'Colorblind Mode' },
+  { path: '10-accessibility/font-switcher.svg', title: 'Font Switcher' },
+  { path: '11-analytics-privacy/cookie-consent.svg', title: 'Cookie Consent' },
+  { path: '11-analytics-privacy/google-analytics.svg', title: 'Google Analytics' },
+  { path: '12-integrations/web3forms.svg', title: 'Web3Forms' },
+  { path: '12-integrations/emailjs.svg', title: 'EmailJS Failover' }
 ];
 
 test.describe('Wireframe Viewer', () => {
@@ -49,12 +70,12 @@ test.describe('Wireframe Viewer', () => {
   });
 
   test('displays correct initial state', async ({ page }) => {
-    // Check title
-    await expect(page.locator('#current-info .title')).toHaveText('Desktop Layout');
-    await expect(page.locator('#current-info .counter')).toHaveText('1 / 17');
+    // Check title - index.html starts at index 1 (Landing Hero)
+    await expect(page.locator('#current-info .title')).toHaveText('Landing Hero');
+    await expect(page.locator('#current-info .counter')).toHaveText('2 / 37');
 
-    // Previous should be disabled
-    await expect(page.locator('#prev')).toBeDisabled();
+    // Previous should be enabled (not at first wireframe)
+    await expect(page.locator('#prev')).toBeEnabled();
 
     // Next should be enabled
     await expect(page.locator('#next')).toBeEnabled();
@@ -63,55 +84,55 @@ test.describe('Wireframe Viewer', () => {
   test('next button navigates forward', async ({ page }) => {
     const nextBtn = page.locator('#next');
 
-    // Click next
+    // Click next (from Landing Hero to Features)
     await nextBtn.click();
 
-    // Should show second wireframe
-    await expect(page.locator('#current-info .title')).toHaveText('Mobile Layout');
-    await expect(page.locator('#current-info .counter')).toHaveText('2 / 17');
+    // Should show third wireframe (Features)
+    await expect(page.locator('#current-info .title')).toHaveText('Features');
+    await expect(page.locator('#current-info .counter')).toHaveText('3 / 37');
 
-    // Previous should now be enabled
+    // Previous should be enabled
     await expect(page.locator('#prev')).toBeEnabled();
   });
 
   test('previous button navigates backward', async ({ page }) => {
-    // First navigate forward
+    // Start at Landing Hero (index 1), navigate forward
     await page.locator('#next').click();
-    await expect(page.locator('#current-info .counter')).toHaveText('2 / 17');
+    await expect(page.locator('#current-info .counter')).toHaveText('3 / 37');
 
     // Then navigate back
     await page.locator('#prev').click();
-    await expect(page.locator('#current-info .counter')).toHaveText('1 / 17');
-    await expect(page.locator('#current-info .title')).toHaveText('Desktop Layout');
+    await expect(page.locator('#current-info .counter')).toHaveText('2 / 37');
+    await expect(page.locator('#current-info .title')).toHaveText('Landing Hero');
   });
 
   test('sidebar links navigate to correct wireframes', async ({ page }) => {
-    // Click a specific sidebar link
-    await page.click('a[data-svg="04-route-planning/create-route.svg"]');
+    // Click a specific sidebar link (Checkout Flow is index 20)
+    await page.click('a[data-svg="06-payments/checkout-flow.svg"]');
 
     // Should update to that wireframe
-    await expect(page.locator('#current-info .title')).toHaveText('Create Route');
-    await expect(page.locator('#current-info .counter')).toHaveText('12 / 17');
+    await expect(page.locator('#current-info .title')).toHaveText('Checkout Flow');
+    await expect(page.locator('#current-info .counter')).toHaveText('20 / 37');
 
     // Link should be active
     await expect(
-      page.locator('a[data-svg="04-route-planning/create-route.svg"]')
+      page.locator('a[data-svg="06-payments/checkout-flow.svg"]')
     ).toHaveClass(/active/);
   });
 
   test('keyboard navigation works', async ({ page }) => {
-    // Press right arrow
+    // Starts at Landing Hero (index 1), press right arrow
     await page.keyboard.press('ArrowRight');
-    await expect(page.locator('#current-info .counter')).toHaveText('2 / 17');
+    await expect(page.locator('#current-info .counter')).toHaveText('3 / 37');
 
     // Press left arrow
     await page.keyboard.press('ArrowLeft');
-    await expect(page.locator('#current-info .counter')).toHaveText('1 / 17');
+    await expect(page.locator('#current-info .counter')).toHaveText('2 / 37');
   });
 
   test('last wireframe disables next button', async ({ page }) => {
-    // Navigate to last wireframe via sidebar
-    await page.click('a[data-svg="06-components/component-library.svg"]');
+    // Navigate to last wireframe via sidebar (EmailJS Failover is last)
+    await page.click('a[data-svg="12-integrations/emailjs.svg"]');
 
     // Next should be disabled
     await expect(page.locator('#next')).toBeDisabled();
