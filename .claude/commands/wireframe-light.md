@@ -46,29 +46,82 @@ Create SVG wireframes following the light theme patterns.
 
 **File location**: `docs/design/wireframes/[feature-folder]/`
 
-**Light Theme SVG Structure**:
+**Side-by-Side Layout Template** (Desktop left, Mobile right):
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
   <defs>
     <style>
-      .bg { fill: #f0f4f8; }
-      .fill-white { fill: #ffffff; stroke: #374151; stroke-width: 1; }
-      .fill-dark { fill: #1f2937; }
-      .annotation { fill: #8b5cf6; font-family: monospace; font-size: 10px; }
-      .annotation-box { fill: #ffffff; stroke: #8b5cf6; stroke-width: 2; }
+      /* Typography - use these classes, not inline sizes */
+      .heading-lg { fill: #1f2937; font-family: system-ui, sans-serif; font-size: 20px; font-weight: bold; }
       .heading { fill: #1f2937; font-family: system-ui, sans-serif; font-size: 14px; font-weight: bold; }
-      .text-sm { fill: #6b7280; font-family: system-ui, sans-serif; font-size: 10px; }
       .text-md { fill: #374151; font-family: system-ui, sans-serif; font-size: 12px; }
-      .primary { fill: #8b5cf6; }
+      .text-sm { fill: #6b7280; font-family: system-ui, sans-serif; font-size: 10px; }
+      .text-muted { fill: #9ca3af; font-family: system-ui, sans-serif; font-size: 10px; }
+      .annotation { fill: #8b5cf6; font-family: monospace; font-size: 10px; }
+      /* Layout labels */
+      .label-desktop { fill: #8b5cf6; font-family: monospace; font-size: 11px; font-weight: bold; }
+      .label-mobile { fill: #d946ef; font-family: monospace; font-size: 11px; font-weight: bold; }
+      /* Panels */
+      .panel { fill: #ffffff; stroke: #e5e7eb; stroke-width: 1; }
+      .panel-dark { fill: #f3f4f6; stroke: #d1d5db; stroke-width: 1; }
     </style>
   </defs>
+
   <!-- Background -->
-  <rect class="bg" width="1200" height="800"/>
+  <rect width="1200" height="800" fill="#f0f4f8"/>
+
   <!-- Title -->
-  <text x="600" y="25" text-anchor="middle" class="annotation" font-size="14" font-weight="bold">WIREFRAME TITLE</text>
-  <!-- Content here -->
+  <text x="600" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="1">WIREFRAME TITLE</text>
+
+  <!-- DESKTOP SECTION (left) -->
+  <text x="40" y="52" class="label-desktop">DESKTOP</text>
+  <g id="desktop-view">
+    <!-- Desktop area: x=40, y=60, width=700, height=680 -->
+    <!-- 3-column layout: sidebar 160px | main 340px | detail 180px (10px gaps) -->
+    <!-- Header: x=40, y=60, width=700, height=50 -->
+    <!-- Sidebar: x=40, y=120, width=160 -->
+    <!-- Main: x=210, y=120, width=340 -->
+    <!-- Detail: x=560, y=120, width=180 -->
+  </g>
+
+  <!-- MOBILE SECTION (right) -->
+  <text x="780" y="52" class="label-mobile">MOBILE</text>
+  <g id="mobile-view" transform="translate(780, 60)">
+    <!-- Phone frame: 360x700, rx=24 -->
+    <rect x="0" y="0" width="360" height="700" rx="24" fill="#e5e7eb" stroke="#d1d5db" stroke-width="2"/>
+    <!-- Screen area: x=10, y=10, width=340, height=680, rx=16 -->
+    <rect x="10" y="10" width="340" height="680" rx="16" fill="#ffffff"/>
+    <!-- Status bar -->
+    <rect x="10" y="10" width="340" height="28" rx="16" fill="#f3f4f6"/>
+    <text x="30" y="28" class="text-sm">9:41</text>
+    <!-- Mobile content starts at y=48 within this group -->
+  </g>
 </svg>
 ```
+
+**Layout Dimensions**:
+| Section | Position | Size | Notes |
+|---------|----------|------|-------|
+| Desktop area | x=40, y=60 | 700×680 | 3-column layout |
+| - Sidebar | x=40 | 160px wide | Navigation |
+| - Main | x=210 | 340px wide | Primary content |
+| - Detail | x=560 | 180px wide | Item details |
+| - Gaps | | 10px | Between columns |
+| Mobile area | x=780, y=60 | 360×700 | Phone frame |
+| - Content | x=790, y=70 | 340×660 | 10px padding |
+
+**Component Sizing Standards** (use consistently):
+| Component | Desktop | Mobile | rx |
+|-----------|---------|--------|-----|
+| Primary button | 100×36 | 80×32 | 6 |
+| Icon button | 40×40 | 36×36 | 6 |
+| FAB | r=28 | r=24 | circle |
+| Text input | height=36 | height=32 | 6 |
+| Card | - | - | 8 |
+| List item | - | - | 6 |
+| Badge (pill) | height=22 | height=20 | 11 |
+| Avatar large | r=24 | r=20 | circle |
+| Avatar small | r=16 | r=14 | circle |
 
 **Light Theme Color Palette**:
 - Background: `#f0f4f8`
