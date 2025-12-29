@@ -24,11 +24,14 @@ Ask the user which spec to use if multiple exist, or use the only one if there's
 
 ### 2. Read the Spec
 
-Read the spec file to understand:
+**Use the Read tool** to read the full spec file. Extract and note:
 - Feature name and purpose
 - User stories and acceptance criteria
 - UI requirements and interactions
 - Any mentioned screens, forms, lists, or components
+- Error states or edge cases mentioned
+
+This is critical - wireframes must accurately reflect the spec requirements.
 
 ### 3. Plan the Wireframes
 
@@ -151,7 +154,7 @@ Create SVG wireframes following the dark theme patterns from the component libra
 **Design Guidelines**:
 - Include annotation boxes to explain UI elements
 - Show realistic placeholder data (not "Lorem ipsum")
-- Follow patterns from `docs/design/wireframes/06-components/component-library.svg`
+- Use the sizing standards above for consistent component dimensions
 
 ### 5. Update the Wireframe Viewer
 
