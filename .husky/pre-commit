@@ -2,16 +2,20 @@
 echo "🔐 Scanning staged files for secrets..."
 
 if [ -d "/app" ] && [ "$PWD" = "/app" ]; then
+  # Running inside container
   gitleaks protect --staged --config .gitleaks.toml --verbose
 elif command -v docker >/dev/null 2>&1 && docker compose ps 2>/dev/null | grep -q scripthammer; then
+  # Use running scripthammer service
   docker compose exec -T scripthammer gitleaks protect --staged --config .gitleaks.toml --verbose
+elif command -v docker >/dev/null 2>&1; then
+  # Use one-off docker run with official gitleaks image
+  docker run --rm -v "$(pwd):/repo" -w /repo zricethezav/gitleaks:latest protect --staged --config .gitleaks.toml --verbose
+elif command -v gitleaks >/dev/null 2>&1; then
+  # Fallback to local gitleaks
+  gitleaks protect --staged --config .gitleaks.toml --verbose
 else
-  if command -v gitleaks >/dev/null 2>&1; then
-    gitleaks protect --staged --config .gitleaks.toml --verbose
-  else
-    echo "⚠️  gitleaks not found, skipping secret scan"
-    exit 0
-  fi
+  echo "⚠️  gitleaks not found and docker not available, skipping secret scan"
+  exit 0
 fi
 
 GITLEAKS_EXIT=$?
