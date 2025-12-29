@@ -9,199 +9,187 @@
       <stop offset="100%" style="stop-color:#d946ef"/>
     </linearGradient>
     <style>
+      .page-title { fill: #64748b; font-family: system-ui, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 1px; }
+      .section-label { fill: #8b5cf6; font-family: monospace; font-size: 11px; }
       .heading { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 14px; font-weight: bold; }
-      .text-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 10px; }
+      .heading-lg { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 18px; font-weight: bold; }
       .text-md { fill: #cbd5e1; font-family: system-ui, sans-serif; font-size: 12px; }
+      .text-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 10px; }
       .text-muted { fill: #64748b; font-family: system-ui, sans-serif; font-size: 10px; }
-      .annotation { fill: #8b5cf6; font-family: monospace; font-size: 10px; }
+      .annotation { fill: #8b5cf6; font-family: monospace; font-size: 9px; }
     </style>
   </defs>
 
   <!-- Background -->
   <rect width="1200" height="800" fill="url(#bgGrad)"/>
-  <g opacity="0.05">
-    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="15" cy="15" r="1" fill="#fff"/>
+  <g opacity="0.03">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#fff" stroke-width="0.5"/>
     </pattern>
-    <rect width="1200" height="800" fill="url(#dots)"/>
+    <rect width="1200" height="800" fill="url(#grid)"/>
   </g>
   <rect x="0" y="0" width="1200" height="3" fill="url(#accentGrad)"/>
 
-  <!-- Title -->
-  <text x="600" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#64748b" letter-spacing="1">ACCOUNT SETTINGS PAGE</text>
+  <!-- Page Title -->
+  <text x="600" y="28" text-anchor="middle" class="page-title">USER PROFILE - ACCOUNT SETTINGS</text>
 
-  <!-- ========================================== -->
-  <!-- Desktop Layout -->
-  <!-- ========================================== -->
-  <text x="400" y="60" text-anchor="middle" class="annotation" font-size="12">DESKTOP LAYOUT</text>
+  <!-- ==================== DESKTOP VIEW ==================== -->
+  <text x="405" y="48" text-anchor="middle" class="section-label">DESKTOP</text>
 
-  <!-- Desktop frame -->
-  <rect x="50" y="80" width="700" height="550" rx="8" fill="#1e293b" stroke="#475569"/>
+  <!-- Desktop Browser Frame -->
+  <rect x="30" y="55" width="750" height="520" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <rect x="30" y="55" width="750" height="32" rx="8" fill="#334155"/>
+  <circle cx="52" cy="71" r="6" fill="#ef4444" opacity="0.8"/>
+  <circle cx="72" cy="71" r="6" fill="#eab308" opacity="0.8"/>
+  <circle cx="92" cy="71" r="6" fill="#22c55e" opacity="0.8"/>
+  <rect x="120" y="63" width="400" height="16" rx="4" fill="#1e293b"/>
+  <text x="320" y="75" text-anchor="middle" class="text-muted">scripthammer.com/account/settings</text>
 
-  <!-- Header -->
-  <rect x="50" y="80" width="700" height="50" rx="8" fill="#334155"/>
-  <text x="80" y="110" fill="#8b5cf6" font-size="16">&#x2190;</text>
-  <text x="110" y="112" class="heading" font-size="16">Account Settings</text>
+  <!-- Desktop Content -->
+  <rect x="30" y="87" width="750" height="488" fill="#0f172a"/>
 
-  <!-- Utility Icons Group (positioned between title and Save Changes) -->
-  <g transform="translate(500, 98)">
-    <g transform="translate(0, 0)">
-      <path d="M7 2v6m0 0L4.5 5.5M7 8l2.5-2.5M3 11h8" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    </g>
-    <g transform="translate(20, 0)">
-      <path d="M2 3h2m3 0h3M2 7h4m3 0h1M2 11h1m3 0h4" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
-      <circle cx="5.5" cy="3" r="1.2" fill="#94a3b8"/>
-      <circle cx="7.5" cy="7" r="1.2" fill="#94a3b8"/>
-      <circle cx="4.5" cy="11" r="1.2" fill="#94a3b8"/>
-    </g>
-    <g transform="translate(40, 0)">
-      <path d="M1 7s2-4 6-4 6 4 6 4-2 4-6 4-6-4-6-4z" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
-      <circle cx="7" cy="7" r="2" fill="#94a3b8"/>
-    </g>
-    <g transform="translate(60, 0)">
-      <rect x="2" y="1" width="10" height="12" rx="1.5" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
-      <path d="M4.5 4h5M4.5 7h5M4.5 10h3" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
-    </g>
-  </g>
+  <!-- Header Bar -->
+  <rect x="30" y="87" width="750" height="50" fill="#1e293b"/>
+  <text x="60" y="117" fill="#94a3b8" font-size="14">←</text>
+  <text x="85" y="118" class="heading">Account Settings</text>
+  <rect x="680" y="100" width="80" height="28" rx="4" fill="url(#accentGrad)"/>
+  <text x="720" y="118" text-anchor="middle" fill="#fff" class="text-md">Save</text>
 
-  <!-- Save Changes button -->
-  <rect x="650" y="90" width="90" height="30" rx="6" fill="#8b5cf6"/>
-  <text x="695" y="110" text-anchor="middle" fill="white" class="text-md">Save</text>
+  <!-- Sidebar Navigation -->
+  <rect x="30" y="137" width="160" height="438" fill="#1e293b"/>
 
-  <!-- Sidebar navigation -->
-  <rect x="50" y="130" width="180" height="500" fill="#0f172a"/>
+  <!-- Active: Profile -->
+  <rect x="30" y="137" width="160" height="40" fill="#8b5cf6" opacity="0.15"/>
+  <rect x="30" y="137" width="4" height="40" fill="#8b5cf6"/>
+  <text x="50" y="162" fill="#a78bfa" class="text-md">Profile</text>
 
-  <rect x="50" y="130" width="180" height="44" fill="#8b5cf6" opacity="0.15"/>
-  <rect x="50" y="130" width="4" height="44" fill="#8b5cf6"/>
-  <text x="70" y="158" fill="#a78bfa" class="text-md">Profile</text>
+  <!-- Other nav items -->
+  <text x="50" y="200" class="text-md">Security</text>
+  <text x="50" y="235" class="text-md">Notifications</text>
+  <text x="50" y="270" class="text-md">Privacy</text>
+  <text x="50" y="305" class="text-md">Connected Apps</text>
+  <text x="50" y="350" class="text-muted">Danger Zone</text>
 
-  <text x="70" y="200" class="text-md">Security</text>
-  <text x="70" y="240" class="text-md">Notifications</text>
-  <text x="70" y="280" class="text-md">Privacy</text>
-  <text x="70" y="320" class="text-md">Connected Apps</text>
-  <text x="70" y="360" class="text-muted">Danger Zone</text>
+  <!-- Main Content Area -->
+  <rect x="190" y="137" width="590" height="438" fill="#0f172a"/>
 
-  <!-- Main content area -->
-  <rect x="230" y="130" width="520" height="500" fill="#1e293b"/>
+  <!-- Profile Picture Section -->
+  <text x="220" y="170" class="heading">Profile Picture</text>
 
-  <!-- Avatar Section -->
-  <text x="260" y="170" class="heading" font-size="14">Profile Picture</text>
+  <!-- Avatar with initials -->
+  <circle cx="280" cy="235" r="45" fill="#8b5cf6"/>
+  <text x="280" y="245" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">JD</text>
 
-  <!-- Current avatar -->
-  <circle cx="310" cy="240" r="50" fill="#8b5cf6"/>
-  <text x="310" y="250" text-anchor="middle" fill="white" font-size="24" font-weight="bold">JD</text>
+  <!-- Upload Button -->
+  <rect x="350" y="200" width="130" height="36" rx="6" fill="url(#accentGrad)"/>
+  <text x="415" y="223" text-anchor="middle" fill="#fff" class="text-md">Upload Avatar</text>
 
-  <!-- Upload button -->
-  <rect x="390" y="200" width="140" height="40" rx="6" fill="#8b5cf6"/>
-  <text x="460" y="226" text-anchor="middle" fill="white" class="text-md">Upload Avatar</text>
-
-  <!-- Remove button -->
-  <rect x="390" y="250" width="140" height="36" rx="6" fill="transparent" stroke="#475569"/>
-  <text x="460" y="274" text-anchor="middle" class="text-md">Remove Avatar</text>
+  <!-- Remove Button -->
+  <rect x="350" y="245" width="130" height="32" rx="6" fill="transparent" stroke="#475569"/>
+  <text x="415" y="266" text-anchor="middle" class="text-md">Remove Avatar</text>
 
   <!-- File requirements -->
-  <text x="260" y="320" class="text-muted">Accepted: JPEG, PNG, WebP</text>
-  <text x="260" y="335" class="text-muted">Max size: 5MB | Min: 200x200px</text>
+  <text x="220" y="300" class="text-muted">Accepted: JPEG, PNG, WebP</text>
+  <text x="220" y="315" class="text-muted">Max size: 5MB | Min: 200x200px</text>
 
   <!-- Divider -->
-  <line x1="260" y1="360" x2="720" y2="360" stroke="#475569" stroke-dasharray="4"/>
+  <line x1="220" y1="335" x2="750" y2="335" stroke="#475569" stroke-dasharray="4"/>
 
   <!-- Display Name Section -->
-  <text x="260" y="395" class="heading" font-size="14">Display Name</text>
-  <rect x="260" y="410" width="300" height="44" rx="6" fill="#0f172a" stroke="#475569"/>
-  <text x="280" y="438" class="text-md">John Doe</text>
+  <text x="220" y="365" class="heading">Display Name</text>
+  <rect x="220" y="378" width="280" height="38" rx="6" fill="#1e293b" stroke="#475569"/>
+  <text x="235" y="402" class="text-md">John Doe</text>
 
   <!-- Email Section -->
-  <text x="260" y="485" class="heading" font-size="14">Email Address</text>
-  <rect x="260" y="500" width="300" height="44" rx="6" fill="#0f172a" stroke="#475569"/>
-  <text x="280" y="528" class="text-md">john.doe@example.com</text>
-  <circle cx="540" cy="522" r="8" fill="#22c55e"/>
-  <text x="555" y="526" fill="#22c55e" class="text-sm">Verified</text>
+  <text x="220" y="445" class="heading">Email Address</text>
+  <rect x="220" y="458" width="280" height="38" rx="6" fill="#1e293b" stroke="#475569"/>
+  <text x="235" y="482" class="text-md">john.doe@example.com</text>
+  <circle cx="485" cy="477" r="6" fill="#22c55e"/>
+  <text x="498" y="481" fill="#22c55e" class="text-sm">Verified</text>
 
-  <!-- Save button -->
-  <rect x="260" y="570" width="120" height="44" rx="6" fill="#8b5cf6"/>
-  <text x="320" y="598" text-anchor="middle" fill="white" class="text-md">Save Changes</text>
+  <!-- Save Changes Button -->
+  <rect x="220" y="515" width="120" height="38" rx="6" fill="url(#accentGrad)"/>
+  <text x="280" y="539" text-anchor="middle" fill="#fff" class="text-md">Save Changes</text>
 
-  <!-- ========================================== -->
-  <!-- Mobile Layout -->
-  <!-- ========================================== -->
-  <text x="950" y="60" text-anchor="middle" class="annotation" font-size="12">MOBILE LAYOUT</text>
+  <!-- ==================== MOBILE VIEW ==================== -->
+  <text x="917" y="48" text-anchor="middle" class="section-label">MOBILE</text>
 
-  <!-- Phone frame -->
-  <rect x="800" y="80" width="320" height="600" rx="20" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+  <!-- Phone Frame -->
+  <rect x="820" y="55" width="195" height="422" rx="24" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+  <rect x="875" y="55" width="85" height="20" rx="10" fill="#0f172a"/>
+  <rect x="826" y="61" width="183" height="410" rx="20" fill="#1e293b"/>
 
-  <!-- Status bar -->
-  <rect x="800" y="80" width="320" height="30" rx="20" fill="#0f172a"/>
-  <text x="960" y="100" text-anchor="middle" class="text-sm">9:41</text>
+  <!-- Status Bar -->
+  <text x="846" y="80" class="text-muted" font-size="9">9:41</text>
+  <g transform="translate(970, 72)">
+    <rect x="0" y="0" width="18" height="9" rx="2" stroke="#64748b" stroke-width="1" fill="none"/>
+    <rect x="2" y="2" width="12" height="5" rx="1" fill="#64748b"/>
+  </g>
 
-  <!-- Header -->
-  <rect x="800" y="110" width="320" height="50" fill="#334155"/>
-  <text x="830" y="140" fill="#8b5cf6" font-size="16">&#x2190;</text>
-  <text x="960" y="142" text-anchor="middle" class="heading">Account Settings</text>
+  <!-- Mobile Header -->
+  <rect x="826" y="90" width="183" height="44" fill="#0f172a"/>
+  <text x="846" y="117" fill="#94a3b8" font-size="14">←</text>
+  <text x="917" y="117" text-anchor="middle" class="heading">Account</text>
 
-  <!-- Avatar section (mobile) -->
-  <rect x="815" y="175" width="290" height="140" rx="8" fill="#0f172a"/>
+  <!-- Mobile Avatar Section -->
+  <rect x="836" y="140" width="163" height="100" rx="6" fill="#0f172a"/>
+  <circle cx="917" cy="180" r="30" fill="#8b5cf6"/>
+  <text x="917" y="188" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">JD</text>
+  <rect x="867" y="218" width="100" height="28" rx="4" fill="url(#accentGrad)"/>
+  <text x="917" y="237" text-anchor="middle" fill="#fff" class="text-sm">Upload Avatar</text>
 
-  <!-- Centered avatar -->
-  <circle cx="960" cy="225" r="40" fill="#8b5cf6"/>
-  <text x="960" y="235" text-anchor="middle" fill="white" font-size="20" font-weight="bold">JD</text>
+  <!-- Mobile Settings List -->
+  <rect x="836" y="250" width="163" height="40" fill="#0f172a"/>
+  <text x="850" y="275" class="text-sm">Display Name</text>
+  <text x="987" y="275" text-anchor="end" class="text-muted" font-size="9">John Doe ›</text>
 
-  <!-- Upload button (mobile) -->
-  <rect x="870" y="280" width="180" height="44" rx="6" fill="#8b5cf6"/>
-  <text x="960" y="308" text-anchor="middle" fill="white" class="text-md">Upload Avatar</text>
+  <rect x="836" y="295" width="163" height="40" fill="#0f172a"/>
+  <text x="850" y="320" class="text-sm">Email</text>
+  <text x="987" y="320" text-anchor="end" class="text-muted" font-size="9">john.doe@... ›</text>
 
-  <!-- Settings list -->
-  <rect x="815" y="330" width="290" height="50" fill="#0f172a"/>
-  <text x="835" y="360" class="text-md">Display Name</text>
-  <text x="1085" y="360" text-anchor="end" class="text-muted">John Doe &#x203A;</text>
+  <rect x="836" y="340" width="163" height="40" fill="#0f172a"/>
+  <text x="850" y="365" class="text-sm">Security</text>
+  <text x="987" y="365" text-anchor="end" class="text-muted" font-size="9">›</text>
 
-  <rect x="815" y="385" width="290" height="50" fill="#0f172a"/>
-  <text x="835" y="415" class="text-md">Email</text>
-  <text x="1085" y="415" text-anchor="end" class="text-muted">john.doe@... &#x203A;</text>
+  <rect x="836" y="385" width="163" height="40" fill="#0f172a"/>
+  <text x="850" y="410" class="text-sm">Notifications</text>
+  <text x="987" y="410" text-anchor="end" class="text-muted" font-size="9">›</text>
 
-  <rect x="815" y="440" width="290" height="50" fill="#0f172a"/>
-  <text x="835" y="470" class="text-md">Security</text>
-  <text x="1085" y="470" text-anchor="end" class="text-muted">&#x203A;</text>
+  <!-- Remove Avatar Link -->
+  <text x="917" y="445" text-anchor="middle" fill="#ef4444" class="text-sm">Remove Avatar</text>
 
-  <rect x="815" y="495" width="290" height="50" fill="#0f172a"/>
-  <text x="835" y="525" class="text-md">Notifications</text>
-  <text x="1085" y="525" text-anchor="end" class="text-muted">&#x203A;</text>
+  <!-- Phone Home Indicator -->
+  <rect x="880" y="458" width="75" height="4" rx="2" fill="#475569"/>
 
-  <rect x="815" y="550" width="290" height="50" fill="#0f172a"/>
-  <text x="835" y="580" class="text-md">Privacy</text>
-  <text x="1085" y="580" text-anchor="end" class="text-muted">&#x203A;</text>
+  <!-- ==================== ANNOTATIONS ==================== -->
+  <text x="30" y="590" class="section-label">SPECIFICATIONS</text>
 
-  <!-- Remove avatar link -->
-  <text x="960" y="625" text-anchor="middle" fill="#ef4444" class="text-sm">Remove Avatar</text>
+  <rect x="30" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="42" y="618" class="annotation">FR-001: Upload Avatar button on page</text>
+  <text x="42" y="632" class="annotation">FR-002: Accept JPEG, PNG, WebP formats</text>
+  <text x="42" y="646" class="annotation">FR-003: Reject files larger than 5MB</text>
+  <text x="42" y="660" class="annotation">FR-013: Remove/delete existing avatar</text>
+  <text x="42" y="674" class="annotation">FR-014: Default avatar (initials) shown</text>
 
-  <!-- Bottom nav -->
-  <rect x="800" y="650" width="320" height="50" rx="20" fill="#0f172a"/>
-  <text x="870" y="680" text-anchor="middle" class="text-muted">Home</text>
-  <text x="960" y="680" text-anchor="middle" fill="#8b5cf6" class="text-sm">Account</text>
-  <text x="1050" y="680" text-anchor="middle" class="text-muted">Messages</text>
+  <rect x="320" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="332" y="618" class="annotation">FR-005: Crop interface for positioning</text>
+  <text x="332" y="632" class="annotation">FR-006: Resize to 800x800px WebP output</text>
+  <text x="332" y="646" class="annotation">FR-010: Display avatar immediately</text>
+  <text x="332" y="660" class="annotation">FR-011: Show upload progress indicator</text>
+  <text x="332" y="674" class="annotation">FR-012: Clear error messages</text>
 
-  <!-- ========================================== -->
-  <!-- Annotations -->
-  <!-- ========================================== -->
-  <rect x="50" y="650" width="280" height="90" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <text x="60" y="670" class="annotation">FR-001: Upload Avatar button on page</text>
-  <text x="60" y="685" class="annotation">FR-013: Remove avatar option</text>
-  <text x="60" y="700" class="annotation">FR-014: Default avatar (initials) shown</text>
-  <text x="60" y="715" class="annotation">FR-015: WCAG 2.1 AA accessibility</text>
-  <text x="60" y="730" class="annotation">Constraint-3: 44px min touch targets</text>
+  <rect x="610" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="622" y="618" class="annotation">FR-007: Store in Supabase Storage</text>
+  <text x="622" y="632" class="annotation">FR-008: Generate unique filenames</text>
+  <text x="622" y="646" class="annotation">FR-009: Update profile with avatar URL</text>
+  <text x="622" y="660" class="annotation">FR-015: WCAG 2.1 AA accessibility</text>
+  <text x="622" y="674" class="annotation">FR-016: Handle failures with retry</text>
 
-  <rect x="350" y="650" width="280" height="90" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <text x="360" y="670" class="annotation">FR-002: Accept JPEG, PNG, WebP</text>
-  <text x="360" y="685" class="annotation">FR-003: Max file size 5MB</text>
-  <text x="360" y="700" class="annotation">Assumption-4: Min 200x200px input</text>
-  <text x="360" y="715" class="annotation">FR-006: Output 800x800px WebP</text>
-  <text x="360" y="730" class="annotation">FR-007: Store in Supabase Storage</text>
-
-  <rect x="650" y="650" width="200" height="90" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <text x="660" y="670" class="annotation">SC-001: Display within 5s</text>
-  <text x="660" y="685" class="annotation">SC-004: WCAG 2.1 AA compliant</text>
-  <text x="660" y="700" class="annotation">SC-005: Avatar displays</text>
-  <text x="660" y="715" class="annotation">consistently across pages</text>
-  <text x="660" y="730" class="annotation">SC-006: 90% first-attempt success</text>
+  <rect x="900" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="912" y="618" class="annotation">SC-001: Display within 5 seconds</text>
+  <text x="912" y="632" class="annotation">SC-004: WCAG 2.1 AA compliant</text>
+  <text x="912" y="646" class="annotation">SC-005: Avatar consistent across pages</text>
+  <text x="912" y="660" class="annotation">SC-006: 90% first-attempt success</text>
+  <text x="912" y="674" class="annotation">Constraint-3: 44px min touch targets</text>
 
 </svg>

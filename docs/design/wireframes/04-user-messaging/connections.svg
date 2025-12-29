@@ -1,0 +1,244 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#d946ef"/>
+    </linearGradient>
+    <style>
+      .page-title { fill: #64748b; font-family: system-ui, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 1px; }
+      .section-label { fill: #8b5cf6; font-family: monospace; font-size: 11px; }
+      .heading { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 14px; font-weight: bold; }
+      .heading-lg { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 18px; font-weight: bold; }
+      .text-md { fill: #cbd5e1; font-family: system-ui, sans-serif; font-size: 12px; }
+      .text-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 10px; }
+      .text-muted { fill: #64748b; font-family: system-ui, sans-serif; font-size: 10px; }
+      .annotation { fill: #8b5cf6; font-family: monospace; font-size: 9px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+  <g opacity="0.03">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#fff" stroke-width="0.5"/>
+    </pattern>
+    <rect width="1200" height="800" fill="url(#grid)"/>
+  </g>
+  <rect x="0" y="0" width="1200" height="3" fill="url(#accentGrad)"/>
+
+  <!-- Page Title -->
+  <text x="600" y="28" text-anchor="middle" class="page-title">USER MESSAGING - CONNECTIONS MANAGEMENT</text>
+
+  <!-- ==================== DESKTOP VIEW ==================== -->
+  <text x="405" y="48" text-anchor="middle" class="section-label">DESKTOP</text>
+
+  <!-- Desktop Browser Frame -->
+  <rect x="30" y="55" width="750" height="520" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <rect x="30" y="55" width="750" height="32" rx="8" fill="#334155"/>
+  <circle cx="52" cy="71" r="6" fill="#ef4444" opacity="0.8"/>
+  <circle cx="72" cy="71" r="6" fill="#eab308" opacity="0.8"/>
+  <circle cx="92" cy="71" r="6" fill="#22c55e" opacity="0.8"/>
+  <rect x="120" y="63" width="400" height="16" rx="4" fill="#1e293b"/>
+  <text x="320" y="75" text-anchor="middle" class="text-muted">scripthammer.com/connections</text>
+
+  <!-- Desktop Content -->
+  <rect x="30" y="87" width="750" height="488" fill="#0f172a"/>
+
+  <!-- Header -->
+  <rect x="30" y="87" width="750" height="50" fill="#1e293b"/>
+  <text x="60" y="118" class="heading-lg">Connections</text>
+
+  <!-- Tab Navigation -->
+  <rect x="200" y="97" width="80" height="30" rx="4" fill="#8b5cf6" opacity="0.15"/>
+  <text x="240" y="117" text-anchor="middle" fill="#a78bfa" class="text-md">Friends</text>
+  <text x="320" y="117" text-anchor="middle" class="text-md">Requests</text>
+  <circle cx="365" cy="112" r="8" fill="#ef4444"/>
+  <text x="365" y="116" text-anchor="middle" fill="#fff" font-size="9">2</text>
+  <text x="430" y="117" text-anchor="middle" class="text-md">Blocked</text>
+
+  <!-- Search Bar -->
+  <rect x="550" y="97" width="200" height="30" rx="6" fill="#0f172a" stroke="#475569"/>
+  <text x="570" y="117" class="text-muted">Find users...</text>
+
+  <!-- Friends List -->
+  <text x="60" y="165" class="section-label">YOUR CONNECTIONS (12)</text>
+
+  <!-- Friend 1 -->
+  <rect x="50" y="180" width="350" height="60" rx="8" fill="#1e293b"/>
+  <circle cx="90" cy="210" r="22" fill="#8b5cf6"/>
+  <text x="90" y="216" text-anchor="middle" fill="#fff" font-size="12">JD</text>
+  <text x="125" y="202" class="heading">John Doe</text>
+  <text x="125" y="218" class="text-sm">@johndoe</text>
+  <circle cx="127" cy="232" r="4" fill="#22c55e"/>
+  <text x="140" y="235" class="text-sm" fill="#22c55e">Online</text>
+  <rect x="300" y="195" width="80" height="30" rx="4" fill="url(#accentGrad)"/>
+  <text x="340" y="215" text-anchor="middle" fill="#fff" class="text-sm">Message</text>
+
+  <!-- Friend 2 -->
+  <rect x="50" y="250" width="350" height="60" rx="8" fill="#1e293b"/>
+  <circle cx="90" cy="280" r="22" fill="#0891b2"/>
+  <text x="90" y="286" text-anchor="middle" fill="#fff" font-size="12">AS</text>
+  <text x="125" y="272" class="heading">Alice Smith</text>
+  <text x="125" y="288" class="text-sm">@alicesmith</text>
+  <text x="125" y="305" class="text-muted">Last seen 2h ago</text>
+  <rect x="300" y="265" width="80" height="30" rx="4" fill="url(#accentGrad)"/>
+  <text x="340" y="285" text-anchor="middle" fill="#fff" class="text-sm">Message</text>
+
+  <!-- Friend 3 -->
+  <rect x="50" y="320" width="350" height="60" rx="8" fill="#1e293b"/>
+  <circle cx="90" cy="350" r="22" fill="#d946ef"/>
+  <text x="90" y="356" text-anchor="middle" fill="#fff" font-size="12">BJ</text>
+  <text x="125" y="342" class="heading">Bob Johnson</text>
+  <text x="125" y="358" class="text-sm">@bobjohnson</text>
+  <text x="125" y="375" class="text-muted">Last seen yesterday</text>
+  <rect x="300" y="335" width="80" height="30" rx="4" fill="url(#accentGrad)"/>
+  <text x="340" y="355" text-anchor="middle" fill="#fff" class="text-sm">Message</text>
+
+  <!-- Search Results Panel (Right Side) -->
+  <rect x="420" y="150" width="340" height="280" rx="8" fill="#1e293b" stroke="#475569"/>
+  <text x="440" y="178" class="heading">Search Results</text>
+
+  <!-- Search Result 1 -->
+  <rect x="435" y="195" width="310" height="55" rx="6" fill="#0f172a"/>
+  <circle cx="468" cy="222" r="18" fill="#22c55e"/>
+  <text x="468" y="228" text-anchor="middle" fill="#fff" font-size="10">CW</text>
+  <text x="498" y="215" class="text-md">Carol White</text>
+  <text x="498" y="232" class="text-muted">@carolwhite</text>
+  <rect x="640" y="207" width="90" height="30" rx="4" fill="url(#accentGrad)"/>
+  <text x="685" y="227" text-anchor="middle" fill="#fff" class="text-sm">Add Friend</text>
+
+  <!-- Search Result 2 - Request Sent -->
+  <rect x="435" y="260" width="310" height="55" rx="6" fill="#0f172a"/>
+  <circle cx="468" cy="287" r="18" fill="#eab308"/>
+  <text x="468" y="293" text-anchor="middle" fill="#fff" font-size="10">DM</text>
+  <text x="498" y="280" class="text-md">Dan Miller</text>
+  <text x="498" y="297" class="text-muted">@danmiller</text>
+  <rect x="640" y="272" width="90" height="30" rx="4" fill="#334155" stroke="#475569"/>
+  <text x="685" y="292" text-anchor="middle" class="text-muted">Pending</text>
+
+  <!-- Search Result 3 - Already Friends -->
+  <rect x="435" y="325" width="310" height="55" rx="6" fill="#0f172a"/>
+  <circle cx="468" cy="352" r="18" fill="#8b5cf6"/>
+  <text x="468" y="358" text-anchor="middle" fill="#fff" font-size="10">JD</text>
+  <text x="498" y="345" class="text-md">John Doe</text>
+  <text x="498" y="362" class="text-muted">@johndoe</text>
+  <rect x="640" y="337" width="90" height="30" rx="4" fill="url(#accentGrad)"/>
+  <text x="685" y="357" text-anchor="middle" fill="#fff" class="text-sm">Message</text>
+
+  <!-- Pending Requests Section -->
+  <rect x="420" y="445" width="340" height="120" rx="8" fill="#1e293b" stroke="#ef4444"/>
+  <text x="440" y="473" class="heading">Pending Requests</text>
+  <circle cx="725" cy="468" r="10" fill="#ef4444"/>
+  <text x="725" y="472" text-anchor="middle" fill="#fff" font-size="10">2</text>
+
+  <!-- Pending Request 1 -->
+  <rect x="435" y="490" width="310" height="55" rx="6" fill="#0f172a"/>
+  <circle cx="468" cy="517" r="18" fill="#ef4444"/>
+  <text x="468" y="523" text-anchor="middle" fill="#fff" font-size="10">EV</text>
+  <text x="498" y="510" class="text-md">Eve Vector</text>
+  <text x="498" y="527" class="text-muted">Wants to connect</text>
+  <rect x="600" y="502" width="60" height="28" rx="4" fill="#22c55e"/>
+  <text x="630" y="520" text-anchor="middle" fill="#fff" class="text-sm">Accept</text>
+  <rect x="668" y="502" width="60" height="28" rx="4" fill="#334155" stroke="#475569"/>
+  <text x="698" y="520" text-anchor="middle" class="text-muted">Decline</text>
+
+  <!-- ==================== MOBILE VIEW ==================== -->
+  <text x="917" y="48" text-anchor="middle" class="section-label">MOBILE</text>
+
+  <!-- Phone Frame -->
+  <rect x="820" y="55" width="195" height="422" rx="24" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+  <rect x="875" y="55" width="85" height="20" rx="10" fill="#0f172a"/>
+  <rect x="826" y="61" width="183" height="410" rx="20" fill="#1e293b"/>
+
+  <!-- Status Bar -->
+  <text x="846" y="80" class="text-muted" font-size="9">9:41</text>
+  <g transform="translate(970, 72)">
+    <rect x="0" y="0" width="18" height="9" rx="2" stroke="#64748b" stroke-width="1" fill="none"/>
+    <rect x="2" y="2" width="12" height="5" rx="1" fill="#64748b"/>
+  </g>
+
+  <!-- Mobile Header -->
+  <rect x="826" y="90" width="183" height="44" fill="#0f172a"/>
+  <text x="917" y="117" text-anchor="middle" class="heading">Connections</text>
+
+  <!-- Mobile Tabs -->
+  <rect x="840" y="140" width="50" height="24" rx="4" fill="#8b5cf6" opacity="0.15"/>
+  <text x="865" y="157" text-anchor="middle" fill="#a78bfa" font-size="9">Friends</text>
+  <text x="927" y="157" text-anchor="middle" class="text-sm">Requests</text>
+  <circle cx="955" cy="152" r="6" fill="#ef4444"/>
+  <text x="955" y="155" text-anchor="middle" fill="#fff" font-size="7">2</text>
+  <text x="990" y="157" text-anchor="middle" class="text-sm">Blocked</text>
+
+  <!-- Mobile Search -->
+  <rect x="846" y="172" width="143" height="28" rx="6" fill="#0f172a" stroke="#475569"/>
+  <text x="860" y="190" class="text-muted" font-size="9">Find users...</text>
+
+  <!-- Mobile Friend 1 -->
+  <rect x="846" y="210" width="143" height="50" rx="6" fill="#0f172a"/>
+  <circle cx="870" cy="235" r="14" fill="#8b5cf6"/>
+  <text x="870" y="240" text-anchor="middle" fill="#fff" font-size="8">JD</text>
+  <text x="895" y="228" class="text-sm">John Doe</text>
+  <circle cx="897" cy="240" r="3" fill="#22c55e"/>
+  <text x="908" y="243" class="text-muted" font-size="8">Online</text>
+  <text x="978" y="235" text-anchor="end" fill="#8b5cf6" font-size="10">→</text>
+
+  <!-- Mobile Friend 2 -->
+  <rect x="846" y="265" width="143" height="50" rx="6" fill="#0f172a"/>
+  <circle cx="870" cy="290" r="14" fill="#0891b2"/>
+  <text x="870" y="295" text-anchor="middle" fill="#fff" font-size="8">AS</text>
+  <text x="895" y="283" class="text-sm">Alice Smith</text>
+  <text x="895" y="298" class="text-muted" font-size="8">2h ago</text>
+  <text x="978" y="290" text-anchor="end" fill="#8b5cf6" font-size="10">→</text>
+
+  <!-- Mobile Friend 3 -->
+  <rect x="846" y="320" width="143" height="50" rx="6" fill="#0f172a"/>
+  <circle cx="870" cy="345" r="14" fill="#d946ef"/>
+  <text x="870" y="350" text-anchor="middle" fill="#fff" font-size="8">BJ</text>
+  <text x="895" y="338" class="text-sm">Bob Johnson</text>
+  <text x="895" y="353" class="text-muted" font-size="8">Yesterday</text>
+  <text x="978" y="345" text-anchor="end" fill="#8b5cf6" font-size="10">→</text>
+
+  <!-- Mobile Request Banner -->
+  <rect x="846" y="380" width="143" height="40" rx="6" fill="#ef4444" opacity="0.15" stroke="#ef4444"/>
+  <text x="860" y="400" fill="#f87171" class="text-sm">2 pending requests</text>
+  <text x="978" y="400" text-anchor="end" fill="#ef4444" font-size="10">→</text>
+
+  <!-- Phone Home Indicator -->
+  <rect x="880" y="458" width="75" height="4" rx="2" fill="#475569"/>
+
+  <!-- ==================== ANNOTATIONS ==================== -->
+  <text x="30" y="590" class="section-label">SPECIFICATIONS</text>
+
+  <rect x="30" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="42" y="618" class="annotation">FR-001: Search users by username/email</text>
+  <text x="42" y="632" class="annotation">FR-002: Send friend requests</text>
+  <text x="42" y="646" class="annotation">FR-003: Accept/decline/block requests</text>
+  <text x="42" y="660" class="annotation">FR-004: Prevent duplicate requests</text>
+  <text x="42" y="674" class="annotation">FR-005: Prevent self-requests</text>
+
+  <rect x="320" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="332" y="618" class="annotation">FR-006: View connections, pending, blocked</text>
+  <text x="332" y="632" class="annotation">FR-007: Remove connections (unfriend)</text>
+  <text x="332" y="646" class="annotation">FR-017: Message only connections</text>
+  <text x="332" y="660" class="annotation">FR-018: Cannot message non-connections</text>
+  <text x="332" y="674" class="annotation">NFR-011: Exact match search only</text>
+
+  <rect x="610" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="622" y="618" class="annotation">Edge: Blocked user sees read-only history</text>
+  <text x="622" y="632" class="annotation">Edge: "[User] blocked you" banner</text>
+  <text x="622" y="646" class="annotation">Edge: Message input disabled when blocked</text>
+  <text x="622" y="660" class="annotation">NFR-010: Blocked users not notified</text>
+  <text x="622" y="674" class="annotation">SC-013: Request to message &lt;30 seconds</text>
+
+  <rect x="900" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="912" y="618" class="annotation">FR-048: 44px minimum touch targets</text>
+  <text x="912" y="632" class="annotation">FR-050: Sort by last_message_at</text>
+  <text x="912" y="646" class="annotation">FR-051: Unread count badges</text>
+  <text x="912" y="660" class="annotation">NFR-020: Support 100+ connections</text>
+  <text x="912" y="674" class="annotation">A11y: Keyboard navigation support</text>
+
+</svg>

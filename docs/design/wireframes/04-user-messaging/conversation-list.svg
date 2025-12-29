@@ -9,184 +9,274 @@
       <stop offset="100%" style="stop-color:#d946ef"/>
     </linearGradient>
     <style>
+      .page-title { fill: #64748b; font-family: system-ui, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 1px; }
+      .section-label { fill: #8b5cf6; font-family: monospace; font-size: 11px; }
       .heading { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 14px; font-weight: bold; }
-      .text-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 10px; }
+      .heading-lg { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 18px; font-weight: bold; }
       .text-md { fill: #cbd5e1; font-family: system-ui, sans-serif; font-size: 12px; }
+      .text-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 10px; }
       .text-muted { fill: #64748b; font-family: system-ui, sans-serif; font-size: 10px; }
-      .annotation { fill: #8b5cf6; font-family: monospace; font-size: 10px; }
+      .annotation { fill: #8b5cf6; font-family: monospace; font-size: 9px; }
     </style>
   </defs>
 
   <!-- Background -->
   <rect width="1200" height="800" fill="url(#bgGrad)"/>
-  <g opacity="0.05">
-    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="15" cy="15" r="1" fill="#fff"/>
+  <g opacity="0.03">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#fff" stroke-width="0.5"/>
     </pattern>
-    <rect width="1200" height="800" fill="url(#dots)"/>
+    <rect width="1200" height="800" fill="url(#grid)"/>
   </g>
   <rect x="0" y="0" width="1200" height="3" fill="url(#accentGrad)"/>
 
-  <!-- Title -->
-  <text x="600" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#64748b" letter-spacing="1">CONVERSATION LIST</text>
+  <!-- Page Title -->
+  <text x="600" y="28" text-anchor="middle" class="page-title">USER MESSAGING - CONVERSATION LIST</text>
 
-  <!-- ========================================== -->
-  <!-- Mobile Layout (Left) -->
-  <!-- ========================================== -->
-  <text x="200" y="60" text-anchor="middle" class="annotation" font-size="12">MOBILE (FULL-SCREEN LIST)</text>
+  <!-- ==================== DESKTOP VIEW ==================== -->
+  <text x="405" y="48" text-anchor="middle" class="section-label">DESKTOP (Split Pane)</text>
 
-  <!-- Phone frame -->
-  <rect x="50" y="80" width="300" height="650" rx="20" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+  <!-- Desktop Browser Frame -->
+  <rect x="30" y="55" width="750" height="520" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <rect x="30" y="55" width="750" height="32" rx="8" fill="#334155"/>
+  <circle cx="52" cy="71" r="6" fill="#ef4444" opacity="0.8"/>
+  <circle cx="72" cy="71" r="6" fill="#eab308" opacity="0.8"/>
+  <circle cx="92" cy="71" r="6" fill="#22c55e" opacity="0.8"/>
+  <rect x="120" y="63" width="400" height="16" rx="4" fill="#1e293b"/>
+  <text x="320" y="75" text-anchor="middle" class="text-muted">scripthammer.com/messages</text>
 
-  <!-- Status bar -->
-  <rect x="50" y="80" width="300" height="30" rx="20" fill="#0f172a"/>
-  <text x="200" y="100" text-anchor="middle" class="text-sm">9:41</text>
+  <!-- Desktop Content -->
+  <rect x="30" y="87" width="750" height="488" fill="#0f172a"/>
+
+  <!-- Left Sidebar - Conversation List -->
+  <rect x="30" y="87" width="240" height="488" fill="#1e293b"/>
 
   <!-- Header -->
-  <rect x="50" y="110" width="300" height="50" fill="#1e293b"/>
-  <text x="200" y="142" text-anchor="middle" class="heading" font-size="16">Messages</text>
-  <circle cx="320" cy="135" r="16" fill="#8b5cf6"/>
-  <text x="320" y="140" text-anchor="middle" fill="white" font-size="14">+</text>
+  <rect x="30" y="87" width="240" height="44" fill="#334155"/>
+  <text x="50" y="115" class="heading-lg">Messages</text>
+  <rect x="215" y="99" width="40" height="20" rx="4" fill="#8b5cf6"/>
+  <text x="235" y="113" text-anchor="middle" fill="#fff" font-size="10">New</text>
 
-  <!-- Search bar -->
-  <rect x="65" y="170" width="270" height="36" rx="8" fill="#0f172a" stroke="#475569"/>
-  <text x="85" y="193" class="text-muted">Search conversations...</text>
+  <!-- Search Bar -->
+  <rect x="42" y="140" width="216" height="32" rx="4" fill="#0f172a" stroke="#475569"/>
+  <text x="54" y="160" class="text-muted">Search conversations...</text>
 
-  <!-- Conversation items -->
-  <!-- Item 1: Unread -->
-  <rect x="50" y="220" width="300" height="72" fill="#334155"/>
-  <circle cx="90" cy="256" r="24" fill="#8b5cf6"/>
-  <text x="90" y="262" text-anchor="middle" fill="white" class="text-md">JD</text>
-  <text x="125" y="248" class="heading">John Doe</text>
-  <text x="125" y="268" class="text-sm">Hey, are you free tonight?</text>
-  <text x="320" y="248" text-anchor="end" class="text-muted">2m</text>
-  <circle cx="320" cy="268" r="10" fill="#8b5cf6"/>
-  <text x="320" y="272" text-anchor="middle" fill="white" font-size="10">3</text>
+  <!-- Conversation Items -->
+  <!-- Item 1 - Selected (with unread) -->
+  <rect x="30" y="180" width="240" height="70" fill="#8b5cf6" opacity="0.15"/>
+  <rect x="30" y="180" width="3" height="70" fill="#8b5cf6"/>
+  <circle cx="62" cy="215" r="20" fill="#8b5cf6"/>
+  <text x="62" y="220" text-anchor="middle" fill="#fff" font-size="14">JD</text>
+  <circle cx="78" cy="227" r="6" fill="#22c55e" stroke="#1e293b" stroke-width="2"/>
+  <text x="92" y="207" class="heading">John Doe</text>
+  <text x="92" y="222" class="text-sm">Hey, did you see the new design?</text>
+  <text x="92" y="237" class="text-muted">2m ago</text>
+  <circle cx="252" cy="215" r="10" fill="#8b5cf6"/>
+  <text x="252" y="219" text-anchor="middle" fill="#fff" font-size="9">3</text>
 
-  <!-- Item 2: Read, typing -->
-  <rect x="50" y="292" width="300" height="72" fill="#1e293b"/>
-  <circle cx="90" cy="328" r="24" fill="#059669"/>
-  <text x="90" y="334" text-anchor="middle" fill="white" class="text-md">AS</text>
-  <text x="125" y="320" class="heading">Alice Smith</text>
-  <text x="125" y="340" fill="#8b5cf6" font-family="system-ui" font-size="11" font-style="italic">typing...</text>
-  <text x="320" y="320" text-anchor="end" class="text-muted">15m</text>
+  <!-- Item 2 -->
+  <rect x="30" y="250" width="240" height="70" fill="transparent"/>
+  <line x1="42" y1="250" x2="258" y2="250" stroke="#334155"/>
+  <circle cx="62" cy="285" r="20" fill="#d946ef"/>
+  <text x="62" y="290" text-anchor="middle" fill="#fff" font-size="14">AS</text>
+  <text x="92" y="277" class="heading">Alice Smith</text>
+  <text x="92" y="292" class="text-sm">Thanks for the update!</text>
+  <text x="92" y="307" class="text-muted">1h ago</text>
+  <g transform="translate(245, 282)">
+    <path d="M0 0 L4 4 L10 -4" stroke="#8b5cf6" stroke-width="2" fill="none"/>
+    <path d="M4 0 L8 4 L14 -4" stroke="#8b5cf6" stroke-width="2" fill="none"/>
+  </g>
 
-  <!-- Item 3: Read -->
-  <rect x="50" y="364" width="300" height="72" fill="#1e293b"/>
-  <circle cx="90" cy="400" r="24" fill="#334155"/>
-  <text x="90" y="406" text-anchor="middle" fill="white" class="text-md">BW</text>
-  <text x="125" y="392" class="heading">Bob Wilson</text>
-  <text x="125" y="412" class="text-sm">Thanks for the update!</text>
-  <text x="320" y="392" text-anchor="end" class="text-muted">1h</text>
-  <text x="320" y="412" text-anchor="end" fill="#3b82f6" font-size="10">✓✓</text>
+  <!-- Item 3 -->
+  <rect x="30" y="320" width="240" height="70" fill="transparent"/>
+  <line x1="42" y1="320" x2="258" y2="320" stroke="#334155"/>
+  <circle cx="62" cy="355" r="20" fill="#334155"/>
+  <text x="62" y="360" text-anchor="middle" fill="#94a3b8" font-size="14">BJ</text>
+  <circle cx="78" cy="367" r="6" fill="#64748b" stroke="#1e293b" stroke-width="2"/>
+  <text x="92" y="347" class="heading">Bob Johnson</text>
+  <text x="92" y="362" class="text-sm">[Message deleted]</text>
+  <text x="92" y="377" class="text-muted">Yesterday</text>
 
-  <!-- Item 4: Encrypted indicator -->
-  <rect x="50" y="436" width="300" height="72" fill="#1e293b"/>
-  <circle cx="90" cy="472" r="24" fill="#dc2626"/>
-  <text x="90" y="478" text-anchor="middle" fill="white" class="text-md">MJ</text>
-  <text x="125" y="464" class="heading">Mary Johnson</text>
-  <text x="125" y="484" class="text-muted">🔒 Encrypted message</text>
-  <text x="320" y="464" text-anchor="end" class="text-muted">2d</text>
+  <!-- Item 4 - Typing indicator -->
+  <rect x="30" y="390" width="240" height="70" fill="transparent"/>
+  <line x1="42" y1="390" x2="258" y2="390" stroke="#334155"/>
+  <circle cx="62" cy="425" r="20" fill="#22c55e"/>
+  <text x="62" y="430" text-anchor="middle" fill="#fff" font-size="14">CT</text>
+  <circle cx="78" cy="437" r="6" fill="#22c55e" stroke="#1e293b" stroke-width="2"/>
+  <text x="92" y="417" class="heading">Carol Turner</text>
+  <text x="92" y="432" fill="#8b5cf6" font-size="10" font-style="italic">typing...</text>
+  <text x="92" y="447" class="text-muted">Online</text>
+  <g transform="translate(240, 425)">
+    <circle r="3" fill="#8b5cf6" opacity="0.5"/>
+    <circle cx="8" r="3" fill="#8b5cf6" opacity="0.7"/>
+    <circle cx="16" r="3" fill="#8b5cf6"/>
+  </g>
 
-  <!-- Bottom nav -->
-  <rect x="50" y="680" width="300" height="50" rx="20" fill="#0f172a"/>
-  <text x="110" y="710" text-anchor="middle" fill="#8b5cf6" class="text-sm">Messages</text>
-  <text x="200" y="710" text-anchor="middle" class="text-muted">Contacts</text>
-  <text x="290" y="710" text-anchor="middle" class="text-muted">Settings</text>
+  <!-- Skeleton Loading Item -->
+  <rect x="30" y="460" width="240" height="70" fill="transparent"/>
+  <line x1="42" y1="460" x2="258" y2="460" stroke="#334155"/>
+  <circle cx="62" cy="495" r="20" fill="#334155" opacity="0.5"/>
+  <rect x="92" y="482" width="80" height="12" rx="2" fill="#334155" opacity="0.5"/>
+  <rect x="92" y="498" width="140" height="10" rx="2" fill="#334155" opacity="0.3"/>
+  <rect x="92" y="512" width="50" height="8" rx="2" fill="#334155" opacity="0.3"/>
 
-  <!-- ========================================== -->
-  <!-- Desktop Layout (Right) -->
-  <!-- ========================================== -->
-  <text x="800" y="60" text-anchor="middle" class="annotation" font-size="12">DESKTOP (SPLIT-PANE)</text>
+  <!-- Right Panel - Chat Preview -->
+  <rect x="270" y="87" width="510" height="488" fill="#0f172a"/>
 
-  <!-- Desktop frame -->
-  <rect x="450" y="80" width="700" height="550" rx="8" fill="#1e293b" stroke="#475569"/>
+  <!-- Chat Header -->
+  <rect x="270" y="87" width="510" height="56" fill="#1e293b"/>
+  <circle cx="302" cy="115" r="20" fill="#8b5cf6"/>
+  <text x="302" y="120" text-anchor="middle" fill="#fff" font-size="14">JD</text>
+  <text x="335" y="108" class="heading">John Doe</text>
+  <text x="335" y="124" fill="#22c55e" font-size="10">Online</text>
+  <rect x="720" y="103" width="24" height="24" rx="4" fill="#334155"/>
+  <text x="732" y="119" text-anchor="middle" class="text-muted">...</text>
 
-  <!-- Sidebar -->
-  <rect x="450" y="80" width="280" height="550" rx="8" fill="#0f172a"/>
+  <!-- Messages Area -->
+  <rect x="285" y="155" width="480" height="350" fill="#0f172a"/>
 
-  <!-- Sidebar header -->
-  <rect x="450" y="80" width="280" height="50" fill="#1e293b"/>
-  <text x="470" y="112" class="heading" font-size="16">Conversations</text>
-  <circle cx="700" cy="105" r="14" fill="#8b5cf6"/>
-  <text x="700" y="110" text-anchor="middle" fill="white" font-size="12">+</text>
+  <!-- Incoming message -->
+  <rect x="295" y="165" width="220" height="50" rx="12" fill="#334155"/>
+  <text x="307" y="185" class="text-md">Hey, did you see the new design?</text>
+  <text x="307" y="203" class="text-muted">10:30 AM</text>
 
-  <!-- Search -->
-  <rect x="465" y="145" width="250" height="32" rx="6" fill="#1e293b" stroke="#475569"/>
-  <text x="485" y="166" class="text-muted">Search...</text>
+  <!-- Outgoing message -->
+  <rect x="445" y="225" width="150" height="50" rx="12" fill="#8b5cf6"/>
+  <text x="457" y="245" fill="#fff" font-size="12">Yes, it looks great!</text>
+  <g transform="translate(560, 260)">
+    <text x="0" y="0" class="text-muted" font-size="9">10:32 AM</text>
+    <path d="M35 -4 L39 0 L45 -8" stroke="#22c55e" stroke-width="1.5" fill="none"/>
+    <path d="M39 -4 L43 0 L49 -8" stroke="#22c55e" stroke-width="1.5" fill="none"/>
+  </g>
 
-  <!-- Conversation list items -->
-  <!-- Active conversation -->
-  <rect x="450" y="190" width="280" height="60" fill="#8b5cf6" opacity="0.15"/>
-  <rect x="450" y="190" width="4" height="60" fill="#8b5cf6"/>
-  <circle cx="485" cy="220" r="20" fill="#8b5cf6"/>
-  <text x="485" y="226" text-anchor="middle" fill="white" class="text-sm">JD</text>
-  <text x="515" y="215" fill="#a78bfa" font-family="system-ui" font-size="12" font-weight="bold">John Doe</text>
-  <text x="515" y="232" class="text-sm">Hey, are you free...</text>
-  <text x="715" y="215" text-anchor="end" class="text-muted">2m</text>
-  <circle cx="715" cy="230" r="8" fill="#8b5cf6"/>
-  <text x="715" y="234" text-anchor="middle" fill="white" font-size="8">3</text>
+  <!-- Edited message -->
+  <rect x="295" y="285" width="200" height="50" rx="12" fill="#334155"/>
+  <text x="307" y="305" class="text-md">Updated the PR yesterday</text>
+  <text x="307" y="320" class="text-muted">10:35 AM - Edited</text>
 
-  <!-- Other items -->
-  <rect x="450" y="250" width="280" height="60" fill="#0f172a"/>
-  <circle cx="485" cy="280" r="20" fill="#059669"/>
-  <text x="485" y="286" text-anchor="middle" fill="white" class="text-sm">AS</text>
-  <text x="515" y="275" class="text-md">Alice Smith</text>
-  <text x="515" y="292" fill="#8b5cf6" font-family="system-ui" font-size="10" font-style="italic">typing...</text>
+  <!-- New messages indicator -->
+  <rect x="440" y="350" width="130" height="24" rx="12" fill="#8b5cf6" opacity="0.2"/>
+  <text x="505" y="366" text-anchor="middle" fill="#8b5cf6" font-size="10">2 new messages</text>
 
-  <rect x="450" y="310" width="280" height="60" fill="#0f172a"/>
-  <circle cx="485" cy="340" r="20" fill="#334155"/>
-  <text x="485" y="346" text-anchor="middle" fill="white" class="text-sm">BW</text>
-  <text x="515" y="335" class="text-md">Bob Wilson</text>
-  <text x="515" y="352" class="text-sm">Thanks for the update!</text>
+  <!-- Message Input -->
+  <rect x="285" y="510" width="480" height="50" fill="#1e293b"/>
+  <rect x="295" y="520" width="400" height="32" rx="16" fill="#0f172a" stroke="#475569"/>
+  <text x="315" y="540" class="text-muted">Type a message...</text>
+  <rect x="705" y="520" width="50" height="32" rx="16" fill="#8b5cf6"/>
+  <text x="730" y="540" text-anchor="middle" fill="#fff" font-size="11">Send</text>
 
-  <!-- Main chat area -->
-  <rect x="730" y="80" width="420" height="550" fill="#1e293b"/>
+  <!-- ==================== MOBILE VIEW ==================== -->
+  <text x="917" y="48" text-anchor="middle" class="section-label">MOBILE</text>
 
-  <!-- Chat header -->
-  <rect x="730" y="80" width="420" height="55" fill="#334155"/>
-  <circle cx="770" cy="108" r="20" fill="#8b5cf6"/>
-  <text x="770" y="114" text-anchor="middle" fill="white" class="text-md">JD</text>
-  <text x="805" y="103" class="heading">John Doe</text>
-  <circle cx="805" cy="118" r="4" fill="#22c55e"/>
-  <text x="820" y="122" class="text-sm" fill="#22c55e">Online</text>
-  <text x="1120" y="110" text-anchor="end" class="text-muted">🔒 End-to-end encrypted</text>
+  <!-- Phone Frame -->
+  <rect x="820" y="55" width="195" height="422" rx="24" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+  <rect x="875" y="55" width="85" height="20" rx="10" fill="#0f172a"/>
+  <rect x="826" y="61" width="183" height="410" rx="20" fill="#1e293b"/>
 
-  <!-- Messages area placeholder -->
-  <rect x="750" y="150" width="380" height="400" rx="4" fill="#0f172a" opacity="0.3" stroke="#475569" stroke-dasharray="4"/>
-  <text x="940" y="350" text-anchor="middle" class="text-muted">Chat messages here</text>
-  <text x="940" y="370" text-anchor="middle" class="annotation">See chat-window.svg</text>
+  <!-- Status Bar -->
+  <text x="846" y="80" class="text-muted" font-size="9">9:41</text>
+  <g transform="translate(970, 72)">
+    <rect x="0" y="0" width="18" height="9" rx="2" stroke="#64748b" stroke-width="1" fill="none"/>
+    <rect x="2" y="2" width="12" height="5" rx="1" fill="#64748b"/>
+  </g>
 
-  <!-- Message input -->
-  <rect x="750" y="560" width="320" height="44" rx="6" fill="#0f172a" stroke="#475569"/>
-  <text x="770" y="588" class="text-muted">Type a message...</text>
-  <rect x="1080" y="560" width="50" height="44" rx="6" fill="#8b5cf6"/>
-  <text x="1105" y="588" text-anchor="middle" fill="white" class="text-md">→</text>
+  <!-- Mobile Header -->
+  <rect x="826" y="86" width="183" height="40" fill="#334155"/>
+  <text x="880" y="112" class="heading">Messages</text>
+  <circle cx="980" cy="106" r="12" fill="#8b5cf6"/>
+  <text x="980" y="110" text-anchor="middle" fill="#fff" font-size="10">+</text>
 
-  <!-- ========================================== -->
-  <!-- Annotations -->
-  <!-- ========================================== -->
-  <rect x="50" y="750" width="180" height="45" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <text x="60" y="770" class="annotation">FR-050: Sort by</text>
-  <text x="60" y="785" class="annotation">last_message_at (recent first)</text>
+  <!-- Mobile Search -->
+  <rect x="836" y="132" width="163" height="28" rx="4" fill="#0f172a" stroke="#475569"/>
+  <text x="852" y="150" class="text-muted" font-size="9">Search...</text>
 
-  <rect x="250" y="750" width="180" height="45" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <text x="260" y="770" class="annotation">FR-051: Unread badge</text>
-  <text x="260" y="785" class="annotation">shows message count</text>
+  <!-- Mobile Conversation Items -->
+  <!-- Item 1 -->
+  <rect x="826" y="165" width="183" height="55" fill="#8b5cf6" opacity="0.1"/>
+  <circle cx="851" cy="192" r="16" fill="#8b5cf6"/>
+  <text x="851" y="196" text-anchor="middle" fill="#fff" font-size="10">JD</text>
+  <circle cx="863" cy="202" r="5" fill="#22c55e" stroke="#1e293b" stroke-width="1"/>
+  <text x="875" y="186" fill="#fff" font-size="10" font-weight="bold">John Doe</text>
+  <text x="875" y="198" class="text-sm" font-size="9">Hey, did you see...</text>
+  <text x="875" y="210" class="text-muted" font-size="8">2m</text>
+  <circle cx="990" cy="192" r="8" fill="#8b5cf6"/>
+  <text x="990" y="195" text-anchor="middle" fill="#fff" font-size="7">3</text>
 
-  <rect x="450" y="650" width="200" height="60" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <text x="460" y="670" class="annotation">FR-053: Mobile = full-screen</text>
-  <text x="460" y="685" class="annotation">Tablet+ = split-pane layout</text>
-  <text x="460" y="700" class="annotation">FR-062: Load within 1 second</text>
+  <!-- Item 2 -->
+  <line x1="836" y1="220" x2="999" y2="220" stroke="#334155"/>
+  <circle cx="851" cy="247" r="16" fill="#d946ef"/>
+  <text x="851" y="251" text-anchor="middle" fill="#fff" font-size="10">AS</text>
+  <text x="875" y="241" fill="#fff" font-size="10" font-weight="bold">Alice Smith</text>
+  <text x="875" y="253" class="text-sm" font-size="9">Thanks for the up...</text>
+  <text x="875" y="265" class="text-muted" font-size="8">1h</text>
 
-  <rect x="700" y="650" width="200" height="60" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <text x="710" y="670" class="annotation">FR-031: Typing indicator</text>
-  <text x="710" y="685" class="annotation">shown in list preview</text>
-  <text x="710" y="700" class="annotation">(always enabled)</text>
+  <!-- Item 3 -->
+  <line x1="836" y1="275" x2="999" y2="275" stroke="#334155"/>
+  <circle cx="851" cy="302" r="16" fill="#334155"/>
+  <text x="851" y="306" text-anchor="middle" fill="#94a3b8" font-size="10">BJ</text>
+  <text x="875" y="296" fill="#fff" font-size="10" font-weight="bold">Bob Johnson</text>
+  <text x="875" y="308" class="text-sm" font-size="9">[Message deleted]</text>
+  <text x="875" y="320" class="text-muted" font-size="8">Yest.</text>
 
-  <rect x="950" y="650" width="200" height="60" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <text x="960" y="670" class="annotation">FR-014: Zero-knowledge</text>
-  <text x="960" y="685" class="annotation">encryption indicator</text>
-  <text x="960" y="700" class="annotation">shown in header</text>
+  <!-- Item 4 -->
+  <line x1="836" y1="330" x2="999" y2="330" stroke="#334155"/>
+  <circle cx="851" cy="357" r="16" fill="#22c55e"/>
+  <text x="851" y="361" text-anchor="middle" fill="#fff" font-size="10">CT</text>
+  <circle cx="863" cy="367" r="5" fill="#22c55e" stroke="#1e293b" stroke-width="1"/>
+  <text x="875" y="351" fill="#fff" font-size="10" font-weight="bold">Carol Turner</text>
+  <text x="875" y="363" fill="#8b5cf6" font-size="9" font-style="italic">typing...</text>
+  <text x="875" y="375" class="text-muted" font-size="8">Online</text>
+
+  <!-- Swipe hint -->
+  <text x="917" y="410" text-anchor="middle" class="text-muted" font-size="8">Swipe left to archive</text>
+
+  <!-- Bottom Nav -->
+  <rect x="826" y="425" width="183" height="46" fill="#334155"/>
+  <g transform="translate(859, 440)">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="#8b5cf6"/>
+    <text x="12" y="28" text-anchor="middle" class="text-muted" font-size="7">Chat</text>
+  </g>
+  <g transform="translate(905, 440)">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="transparent"/>
+    <text x="12" y="28" text-anchor="middle" class="text-muted" font-size="7">People</text>
+  </g>
+  <g transform="translate(951, 440)">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="transparent"/>
+    <text x="12" y="28" text-anchor="middle" class="text-muted" font-size="7">Profile</text>
+  </g>
+
+  <!-- Phone Home Indicator -->
+  <rect x="880" y="458" width="75" height="4" rx="2" fill="#475569"/>
+
+  <!-- ==================== ANNOTATIONS ==================== -->
+  <text x="30" y="590" class="section-label">SPECIFICATIONS</text>
+
+  <rect x="30" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="42" y="618" class="annotation">FR-050: Sort by last_message_at timestamp</text>
+  <text x="42" y="632" class="annotation">FR-051: Unread message count badge</text>
+  <text x="42" y="646" class="annotation">FR-052: Scroll to bottom button</text>
+  <text x="42" y="660" class="annotation">FR-053: Full-screen mobile, split tablet+</text>
+  <text x="42" y="674" class="annotation">FR-054: Skeleton loading states</text>
+
+  <rect x="320" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="332" y="618" class="annotation">FR-021: Message delivery status icons</text>
+  <text x="332" y="632" class="annotation">FR-031: Typing indicators (3s debounce)</text>
+  <text x="332" y="646" class="annotation">FR-032: Read receipts (double check)</text>
+  <text x="332" y="660" class="annotation">FR-027: "Edited" indicator on messages</text>
+  <text x="332" y="674" class="annotation">FR-066: "[Message deleted]" placeholder</text>
+
+  <rect x="610" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="622" y="618" class="annotation">NFR-026: 44x44px min touch targets</text>
+  <text x="622" y="632" class="annotation">NFR-030: Safe area insets (iOS)</text>
+  <text x="622" y="646" class="annotation">FR-062: Load within 1s (with cache)</text>
+  <text x="622" y="660" class="annotation">NFR-015: IndexedDB caching</text>
+  <text x="622" y="674" class="annotation">FR-049: Virtual scrolling 100+ msgs</text>
+
+  <rect x="900" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="912" y="618" class="annotation">SC-005: 100+ convos in &lt;1s (cached)</text>
+  <text x="912" y="632" class="annotation">SC-009: Typing indicator &lt;200ms</text>
+  <text x="912" y="646" class="annotation">SC-010: Read receipt update &lt;500ms</text>
+  <text x="912" y="660" class="annotation">SC-012: 44x44px touch targets</text>
+  <text x="912" y="674" class="annotation">SC-007: WCAG AA accessibility</text>
 
 </svg>

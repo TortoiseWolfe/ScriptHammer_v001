@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#d946ef"/>
+    </linearGradient>
+    <style>
+      .page-title { fill: #64748b; font-family: system-ui, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 1px; }
+      .section-label { fill: #8b5cf6; font-family: monospace; font-size: 11px; }
+      .heading { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 14px; font-weight: bold; }
+      .text-md { fill: #cbd5e1; font-family: system-ui, sans-serif; font-size: 12px; }
+      .text-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 10px; }
+      .text-muted { fill: #64748b; font-family: system-ui, sans-serif; font-size: 10px; }
+      .annotation { fill: #8b5cf6; font-family: monospace; font-size: 9px; }
+    </style>
+  </defs>
+
+  <!-- ==================== BACKGROUND ==================== -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+  <g opacity="0.03">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#fff" stroke-width="0.5"/>
+    </pattern>
+    <rect width="1200" height="800" fill="url(#grid)"/>
+  </g>
+  <rect x="0" y="0" width="1200" height="3" fill="url(#accentGrad)"/>
+
+  <!-- ==================== PAGE TITLE ==================== -->
+  <text x="600" y="28" text-anchor="middle" class="page-title">PAGE TITLE HERE</text>
+
+  <!-- ==================== DESKTOP VIEW (Left Side) ==================== -->
+  <!-- Desktop: x=30, y=50, w=750, h=520 -->
+  <text x="405" y="48" text-anchor="middle" class="section-label">DESKTOP</text>
+
+  <!-- Desktop Browser Frame -->
+  <rect x="30" y="55" width="750" height="520" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+
+  <!-- Desktop Browser Chrome -->
+  <rect x="30" y="55" width="750" height="32" rx="8" fill="#334155"/>
+  <circle cx="52" cy="71" r="6" fill="#ef4444" opacity="0.8"/>
+  <circle cx="72" cy="71" r="6" fill="#eab308" opacity="0.8"/>
+  <circle cx="92" cy="71" r="6" fill="#22c55e" opacity="0.8"/>
+  <rect x="120" y="63" width="400" height="16" rx="4" fill="#1e293b"/>
+  <text x="320" y="75" text-anchor="middle" class="text-muted">scripthammer.com/page</text>
+
+  <!-- Desktop Content Area: x=30, y=87, w=750, h=488 -->
+  <!-- Your desktop UI content goes here -->
+
+  <!-- ==================== MOBILE VIEW (Right Side) ==================== -->
+  <!-- Mobile: x=820, y=50, w=195, h=422 (iPhone 14 ratio) -->
+  <text x="917" y="48" text-anchor="middle" class="section-label">MOBILE</text>
+
+  <!-- Phone Frame -->
+  <rect x="820" y="55" width="195" height="422" rx="24" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+
+  <!-- Phone Notch -->
+  <rect x="875" y="55" width="85" height="20" rx="10" fill="#0f172a"/>
+
+  <!-- Phone Screen -->
+  <rect x="826" y="61" width="183" height="410" rx="20" fill="#1e293b"/>
+
+  <!-- Status Bar -->
+  <text x="846" y="80" class="text-muted" font-size="9">9:41</text>
+  <g transform="translate(970, 72)">
+    <rect x="0" y="0" width="18" height="9" rx="2" stroke="#64748b" stroke-width="1" fill="none"/>
+    <rect x="18" y="2.5" width="2" height="4" rx="1" fill="#64748b"/>
+    <rect x="2" y="2" width="12" height="5" rx="1" fill="#64748b"/>
+  </g>
+
+  <!-- Mobile Content Area: x=826, y=90, w=183, h=375 -->
+  <!-- Your mobile UI content goes here -->
+
+  <!-- Phone Home Indicator -->
+  <rect x="880" y="458" width="75" height="4" rx="2" fill="#475569"/>
+
+  <!-- ==================== ANNOTATIONS (Bottom) ==================== -->
+  <!-- Annotation Row: y=590, h=85 -->
+  <text x="30" y="590" class="section-label">SPECIFICATIONS</text>
+
+  <!-- Annotation boxes - evenly spaced -->
+  <rect x="30" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="42" y="620" class="annotation">FR-XXX: Feature requirement</text>
+  <text x="42" y="634" class="annotation">FR-XXX: Another requirement</text>
+  <text x="42" y="648" class="annotation">FR-XXX: Third requirement</text>
+  <text x="42" y="662" class="annotation">FR-XXX: Fourth requirement</text>
+
+  <rect x="320" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="332" y="620" class="annotation">SC-XXX: Success criteria</text>
+  <text x="332" y="634" class="annotation">SC-XXX: Another criteria</text>
+  <text x="332" y="648" class="annotation">SC-XXX: Third criteria</text>
+  <text x="332" y="662" class="annotation">SC-XXX: Fourth criteria</text>
+
+  <rect x="610" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="622" y="620" class="annotation">Technical: Implementation note</text>
+  <text x="622" y="634" class="annotation">Constraint: Limitation</text>
+  <text x="622" y="648" class="annotation">Assumption: Design assumption</text>
+  <text x="622" y="662" class="annotation">Edge case: Special handling</text>
+
+  <rect x="900" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="912" y="620" class="annotation">A11y: WCAG 2.1 AA compliant</text>
+  <text x="912" y="634" class="annotation">Touch: 44px minimum targets</text>
+  <text x="912" y="648" class="annotation">Focus: Visible focus states</text>
+  <text x="912" y="662" class="annotation">Screen reader: ARIA labels</text>
+
+  <!-- ==================== FOOTER ==================== -->
+  <text x="600" y="710" text-anchor="middle" class="text-muted">ScriptHammer Wireframe Template v2.0</text>
+
+</svg>

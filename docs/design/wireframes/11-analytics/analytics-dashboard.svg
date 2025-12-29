@@ -1,0 +1,314 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#d946ef"/>
+    </linearGradient>
+    <style>
+      .page-title { fill: #64748b; font-family: system-ui, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 1px; }
+      .section-label { fill: #8b5cf6; font-family: monospace; font-size: 11px; }
+      .heading { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 14px; font-weight: bold; }
+      .heading-lg { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 18px; font-weight: bold; }
+      .text-md { fill: #cbd5e1; font-family: system-ui, sans-serif; font-size: 12px; }
+      .text-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 10px; }
+      .text-muted { fill: #64748b; font-family: system-ui, sans-serif; font-size: 10px; }
+      .annotation { fill: #8b5cf6; font-family: monospace; font-size: 9px; }
+      .stat-value { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 24px; font-weight: bold; }
+      .stat-label { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 10px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+  <g opacity="0.03">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#fff" stroke-width="0.5"/>
+    </pattern>
+    <rect width="1200" height="800" fill="url(#grid)"/>
+  </g>
+  <rect x="0" y="0" width="1200" height="3" fill="url(#accentGrad)"/>
+
+  <!-- Page Title -->
+  <text x="600" y="28" text-anchor="middle" class="page-title">ANALYTICS - GA4 DASHBOARD</text>
+
+  <!-- ==================== DESKTOP VIEW ==================== -->
+  <text x="405" y="48" text-anchor="middle" class="section-label">DESKTOP</text>
+
+  <!-- Desktop Browser Frame -->
+  <rect x="30" y="55" width="750" height="520" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <rect x="30" y="55" width="750" height="32" rx="8" fill="#334155"/>
+  <circle cx="52" cy="71" r="6" fill="#ef4444" opacity="0.8"/>
+  <circle cx="72" cy="71" r="6" fill="#eab308" opacity="0.8"/>
+  <circle cx="92" cy="71" r="6" fill="#22c55e" opacity="0.8"/>
+  <rect x="120" y="63" width="400" height="16" rx="4" fill="#1e293b"/>
+  <text x="320" y="75" text-anchor="middle" class="text-muted">scripthammer.com/admin/analytics</text>
+
+  <!-- Desktop Content -->
+  <rect x="30" y="87" width="750" height="488" fill="#0f172a"/>
+
+  <!-- Header with consent status -->
+  <rect x="30" y="87" width="750" height="50" fill="#1e293b"/>
+  <text x="50" y="118" class="heading-lg">Analytics Dashboard</text>
+
+  <!-- Consent Status Indicator -->
+  <rect x="610" y="100" width="150" height="24" rx="4" fill="#22c55e" opacity="0.2"/>
+  <circle cx="625" cy="112" r="5" fill="#22c55e"/>
+  <text x="638" y="117" fill="#22c55e" font-size="11">Analytics Consent: ON</text>
+
+  <!-- Debug Mode Toggle -->
+  <rect x="470" y="100" width="120" height="24" rx="4" fill="#334155"/>
+  <text x="485" y="116" class="text-sm">Debug Mode</text>
+  <rect x="555" y="104" width="28" height="16" rx="8" fill="#8b5cf6"/>
+  <circle cx="575" cy="112" r="6" fill="#fff"/>
+
+  <!-- Real-time visitors card -->
+  <rect x="50" y="150" width="165" height="85" rx="6" fill="#1e293b" stroke="#475569"/>
+  <text x="65" y="172" class="stat-label">REAL-TIME VISITORS</text>
+  <text x="65" y="205" class="stat-value">247</text>
+  <text x="65" y="225" class="text-muted">+12% from last hour</text>
+  <circle cx="195" cy="185" r="25" fill="#8b5cf6" opacity="0.2"/>
+  <text x="195" y="190" text-anchor="middle" fill="#8b5cf6" font-size="20">@</text>
+
+  <!-- Sessions card -->
+  <rect x="230" y="150" width="165" height="85" rx="6" fill="#1e293b" stroke="#475569"/>
+  <text x="245" y="172" class="stat-label">TODAY'S SESSIONS</text>
+  <text x="245" y="205" class="stat-value">3,842</text>
+  <text x="245" y="225" class="text-muted">Avg: 4m 32s</text>
+  <circle cx="375" cy="185" r="25" fill="#22c55e" opacity="0.2"/>
+  <text x="375" y="192" text-anchor="middle" fill="#22c55e" font-size="16">S</text>
+
+  <!-- Page Views card -->
+  <rect x="410" y="150" width="165" height="85" rx="6" fill="#1e293b" stroke="#475569"/>
+  <text x="425" y="172" class="stat-label">PAGE VIEWS</text>
+  <text x="425" y="205" class="stat-value">8,547</text>
+  <text x="425" y="225" class="text-muted">2.2 pages/session</text>
+  <circle cx="555" cy="185" r="25" fill="#3b82f6" opacity="0.2"/>
+  <text x="555" y="192" text-anchor="middle" fill="#3b82f6" font-size="16">P</text>
+
+  <!-- Bounce Rate card -->
+  <rect x="590" y="150" width="165" height="85" rx="6" fill="#1e293b" stroke="#475569"/>
+  <text x="605" y="172" class="stat-label">BOUNCE RATE</text>
+  <text x="605" y="205" class="stat-value">32.4%</text>
+  <text x="605" y="225" class="text-muted">-5% improvement</text>
+  <circle cx="735" cy="185" r="25" fill="#eab308" opacity="0.2"/>
+  <text x="735" y="192" text-anchor="middle" fill="#eab308" font-size="16">B</text>
+
+  <!-- Web Vitals Section -->
+  <text x="50" y="265" class="heading">Web Vitals</text>
+  <rect x="50" y="280" width="360" height="130" rx="6" fill="#1e293b" stroke="#475569"/>
+
+  <!-- LCP Metric -->
+  <text x="70" y="305" class="text-sm">LCP</text>
+  <rect x="70" y="312" width="130" height="8" rx="4" fill="#334155"/>
+  <rect x="70" y="312" width="95" height="8" rx="4" fill="#22c55e"/>
+  <text x="210" y="320" class="text-sm" fill="#22c55e">1.8s</text>
+  <text x="250" y="320" class="text-muted">Good</text>
+
+  <!-- FID Metric -->
+  <text x="70" y="340" class="text-sm">FID</text>
+  <rect x="70" y="347" width="130" height="8" rx="4" fill="#334155"/>
+  <rect x="70" y="347" width="40" height="8" rx="4" fill="#22c55e"/>
+  <text x="210" y="355" class="text-sm" fill="#22c55e">45ms</text>
+  <text x="250" y="355" class="text-muted">Good</text>
+
+  <!-- CLS Metric -->
+  <text x="70" y="375" class="text-sm">CLS</text>
+  <rect x="70" y="382" width="130" height="8" rx="4" fill="#334155"/>
+  <rect x="70" y="382" width="25" height="8" rx="4" fill="#22c55e"/>
+  <text x="210" y="390" class="text-sm" fill="#22c55e">0.05</text>
+  <text x="250" y="390" class="text-muted">Good</text>
+
+  <!-- TTFB Metric -->
+  <text x="280" y="305" class="text-sm">TTFB</text>
+  <rect x="280" y="312" width="100" height="8" rx="4" fill="#334155"/>
+  <rect x="280" y="312" width="60" height="8" rx="4" fill="#eab308"/>
+  <text x="390" y="320" class="text-sm" fill="#eab308">320ms</text>
+
+  <!-- FCP Metric -->
+  <text x="280" y="340" class="text-sm">FCP</text>
+  <rect x="280" y="347" width="100" height="8" rx="4" fill="#334155"/>
+  <rect x="280" y="347" width="75" height="8" rx="4" fill="#22c55e"/>
+  <text x="390" y="355" class="text-sm" fill="#22c55e">1.2s</text>
+
+  <!-- Custom Events Section -->
+  <text x="430" y="265" class="heading">Custom Events</text>
+  <rect x="430" y="280" width="325" height="130" rx="6" fill="#1e293b" stroke="#475569"/>
+
+  <!-- Event list -->
+  <rect x="445" y="295" width="295" height="28" rx="4" fill="#0f172a"/>
+  <text x="455" y="314" class="text-md">theme_change</text>
+  <rect x="575" y="301" width="45" height="16" rx="4" fill="#8b5cf6" opacity="0.3"/>
+  <text x="597" y="313" text-anchor="middle" class="text-sm" fill="#8b5cf6">1,247</text>
+  <text x="640" y="314" class="text-muted">today</text>
+
+  <rect x="445" y="330" width="295" height="28" rx="4" fill="#0f172a"/>
+  <text x="455" y="349" class="text-md">form_submit</text>
+  <rect x="575" y="336" width="45" height="16" rx="4" fill="#22c55e" opacity="0.3"/>
+  <text x="597" y="348" text-anchor="middle" class="text-sm" fill="#22c55e">342</text>
+  <text x="640" y="349" class="text-muted">today</text>
+
+  <rect x="445" y="365" width="295" height="28" rx="4" fill="#0f172a"/>
+  <text x="455" y="384" class="text-md">pwa_install</text>
+  <rect x="575" y="371" width="45" height="16" rx="4" fill="#3b82f6" opacity="0.3"/>
+  <text x="597" y="383" text-anchor="middle" class="text-sm" fill="#3b82f6">89</text>
+  <text x="640" y="384" class="text-muted">today</text>
+
+  <!-- Traffic Sources Section -->
+  <text x="50" y="435" class="heading">Traffic Sources</text>
+  <rect x="50" y="450" width="240" height="110" rx="6" fill="#1e293b" stroke="#475569"/>
+
+  <!-- Pie chart representation -->
+  <circle cx="120" cy="510" r="40" fill="#334155"/>
+  <path d="M 120 510 L 120 470 A 40 40 0 0 1 157 530 Z" fill="#8b5cf6"/>
+  <path d="M 120 510 L 157 530 A 40 40 0 0 1 83 530 Z" fill="#22c55e"/>
+  <path d="M 120 510 L 83 530 A 40 40 0 0 1 120 470 Z" fill="#3b82f6"/>
+
+  <text x="175" y="478" class="text-sm">Organic</text>
+  <rect x="175" y="483" width="8" height="8" fill="#8b5cf6"/>
+  <text x="190" y="492" class="text-muted">45%</text>
+
+  <text x="175" y="508" class="text-sm">Direct</text>
+  <rect x="175" y="513" width="8" height="8" fill="#22c55e"/>
+  <text x="190" y="522" class="text-muted">32%</text>
+
+  <text x="175" y="538" class="text-sm">Referral</text>
+  <rect x="175" y="543" width="8" height="8" fill="#3b82f6"/>
+  <text x="190" y="552" class="text-muted">23%</text>
+
+  <!-- Top Pages Section -->
+  <text x="310" y="435" class="heading">Top Pages</text>
+  <rect x="310" y="450" width="220" height="110" rx="6" fill="#1e293b" stroke="#475569"/>
+
+  <text x="325" y="475" class="text-sm">/</text>
+  <text x="495" y="475" text-anchor="end" class="text-muted">2,847</text>
+
+  <text x="325" y="497" class="text-sm">/blog</text>
+  <text x="495" y="497" text-anchor="end" class="text-muted">1,523</text>
+
+  <text x="325" y="519" class="text-sm">/profile</text>
+  <text x="495" y="519" text-anchor="end" class="text-muted">987</text>
+
+  <text x="325" y="541" class="text-sm">/messages</text>
+  <text x="495" y="541" text-anchor="end" class="text-muted">654</text>
+
+  <!-- Privacy Mode Panel -->
+  <text x="550" y="435" class="heading">Privacy Controls</text>
+  <rect x="550" y="450" width="205" height="110" rx="6" fill="#1e293b" stroke="#475569"/>
+
+  <rect x="565" y="465" width="175" height="35" rx="4" fill="#0f172a"/>
+  <circle cx="583" cy="482" r="8" fill="#22c55e" opacity="0.3"/>
+  <circle cx="583" cy="482" r="4" fill="#22c55e"/>
+  <text x="600" y="487" class="text-sm">Consent Mode: Active</text>
+
+  <rect x="565" y="508" width="175" height="35" rx="4" fill="#0f172a"/>
+  <circle cx="583" cy="525" r="8" fill="#8b5cf6" opacity="0.3"/>
+  <circle cx="583" cy="525" r="4" fill="#8b5cf6"/>
+  <text x="600" y="530" class="text-sm">IP Anonymization: ON</text>
+
+  <!-- ==================== MOBILE VIEW ==================== -->
+  <text x="917" y="48" text-anchor="middle" class="section-label">MOBILE</text>
+
+  <!-- Phone Frame -->
+  <rect x="820" y="55" width="195" height="422" rx="24" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+  <rect x="875" y="55" width="85" height="20" rx="10" fill="#0f172a"/>
+  <rect x="826" y="61" width="183" height="410" rx="20" fill="#1e293b"/>
+
+  <!-- Status Bar -->
+  <text x="846" y="80" class="text-muted" font-size="9">9:41</text>
+  <g transform="translate(970, 72)">
+    <rect x="0" y="0" width="18" height="9" rx="2" stroke="#64748b" stroke-width="1" fill="none"/>
+    <rect x="2" y="2" width="12" height="5" rx="1" fill="#64748b"/>
+  </g>
+
+  <!-- Mobile Header -->
+  <rect x="826" y="90" width="183" height="40" fill="#0f172a"/>
+  <text x="846" y="115" class="heading" font-size="12">Analytics</text>
+  <rect x="960" y="100" width="35" height="20" rx="4" fill="#22c55e" opacity="0.3"/>
+  <text x="977" y="114" text-anchor="middle" fill="#22c55e" font-size="8">ON</text>
+
+  <!-- Mobile Quick Stats -->
+  <rect x="836" y="140" width="80" height="55" rx="4" fill="#0f172a"/>
+  <text x="846" y="157" class="text-muted" font-size="8">VISITORS</text>
+  <text x="846" y="180" fill="#fff" font-size="18" font-weight="bold">247</text>
+
+  <rect x="920" y="140" width="80" height="55" rx="4" fill="#0f172a"/>
+  <text x="930" y="157" class="text-muted" font-size="8">SESSIONS</text>
+  <text x="930" y="180" fill="#fff" font-size="18" font-weight="bold">3.8k</text>
+
+  <!-- Mobile Web Vitals Mini -->
+  <text x="846" y="215" class="text-sm" font-weight="bold">Web Vitals</text>
+  <rect x="836" y="225" width="163" height="70" rx="4" fill="#0f172a"/>
+
+  <text x="850" y="245" class="text-muted" font-size="8">LCP</text>
+  <rect x="880" y="238" width="50" height="6" rx="3" fill="#334155"/>
+  <rect x="880" y="238" width="35" height="6" rx="3" fill="#22c55e"/>
+  <text x="940" y="245" class="text-muted" font-size="8">1.8s</text>
+
+  <text x="850" y="263" class="text-muted" font-size="8">FID</text>
+  <rect x="880" y="256" width="50" height="6" rx="3" fill="#334155"/>
+  <rect x="880" y="256" width="15" height="6" rx="3" fill="#22c55e"/>
+  <text x="940" y="263" class="text-muted" font-size="8">45ms</text>
+
+  <text x="850" y="281" class="text-muted" font-size="8">CLS</text>
+  <rect x="880" y="274" width="50" height="6" rx="3" fill="#334155"/>
+  <rect x="880" y="274" width="10" height="6" rx="3" fill="#22c55e"/>
+  <text x="940" y="281" class="text-muted" font-size="8">0.05</text>
+
+  <!-- Mobile Events -->
+  <text x="846" y="315" class="text-sm" font-weight="bold">Top Events</text>
+  <rect x="836" y="325" width="163" height="75" rx="4" fill="#0f172a"/>
+
+  <text x="850" y="345" class="text-sm">theme_change</text>
+  <text x="980" y="345" text-anchor="end" fill="#8b5cf6" font-size="10">1,247</text>
+
+  <text x="850" y="365" class="text-sm">form_submit</text>
+  <text x="980" y="365" text-anchor="end" fill="#22c55e" font-size="10">342</text>
+
+  <text x="850" y="385" class="text-sm">pwa_install</text>
+  <text x="980" y="385" text-anchor="end" fill="#3b82f6" font-size="10">89</text>
+
+  <!-- Mobile Privacy Toggle -->
+  <rect x="836" y="410" width="163" height="35" rx="4" fill="#0f172a"/>
+  <text x="850" y="432" class="text-sm">Consent Mode</text>
+  <rect x="950" y="420" width="35" height="16" rx="8" fill="#22c55e"/>
+  <circle cx="977" cy="428" r="6" fill="#fff"/>
+
+  <!-- Phone Home Indicator -->
+  <rect x="880" y="458" width="75" height="4" rx="2" fill="#475569"/>
+
+  <!-- ==================== ANNOTATIONS ==================== -->
+  <text x="30" y="590" class="section-label">SPECIFICATIONS</text>
+
+  <rect x="30" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="42" y="618" class="annotation">FR-001: GA4 loads only after cookie consent</text>
+  <text x="42" y="632" class="annotation">FR-002: Web Vitals (LCP, FID, CLS) to GA4</text>
+  <text x="42" y="646" class="annotation">FR-003: Custom events for key interactions</text>
+  <text x="42" y="660" class="annotation">FR-004: Debug mode for development</text>
+  <text x="42" y="674" class="annotation">FR-005: CSP headers for Google domains</text>
+
+  <rect x="320" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="332" y="618" class="annotation">FR-006: Works with all 32 themes</text>
+  <text x="332" y="632" class="annotation">FR-007: No impact on Lighthouse scores</text>
+  <text x="332" y="646" class="annotation">FR-008: Privacy mode when consent denied</text>
+  <text x="332" y="660" class="annotation">FR-009: IP anonymization enabled</text>
+  <text x="332" y="674" class="annotation">FR-010: Track page views per navigation</text>
+
+  <rect x="610" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="622" y="618" class="annotation">FR-011: trackThemeChange() event</text>
+  <text x="622" y="632" class="annotation">FR-012: trackFormSubmit() event</text>
+  <text x="622" y="646" class="annotation">FR-013: trackPWAInstall() event</text>
+  <text x="622" y="660" class="annotation">FR-014: trackError() exception tracking</text>
+  <text x="622" y="674" class="annotation">FR-015: trackSearch() site search</text>
+
+  <rect x="900" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="912" y="618" class="annotation">NFR-001: Async script loading</text>
+  <text x="912" y="632" class="annotation">NFR-002: Graceful ad-blocker handling</text>
+  <text x="912" y="646" class="annotation">NFR-003: Send page view false initially</text>
+  <text x="912" y="660" class="annotation">SC-001: Consent state persisted</text>
+  <text x="912" y="674" class="annotation">SC-002: GDPR/CCPA compliance ready</text>
+
+</svg>

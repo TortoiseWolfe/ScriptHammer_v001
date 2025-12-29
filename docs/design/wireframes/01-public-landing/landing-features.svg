@@ -9,183 +9,193 @@
       <stop offset="100%" style="stop-color:#d946ef"/>
     </linearGradient>
     <style>
+      .page-title { fill: #64748b; font-family: system-ui, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 1px; }
+      .section-label { fill: #8b5cf6; font-family: monospace; font-size: 11px; }
       .heading { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 14px; font-weight: bold; }
-      .text-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 10px; }
+      .heading-lg { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 18px; font-weight: bold; }
       .text-md { fill: #cbd5e1; font-family: system-ui, sans-serif; font-size: 12px; }
+      .text-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 10px; }
       .text-muted { fill: #64748b; font-family: system-ui, sans-serif; font-size: 10px; }
-      .annotation { fill: #8b5cf6; font-family: monospace; font-size: 10px; }
+      .annotation { fill: #8b5cf6; font-family: monospace; font-size: 9px; }
     </style>
   </defs>
 
   <!-- Background -->
   <rect width="1200" height="800" fill="url(#bgGrad)"/>
-  <g opacity="0.05">
-    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="15" cy="15" r="1" fill="#fff"/>
+  <g opacity="0.03">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#fff" stroke-width="0.5"/>
     </pattern>
-    <rect width="1200" height="800" fill="url(#dots)"/>
+    <rect width="1200" height="800" fill="url(#grid)"/>
   </g>
   <rect x="0" y="0" width="1200" height="3" fill="url(#accentGrad)"/>
 
-  <!-- Title -->
-  <text x="600" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#64748b" letter-spacing="1">LANDING PAGE - FEATURES SECTION</text>
+  <!-- Page Title -->
+  <text x="600" y="28" text-anchor="middle" class="page-title">PUBLIC LANDING - FEATURES SECTION</text>
 
-  <!-- ========================================== -->
-  <!-- Features Grid (Desktop) -->
-  <!-- ========================================== -->
-  <text x="400" y="60" text-anchor="middle" class="annotation" font-size="12">FEATURES GRID (DESKTOP)</text>
+  <!-- ==================== DESKTOP VIEW ==================== -->
+  <text x="405" y="48" text-anchor="middle" class="section-label">DESKTOP</text>
 
-  <rect x="50" y="80" width="700" height="550" rx="8" fill="#1e293b" stroke="#475569"/>
+  <!-- Desktop Browser Frame -->
+  <rect x="30" y="55" width="750" height="520" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <rect x="30" y="55" width="750" height="32" rx="8" fill="#334155"/>
+  <circle cx="52" cy="71" r="6" fill="#ef4444" opacity="0.8"/>
+  <circle cx="72" cy="71" r="6" fill="#eab308" opacity="0.8"/>
+  <circle cx="92" cy="71" r="6" fill="#22c55e" opacity="0.8"/>
+  <rect x="120" y="63" width="400" height="16" rx="4" fill="#1e293b"/>
+  <text x="320" y="75" text-anchor="middle" class="text-muted">scripthammer.com/features</text>
 
-  <!-- Section header -->
-  <text x="400" y="120" text-anchor="middle" fill="#8b5cf6" class="text-sm" letter-spacing="2">WHY CHOOSE US</text>
-  <text x="400" y="150" text-anchor="middle" fill="white" font-family="system-ui, sans-serif" font-size="22" font-weight="bold">Everything you need to build</text>
-  <text x="400" y="178" text-anchor="middle" fill="white" font-family="system-ui, sans-serif" font-size="22" font-weight="bold">modern applications</text>
+  <!-- Desktop Content -->
+  <rect x="30" y="87" width="750" height="488" fill="#0f172a"/>
 
-  <!-- Feature cards - Row 1 -->
+  <!-- Section Header -->
+  <text x="405" y="120" text-anchor="middle" fill="#8b5cf6" class="text-sm" letter-spacing="2">WHY CHOOSE US</text>
+  <text x="405" y="148" text-anchor="middle" class="heading-lg">Everything you need to build</text>
+  <text x="405" y="172" text-anchor="middle" class="heading-lg">modern applications</text>
+
+  <!-- Feature Cards Grid - Row 1 -->
   <!-- Card 1: Real-time -->
-  <rect x="80" y="210" width="200" height="150" rx="8" fill="#0f172a" stroke="#475569"/>
-  <circle cx="130" cy="255" r="22" fill="#8b5cf6" opacity="0.2"/>
-  <text x="130" y="262" text-anchor="middle" fill="#8b5cf6" font-size="18">⚡</text>
-  <text x="100" y="300" class="heading">Real-time Sync</text>
-  <text x="100" y="320" class="text-sm">Changes sync instantly across</text>
-  <text x="100" y="335" class="text-sm">all devices. Collaborate with</text>
-  <text x="100" y="350" class="text-sm">your team in real-time.</text>
+  <rect x="65" y="195" width="220" height="130" rx="6" fill="#1e293b" stroke="#475569"/>
+  <circle cx="100" cy="235" r="18" fill="#8b5cf6" opacity="0.2"/>
+  <text x="100" y="241" text-anchor="middle" fill="#8b5cf6" font-size="14">⚡</text>
+  <text x="130" y="232" class="heading" font-size="12">Real-time Sync</text>
+  <text x="130" y="252" class="text-sm">Changes sync instantly</text>
+  <text x="130" y="267" class="text-sm">across all devices.</text>
 
   <!-- Card 2: Encryption -->
-  <rect x="300" y="210" width="200" height="150" rx="8" fill="#0f172a" stroke="#475569"/>
-  <circle cx="350" cy="255" r="22" fill="#22c55e" opacity="0.2"/>
-  <text x="350" y="262" text-anchor="middle" fill="#22c55e" font-size="18">🔒</text>
-  <text x="320" y="300" class="heading">E2E Encryption</text>
-  <text x="320" y="320" class="text-sm">Your data is encrypted before</text>
-  <text x="320" y="335" class="text-sm">it leaves your device. Only you</text>
-  <text x="320" y="350" class="text-sm">can read your messages.</text>
+  <rect x="300" y="195" width="220" height="130" rx="6" fill="#1e293b" stroke="#475569"/>
+  <circle cx="335" cy="235" r="18" fill="#22c55e" opacity="0.2"/>
+  <text x="335" y="241" text-anchor="middle" fill="#22c55e" font-size="14">🔒</text>
+  <text x="365" y="232" class="heading" font-size="12">E2E Encryption</text>
+  <text x="365" y="252" class="text-sm">Your data is encrypted</text>
+  <text x="365" y="267" class="text-sm">before leaving device.</text>
 
   <!-- Card 3: Offline -->
-  <rect x="520" y="210" width="200" height="150" rx="8" fill="#0f172a" stroke="#475569"/>
-  <circle cx="570" cy="255" r="22" fill="#0891b2" opacity="0.2"/>
-  <text x="570" y="262" text-anchor="middle" fill="#0891b2" font-size="18">📱</text>
-  <text x="540" y="300" class="heading">Offline First</text>
-  <text x="540" y="320" class="text-sm">Works without internet.</text>
-  <text x="540" y="335" class="text-sm">Changes sync automatically</text>
-  <text x="540" y="350" class="text-sm">when you're back online.</text>
+  <rect x="535" y="195" width="220" height="130" rx="6" fill="#1e293b" stroke="#475569"/>
+  <circle cx="570" cy="235" r="18" fill="#0891b2" opacity="0.2"/>
+  <text x="570" y="241" text-anchor="middle" fill="#0891b2" font-size="14">📱</text>
+  <text x="600" y="232" class="heading" font-size="12">Offline First</text>
+  <text x="600" y="252" class="text-sm">Works without internet.</text>
+  <text x="600" y="267" class="text-sm">Syncs when back online.</text>
 
-  <!-- Feature cards - Row 2 -->
+  <!-- Feature Cards Grid - Row 2 -->
   <!-- Card 4: Accessibility -->
-  <rect x="80" y="380" width="200" height="150" rx="8" fill="#0f172a" stroke="#475569"/>
-  <circle cx="130" cy="425" r="22" fill="#d946ef" opacity="0.2"/>
-  <text x="130" y="432" text-anchor="middle" fill="#d946ef" font-size="18">♿</text>
-  <text x="100" y="470" class="heading">Fully Accessible</text>
-  <text x="100" y="490" class="text-sm">WCAG 2.1 AA compliant.</text>
-  <text x="100" y="505" class="text-sm">Keyboard navigation, screen</text>
-  <text x="100" y="520" class="text-sm">reader support, color modes.</text>
+  <rect x="65" y="340" width="220" height="130" rx="6" fill="#1e293b" stroke="#475569"/>
+  <circle cx="100" cy="380" r="18" fill="#d946ef" opacity="0.2"/>
+  <text x="100" y="386" text-anchor="middle" fill="#d946ef" font-size="14">♿</text>
+  <text x="130" y="377" class="heading" font-size="12">Fully Accessible</text>
+  <text x="130" y="397" class="text-sm">WCAG 2.1 AA compliant.</text>
+  <text x="130" y="412" class="text-sm">Keyboard + screen readers.</text>
 
   <!-- Card 5: Performance -->
-  <rect x="300" y="380" width="200" height="150" rx="8" fill="#0f172a" stroke="#475569"/>
-  <circle cx="350" cy="425" r="22" fill="#eab308" opacity="0.2"/>
-  <text x="350" y="432" text-anchor="middle" fill="#eab308" font-size="18">🚀</text>
-  <text x="320" y="470" class="heading">Blazing Fast</text>
-  <text x="320" y="490" class="text-sm">90+ Lighthouse scores.</text>
-  <text x="320" y="505" class="text-sm">Optimized for performance</text>
-  <text x="320" y="520" class="text-sm">on any device or network.</text>
+  <rect x="300" y="340" width="220" height="130" rx="6" fill="#1e293b" stroke="#475569"/>
+  <circle cx="335" cy="380" r="18" fill="#eab308" opacity="0.2"/>
+  <text x="335" y="386" text-anchor="middle" fill="#eab308" font-size="14">🚀</text>
+  <text x="365" y="377" class="heading" font-size="12">Blazing Fast</text>
+  <text x="365" y="397" class="text-sm">90+ Lighthouse scores.</text>
+  <text x="365" y="412" class="text-sm">Optimized performance.</text>
 
   <!-- Card 6: Privacy -->
-  <rect x="520" y="380" width="200" height="150" rx="8" fill="#0f172a" stroke="#475569"/>
-  <circle cx="570" cy="425" r="22" fill="#ef4444" opacity="0.2"/>
-  <text x="570" y="432" text-anchor="middle" fill="#ef4444" font-size="18">🛡️</text>
-  <text x="540" y="470" class="heading">Privacy First</text>
-  <text x="540" y="490" class="text-sm">GDPR compliant. No tracking</text>
-  <text x="540" y="505" class="text-sm">without consent. Your data</text>
-  <text x="540" y="520" class="text-sm">stays yours.</text>
+  <rect x="535" y="340" width="220" height="130" rx="6" fill="#1e293b" stroke="#475569"/>
+  <circle cx="570" cy="380" r="18" fill="#ef4444" opacity="0.2"/>
+  <text x="570" y="386" text-anchor="middle" fill="#ef4444" font-size="14">🛡️</text>
+  <text x="600" y="377" class="heading" font-size="12">Privacy First</text>
+  <text x="600" y="397" class="text-sm">GDPR compliant. No</text>
+  <text x="600" y="412" class="text-sm">tracking without consent.</text>
 
-  <!-- CTA -->
-  <rect x="300" y="560" width="200" height="44" rx="6" fill="#8b5cf6"/>
-  <text x="400" y="588" text-anchor="middle" fill="white" class="text-md">Explore All Features</text>
+  <!-- CTA Button -->
+  <rect x="305" y="495" width="200" height="40" rx="6" fill="url(#accentGrad)"/>
+  <text x="405" y="521" text-anchor="middle" fill="#fff" class="heading">Explore All Features</text>
 
-  <!-- ========================================== -->
-  <!-- Mobile Features (Scrollable) -->
-  <!-- ========================================== -->
-  <text x="950" y="60" text-anchor="middle" class="annotation" font-size="12">MOBILE (STACKED CARDS)</text>
+  <!-- ==================== MOBILE VIEW ==================== -->
+  <text x="917" y="48" text-anchor="middle" class="section-label">MOBILE</text>
 
-  <!-- Phone frame -->
-  <rect x="800" y="80" width="320" height="600" rx="20" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+  <!-- Phone Frame -->
+  <rect x="820" y="55" width="195" height="422" rx="24" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+  <rect x="875" y="55" width="85" height="20" rx="10" fill="#0f172a"/>
+  <rect x="826" y="61" width="183" height="410" rx="20" fill="#1e293b"/>
 
-  <!-- Status bar -->
-  <rect x="800" y="80" width="320" height="28" rx="20" fill="#0f172a"/>
-  <text x="960" y="98" text-anchor="middle" class="text-sm">9:41</text>
+  <!-- Status Bar -->
+  <text x="846" y="80" class="text-muted" font-size="9">9:41</text>
+  <g transform="translate(970, 72)">
+    <rect x="0" y="0" width="18" height="9" rx="2" stroke="#64748b" stroke-width="1" fill="none"/>
+    <rect x="2" y="2" width="12" height="5" rx="1" fill="#64748b"/>
+  </g>
 
-  <!-- Section header (mobile) -->
-  <text x="960" y="135" text-anchor="middle" fill="#8b5cf6" class="text-sm" letter-spacing="1">WHY CHOOSE US</text>
-  <text x="960" y="162" text-anchor="middle" fill="white" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">Everything you need</text>
+  <!-- Mobile Header -->
+  <rect x="826" y="90" width="183" height="44" fill="#0f172a"/>
+  <text x="846" y="117" fill="#94a3b8" font-size="14">←</text>
+  <text x="917" y="117" text-anchor="middle" class="heading">Features</text>
 
-  <!-- Stacked feature cards -->
+  <!-- Mobile Section Header -->
+  <text x="917" y="155" text-anchor="middle" fill="#8b5cf6" font-size="9" letter-spacing="1">WHY CHOOSE US</text>
+  <text x="917" y="175" text-anchor="middle" class="heading" font-size="12">Everything you need</text>
+
+  <!-- Mobile Stacked Cards -->
   <!-- Card 1 -->
-  <rect x="830" y="185" width="260" height="90" rx="8" fill="#0f172a" stroke="#475569"/>
-  <circle cx="870" cy="230" r="18" fill="#8b5cf6" opacity="0.2"/>
-  <text x="870" y="236" text-anchor="middle" fill="#8b5cf6" font-size="14">⚡</text>
-  <text x="900" y="218" class="heading" font-size="12">Real-time Sync</text>
-  <text x="900" y="238" class="text-sm">Changes sync instantly across</text>
-  <text x="900" y="253" class="text-sm">all devices.</text>
+  <rect x="846" y="190" width="143" height="55" rx="4" fill="#0f172a" stroke="#475569"/>
+  <circle cx="868" cy="218" r="12" fill="#8b5cf6" opacity="0.2"/>
+  <text x="868" y="222" text-anchor="middle" fill="#8b5cf6" font-size="10">⚡</text>
+  <text x="890" y="212" class="heading" font-size="9">Real-time Sync</text>
+  <text x="890" y="226" class="text-muted" font-size="8">Instant sync across devices</text>
 
   <!-- Card 2 -->
-  <rect x="830" y="285" width="260" height="90" rx="8" fill="#0f172a" stroke="#475569"/>
-  <circle cx="870" cy="330" r="18" fill="#22c55e" opacity="0.2"/>
-  <text x="870" y="336" text-anchor="middle" fill="#22c55e" font-size="14">🔒</text>
-  <text x="900" y="318" class="heading" font-size="12">E2E Encryption</text>
-  <text x="900" y="338" class="text-sm">Your data is encrypted before</text>
-  <text x="900" y="353" class="text-sm">it leaves your device.</text>
+  <rect x="846" y="252" width="143" height="55" rx="4" fill="#0f172a" stroke="#475569"/>
+  <circle cx="868" cy="280" r="12" fill="#22c55e" opacity="0.2"/>
+  <text x="868" y="284" text-anchor="middle" fill="#22c55e" font-size="10">🔒</text>
+  <text x="890" y="274" class="heading" font-size="9">E2E Encryption</text>
+  <text x="890" y="288" class="text-muted" font-size="8">Encrypted before leaving</text>
 
   <!-- Card 3 -->
-  <rect x="830" y="385" width="260" height="90" rx="8" fill="#0f172a" stroke="#475569"/>
-  <circle cx="870" cy="430" r="18" fill="#0891b2" opacity="0.2"/>
-  <text x="870" y="436" text-anchor="middle" fill="#0891b2" font-size="14">📱</text>
-  <text x="900" y="418" class="heading" font-size="12">Offline First</text>
-  <text x="900" y="438" class="text-sm">Works without internet.</text>
-  <text x="900" y="453" class="text-sm">Syncs when back online.</text>
+  <rect x="846" y="314" width="143" height="55" rx="4" fill="#0f172a" stroke="#475569"/>
+  <circle cx="868" cy="342" r="12" fill="#0891b2" opacity="0.2"/>
+  <text x="868" y="346" text-anchor="middle" fill="#0891b2" font-size="10">📱</text>
+  <text x="890" y="336" class="heading" font-size="9">Offline First</text>
+  <text x="890" y="350" class="text-muted" font-size="8">Works without internet</text>
 
   <!-- Card 4 -->
-  <rect x="830" y="485" width="260" height="90" rx="8" fill="#0f172a" stroke="#475569"/>
-  <circle cx="870" cy="530" r="18" fill="#d946ef" opacity="0.2"/>
-  <text x="870" y="536" text-anchor="middle" fill="#d946ef" font-size="14">♿</text>
-  <text x="900" y="518" class="heading" font-size="12">Fully Accessible</text>
-  <text x="900" y="538" class="text-sm">WCAG 2.1 AA compliant.</text>
-  <text x="900" y="553" class="text-sm">Keyboard nav, screen readers.</text>
+  <rect x="846" y="376" width="143" height="55" rx="4" fill="#0f172a" stroke="#475569"/>
+  <circle cx="868" cy="404" r="12" fill="#d946ef" opacity="0.2"/>
+  <text x="868" y="408" text-anchor="middle" fill="#d946ef" font-size="10">♿</text>
+  <text x="890" y="398" class="heading" font-size="9">Fully Accessible</text>
+  <text x="890" y="412" class="text-muted" font-size="8">WCAG 2.1 AA compliant</text>
 
-  <!-- Scroll indicator -->
-  <rect x="950" y="590" width="6" height="30" rx="3" fill="#334155"/>
-  <rect x="950" y="590" width="6" height="15" rx="3" fill="#8b5cf6"/>
+  <!-- Scroll Indicator -->
+  <rect x="975" y="200" width="4" height="60" rx="2" fill="#334155"/>
+  <rect x="975" y="200" width="4" height="25" rx="2" fill="#8b5cf6"/>
 
-  <!-- CTA (mobile) -->
-  <rect x="830" y="630" width="260" height="40" rx="6" fill="#8b5cf6"/>
-  <text x="960" y="656" text-anchor="middle" fill="white" class="text-md">Explore All Features</text>
+  <!-- Phone Home Indicator -->
+  <rect x="880" y="458" width="75" height="4" rx="2" fill="#475569"/>
 
-  <!-- ========================================== -->
-  <!-- Annotations -->
-  <!-- ========================================== -->
-  <rect x="50" y="650" width="280" height="90" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <text x="60" y="670" class="annotation">Constitution I: Component Structure</text>
-  <text x="60" y="685" class="annotation">Each feature card is a reusable</text>
-  <text x="60" y="700" class="annotation">FeatureCard component (5-file pattern)</text>
-  <text x="60" y="715" class="annotation">Storybook stories for each variant</text>
-  <text x="60" y="730" class="annotation">Unit tests for accessibility</text>
+  <!-- ==================== ANNOTATIONS ==================== -->
+  <text x="30" y="590" class="section-label">SPECIFICATIONS</text>
 
-  <rect x="350" y="650" width="250" height="90" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <text x="360" y="670" class="annotation">Constitution V: Progressive Enhancement</text>
-  <text x="360" y="685" class="annotation">Grid → Stack on mobile</text>
-  <text x="360" y="700" class="annotation">PWA capabilities highlighted</text>
-  <text x="360" y="715" class="annotation">Offline-first messaging</text>
-  <text x="360" y="730" class="annotation">Accessibility as selling point</text>
+  <rect x="30" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="42" y="618" class="annotation">Constitution I: Component Structure</text>
+  <text x="42" y="632" class="annotation">FeatureCard is reusable component</text>
+  <text x="42" y="646" class="annotation">5-file pattern (index, component, test,</text>
+  <text x="42" y="660" class="annotation">stories, a11y test)</text>
+  <text x="42" y="674" class="annotation">Storybook stories for each variant</text>
 
-  <rect x="620" y="650" width="250" height="90" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <text x="630" y="670" class="annotation">Constitution VI: Privacy &amp; Compliance</text>
-  <text x="630" y="685" class="annotation">Privacy as feature, not afterthought</text>
-  <text x="630" y="700" class="annotation">E2E encryption messaging</text>
-  <text x="630" y="715" class="annotation">GDPR compliance highlighted</text>
-  <text x="630" y="730" class="annotation">No tracking by default</text>
+  <rect x="320" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="332" y="618" class="annotation">Constitution V: Progressive Enhancement</text>
+  <text x="332" y="632" class="annotation">Desktop: 3-column grid layout</text>
+  <text x="332" y="646" class="annotation">Mobile: Stacked single column</text>
+  <text x="332" y="660" class="annotation">PWA capabilities highlighted</text>
+  <text x="332" y="674" class="annotation">Accessibility as selling point</text>
 
-  <rect x="890" y="700" width="230" height="55" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <text x="900" y="720" class="annotation">Responsive breakpoints:</text>
-  <text x="900" y="735" class="annotation">Mobile: &lt;768px (stacked)</text>
-  <text x="900" y="750" class="annotation">Desktop: 3-col grid</text>
+  <rect x="610" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="622" y="618" class="annotation">Constitution VI: Privacy &amp; Compliance</text>
+  <text x="622" y="632" class="annotation">Privacy as feature not afterthought</text>
+  <text x="622" y="646" class="annotation">E2E encryption messaging</text>
+  <text x="622" y="660" class="annotation">GDPR compliance highlighted</text>
+  <text x="622" y="674" class="annotation">No tracking by default</text>
+
+  <rect x="900" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="912" y="618" class="annotation">Responsive breakpoints:</text>
+  <text x="912" y="632" class="annotation">Mobile: &lt;768px (stacked)</text>
+  <text x="912" y="646" class="annotation">Tablet: 768-1024px (2-col)</text>
+  <text x="912" y="660" class="annotation">Desktop: &gt;1024px (3-col)</text>
+  <text x="912" y="674" class="annotation">CSS Grid with auto-fit</text>
 
 </svg>

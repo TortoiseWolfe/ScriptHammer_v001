@@ -52,31 +52,31 @@
     <text x="0" y="25" text-anchor="middle" class="text-muted">Compliant</text>
   </g>
 
-  <!-- Stats cards row -->
+  <!-- Stats cards row (80px cards with 8px gaps = 344px total, ends at x=564 before Critical Issues at x=570) -->
   <g transform="translate(220, 90)">
     <!-- Pages Tested -->
-    <rect x="0" y="0" width="100" height="70" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
-    <text x="50" y="25" text-anchor="middle" class="text-muted">PAGES</text>
-    <text x="50" y="50" text-anchor="middle" class="heading" font-size="20">12</text>
-    <text x="50" y="65" text-anchor="middle" class="text-sm" fill="#22c55e">All tested</text>
+    <rect x="0" y="0" width="80" height="70" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="40" y="25" text-anchor="middle" class="text-muted">PAGES</text>
+    <text x="40" y="50" text-anchor="middle" class="heading" font-size="20">12</text>
+    <text x="40" y="65" text-anchor="middle" class="text-sm" fill="#22c55e">All tested</text>
 
     <!-- Errors -->
-    <rect x="110" y="0" width="100" height="70" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
-    <text x="160" y="25" text-anchor="middle" class="text-muted">ERRORS</text>
-    <text x="160" y="50" text-anchor="middle" class="heading" font-size="20" fill="#ef4444">3</text>
-    <text x="160" y="65" text-anchor="middle" class="text-sm" fill="#ef4444">Critical</text>
+    <rect x="88" y="0" width="80" height="70" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="128" y="25" text-anchor="middle" class="text-muted">ERRORS</text>
+    <text x="128" y="50" text-anchor="middle" class="heading" font-size="20" fill="#ef4444">3</text>
+    <text x="128" y="65" text-anchor="middle" class="text-sm" fill="#ef4444">Critical</text>
 
     <!-- Warnings -->
-    <rect x="220" y="0" width="100" height="70" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
-    <text x="270" y="25" text-anchor="middle" class="text-muted">WARNINGS</text>
-    <text x="270" y="50" text-anchor="middle" class="heading" font-size="20" fill="#eab308">8</text>
-    <text x="270" y="65" text-anchor="middle" class="text-sm" fill="#eab308">Should fix</text>
+    <rect x="176" y="0" width="80" height="70" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="216" y="25" text-anchor="middle" class="text-muted">WARNINGS</text>
+    <text x="216" y="50" text-anchor="middle" class="heading" font-size="18" fill="#eab308">8</text>
+    <text x="216" y="65" text-anchor="middle" class="text-sm" fill="#eab308">Should fix</text>
 
     <!-- Notices -->
-    <rect x="330" y="0" width="100" height="70" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
-    <text x="380" y="25" text-anchor="middle" class="text-muted">NOTICES</text>
-    <text x="380" y="50" text-anchor="middle" class="heading" font-size="20" fill="#3b82f6">14</text>
-    <text x="380" y="65" text-anchor="middle" class="text-sm" fill="#3b82f6">Review</text>
+    <rect x="264" y="0" width="80" height="70" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="304" y="25" text-anchor="middle" class="text-muted">NOTICES</text>
+    <text x="304" y="50" text-anchor="middle" class="heading" font-size="20" fill="#3b82f6">14</text>
+    <text x="304" y="65" text-anchor="middle" class="text-sm" fill="#3b82f6">Review</text>
   </g>
 
   <!-- Page scores table -->

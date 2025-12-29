@@ -214,3 +214,33 @@ Comprehensive visual review of ALL wireframes for overlap issues and UI element 
 2. Reduced annotation box heights to 45-50px
 3. Reorganized layouts to spread boxes horizontally
 4. Some files already had acceptable spacing (text annotations or proper horizontal gaps)
+
+---
+
+#### 11. WCAG Compliance (wcag-compliance.svg) - Stats Card Overlap
+**Problem**: NOTICES stats card hidden behind CRITICAL ISSUES panel
+**Location**: Top stats row - 4th card (NOTICES) covered by right panel
+**Details**:
+- Stats cards at translate(220, 90) with 100px width + 10px gaps = 430px total
+- Cards ended at x=650 (220 + 430)
+- CRITICAL ISSUES panel starts at x=570
+- **80px overlap** - NOTICES card almost entirely hidden
+**Solution**: Reduced card widths to 80px with 8px gaps = 344px total, ending at x=564
+**Status**: ✅ FIXED
+
+---
+
+#### 12. Colorblind Mode (colorblind-mode.svg) - Multiple Overlaps
+**Problem**: Settings panel elements cramped, empty space on right unused
+**Location**: Left column - Enable Patterns toggle overlaps settings panel and MOBILE section
+**Details**:
+- Settings panel: y=75-495 (420px tall)
+- Enable Patterns toggle: y=475-525 (extends 30px beyond panel)
+- MOBILE header: y=520 (only 5px below toggle - severe cramping)
+- Right side had large empty area below COLOR VISION TYPES panel
+**Solution**:
+- Increased viewBox from 800 to 880
+- Moved MOBILE section down: header y=520→580, phone y=535→595
+- Moved DEVELOPER SIMULATION section down: y=520→580
+- Moved annotations down: y=400→595 (fills empty right side)
+**Status**: ✅ FIXED

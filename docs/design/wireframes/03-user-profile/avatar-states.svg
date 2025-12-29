@@ -9,234 +9,261 @@
       <stop offset="100%" style="stop-color:#d946ef"/>
     </linearGradient>
     <style>
+      .page-title { fill: #64748b; font-family: system-ui, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 1px; }
+      .section-label { fill: #8b5cf6; font-family: monospace; font-size: 11px; }
       .heading { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 14px; font-weight: bold; }
-      .text-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 10px; }
       .text-md { fill: #cbd5e1; font-family: system-ui, sans-serif; font-size: 12px; }
+      .text-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 10px; }
       .text-muted { fill: #64748b; font-family: system-ui, sans-serif; font-size: 10px; }
-      .annotation { fill: #8b5cf6; font-family: monospace; font-size: 10px; }
+      .annotation { fill: #8b5cf6; font-family: monospace; font-size: 9px; }
     </style>
   </defs>
 
   <!-- Background -->
   <rect width="1200" height="800" fill="url(#bgGrad)"/>
-  <g opacity="0.05">
-    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="15" cy="15" r="1" fill="#fff"/>
+  <g opacity="0.03">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#fff" stroke-width="0.5"/>
     </pattern>
-    <rect width="1200" height="800" fill="url(#dots)"/>
+    <rect width="1200" height="800" fill="url(#grid)"/>
   </g>
   <rect x="0" y="0" width="1200" height="3" fill="url(#accentGrad)"/>
 
-  <!-- Title -->
-  <text x="600" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#64748b" letter-spacing="1">AVATAR STATES &amp; SIZES</text>
+  <!-- Page Title -->
+  <text x="600" y="28" text-anchor="middle" class="page-title">USER PROFILE - AVATAR STATES</text>
 
-  <!-- ========================================== -->
-  <!-- Avatar States -->
-  <!-- ========================================== -->
-  <text x="300" y="60" text-anchor="middle" class="annotation" font-size="12">AVATAR STATES</text>
+  <!-- ==================== DESKTOP VIEW ==================== -->
+  <text x="405" y="48" text-anchor="middle" class="section-label">DESKTOP</text>
 
-  <rect x="50" y="80" width="500" height="350" rx="12" fill="#1e293b" stroke="#475569"/>
+  <!-- Desktop Browser Frame -->
+  <rect x="30" y="55" width="750" height="520" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <rect x="30" y="55" width="750" height="32" rx="8" fill="#334155"/>
+  <circle cx="52" cy="71" r="6" fill="#ef4444" opacity="0.8"/>
+  <circle cx="72" cy="71" r="6" fill="#eab308" opacity="0.8"/>
+  <circle cx="92" cy="71" r="6" fill="#22c55e" opacity="0.8"/>
+  <rect x="120" y="63" width="400" height="16" rx="4" fill="#1e293b"/>
+  <text x="320" y="75" text-anchor="middle" class="text-muted">scripthammer.com/components/avatar</text>
 
-  <!-- Default State (Initials) -->
-  <text x="120" y="115" class="text-muted">Default (No Avatar)</text>
-  <circle cx="120" cy="170" r="45" fill="#8b5cf6"/>
-  <text x="120" y="180" text-anchor="middle" fill="white" font-size="24" font-weight="bold">JD</text>
-  <text x="120" y="235" text-anchor="middle" class="text-sm">Initials from</text>
-  <text x="120" y="250" text-anchor="middle" class="text-sm">display name</text>
+  <!-- Desktop Content -->
+  <rect x="30" y="87" width="750" height="488" fill="#0f172a"/>
 
-  <!-- Custom Avatar -->
-  <text x="260" y="115" class="text-muted">Custom Avatar</text>
-  <circle cx="260" cy="170" r="45" fill="#334155" stroke="#8b5cf6" stroke-width="2"/>
-  <rect x="225" y="135" width="70" height="70" rx="35" fill="#475569"/>
-  <text x="260" y="175" text-anchor="middle" class="text-muted" font-size="8">Photo</text>
-  <text x="260" y="235" text-anchor="middle" class="text-sm">800x800 WebP</text>
-  <text x="260" y="250" text-anchor="middle" class="text-sm">from Supabase</text>
+  <!-- Size Variants Section -->
+  <text x="50" y="115" class="heading">Size Variants</text>
+  <rect x="50" y="125" width="350" height="120" rx="6" fill="#1e293b" stroke="#475569"/>
 
-  <!-- Uploading State -->
-  <text x="400" y="115" class="text-muted">Uploading</text>
-  <circle cx="400" cy="170" r="45" fill="#334155" opacity="0.5"/>
-  <circle cx="400" cy="170" r="30" fill="none" stroke="#8b5cf6" stroke-width="3" stroke-dasharray="47,47" stroke-linecap="round">
-    <animateTransform attributeName="transform" type="rotate" from="0 400 170" to="360 400 170" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <text x="400" y="235" text-anchor="middle" class="text-sm">Spinner overlay</text>
-  <text x="400" y="250" text-anchor="middle" class="text-sm">during upload</text>
+  <!-- XS Avatar -->
+  <circle cx="90" cy="175" r="16" fill="#8b5cf6"/>
+  <text x="90" y="180" text-anchor="middle" fill="#fff" font-size="10">JD</text>
+  <text x="90" y="210" text-anchor="middle" class="text-muted">XS (32px)</text>
 
-  <!-- Error State -->
-  <text x="120" y="290" class="text-muted">Upload Failed</text>
-  <circle cx="120" cy="345" r="45" fill="#334155" stroke="#ef4444" stroke-width="2"/>
-  <circle cx="150" cy="315" r="12" fill="#ef4444"/>
-  <text x="150" y="320" text-anchor="middle" fill="white" font-size="12">!</text>
-  <text x="120" y="410" text-anchor="middle" fill="#f87171" class="text-sm">Retry upload</text>
+  <!-- SM Avatar -->
+  <circle cx="160" cy="175" r="20" fill="#8b5cf6"/>
+  <text x="160" y="181" text-anchor="middle" fill="#fff" font-size="12">JD</text>
+  <text x="160" y="215" text-anchor="middle" class="text-muted">SM (40px)</text>
 
-  <!-- Hover/Edit State -->
-  <text x="260" y="290" class="text-muted">Hover State</text>
-  <circle cx="260" cy="345" r="45" fill="#334155"/>
-  <rect x="215" y="300" width="90" height="90" rx="45" fill="#0f172a" opacity="0.7"/>
-  <text x="260" y="340" text-anchor="middle" fill="white" class="text-sm">Change</text>
-  <text x="260" y="358" text-anchor="middle" fill="white" class="text-sm">Avatar</text>
-  <text x="260" y="410" text-anchor="middle" class="text-sm">Overlay on hover</text>
+  <!-- MD Avatar -->
+  <circle cx="240" cy="175" r="24" fill="#8b5cf6"/>
+  <text x="240" y="182" text-anchor="middle" fill="#fff" font-size="14">JD</text>
+  <text x="240" y="220" text-anchor="middle" class="text-muted">MD (48px)</text>
 
-  <!-- Delete Confirmation -->
-  <text x="400" y="290" class="text-muted">Delete Confirm</text>
-  <circle cx="400" cy="345" r="45" fill="#334155" stroke="#ef4444" stroke-dasharray="4"/>
-  <text x="400" y="350" text-anchor="middle" class="text-muted" font-size="8">Photo</text>
-  <text x="400" y="410" text-anchor="middle" fill="#ef4444" class="text-sm">Remove?</text>
+  <!-- LG Avatar -->
+  <circle cx="330" cy="175" r="32" fill="#8b5cf6"/>
+  <text x="330" y="183" text-anchor="middle" fill="#fff" font-size="16">JD</text>
+  <text x="330" y="228" text-anchor="middle" class="text-muted">LG (64px)</text>
 
-  <!-- ========================================== -->
-  <!-- Avatar Sizes -->
-  <!-- ========================================== -->
-  <text x="850" y="60" text-anchor="middle" class="annotation" font-size="12">AVATAR SIZES (RESPONSIVE)</text>
+  <!-- Status Indicators Section -->
+  <text x="420" y="115" class="heading">Status Indicators</text>
+  <rect x="420" y="125" width="350" height="120" rx="6" fill="#1e293b" stroke="#475569"/>
 
-  <rect x="600" y="80" width="550" height="200" rx="12" fill="#1e293b" stroke="#475569"/>
+  <!-- Online -->
+  <circle cx="470" cy="175" r="24" fill="#8b5cf6"/>
+  <text x="470" y="182" text-anchor="middle" fill="#fff" font-size="14">JD</text>
+  <circle cx="488" cy="193" r="8" fill="#22c55e" stroke="#1e293b" stroke-width="2"/>
+  <text x="470" y="220" text-anchor="middle" class="text-muted">Online</text>
 
-  <!-- XS - 24px -->
-  <text x="660" y="115" text-anchor="middle" class="text-muted">XS</text>
-  <circle cx="660" cy="150" r="12" fill="#8b5cf6"/>
-  <text x="660" y="155" text-anchor="middle" fill="white" font-size="8">JD</text>
-  <text x="660" y="180" text-anchor="middle" class="text-muted">24px</text>
-  <text x="660" y="195" text-anchor="middle" class="text-muted">Inline</text>
+  <!-- Away -->
+  <circle cx="550" cy="175" r="24" fill="#8b5cf6"/>
+  <text x="550" y="182" text-anchor="middle" fill="#fff" font-size="14">JD</text>
+  <circle cx="568" cy="193" r="8" fill="#eab308" stroke="#1e293b" stroke-width="2"/>
+  <text x="550" y="220" text-anchor="middle" class="text-muted">Away</text>
 
-  <!-- SM - 32px -->
-  <text x="740" y="115" text-anchor="middle" class="text-muted">SM</text>
-  <circle cx="740" cy="150" r="16" fill="#8b5cf6"/>
-  <text x="740" y="155" text-anchor="middle" fill="white" font-size="10">JD</text>
-  <text x="740" y="185" text-anchor="middle" class="text-muted">32px</text>
-  <text x="740" y="200" text-anchor="middle" class="text-muted">List item</text>
+  <!-- Busy -->
+  <circle cx="630" cy="175" r="24" fill="#8b5cf6"/>
+  <text x="630" y="182" text-anchor="middle" fill="#fff" font-size="14">JD</text>
+  <circle cx="648" cy="193" r="8" fill="#ef4444" stroke="#1e293b" stroke-width="2"/>
+  <text x="630" y="220" text-anchor="middle" class="text-muted">Busy</text>
 
-  <!-- MD - 40px -->
-  <text x="830" y="115" text-anchor="middle" class="text-muted">MD</text>
-  <circle cx="830" cy="150" r="20" fill="#8b5cf6"/>
-  <text x="830" y="156" text-anchor="middle" fill="white" font-size="12">JD</text>
-  <text x="830" y="190" text-anchor="middle" class="text-muted">40px</text>
-  <text x="830" y="205" text-anchor="middle" class="text-muted">Comment</text>
+  <!-- Offline -->
+  <circle cx="710" cy="175" r="24" fill="#334155"/>
+  <text x="710" y="182" text-anchor="middle" fill="#94a3b8" font-size="14">JD</text>
+  <circle cx="728" cy="193" r="8" fill="#475569" stroke="#1e293b" stroke-width="2"/>
+  <text x="710" y="220" text-anchor="middle" class="text-muted">Offline</text>
 
-  <!-- LG - 64px -->
-  <text x="930" y="115" text-anchor="middle" class="text-muted">LG</text>
-  <circle cx="930" cy="150" r="32" fill="#8b5cf6"/>
-  <text x="930" y="158" text-anchor="middle" fill="white" font-size="16">JD</text>
-  <text x="930" y="200" text-anchor="middle" class="text-muted">64px</text>
-  <text x="930" y="215" text-anchor="middle" class="text-muted">Header</text>
+  <!-- Color Variants Section -->
+  <text x="50" y="270" class="heading">Color Variants (Generated from Name)</text>
+  <rect x="50" y="280" width="350" height="100" rx="6" fill="#1e293b" stroke="#475569"/>
 
-  <!-- XL - 96px -->
-  <text x="1050" y="115" text-anchor="middle" class="text-muted">XL</text>
-  <circle cx="1050" cy="155" r="48" fill="#8b5cf6"/>
-  <text x="1050" y="165" text-anchor="middle" fill="white" font-size="24">JD</text>
-  <text x="1050" y="220" text-anchor="middle" class="text-muted">96px</text>
-  <text x="1050" y="235" text-anchor="middle" class="text-muted">Profile</text>
+  <circle cx="100" cy="330" r="24" fill="#8b5cf6"/>
+  <text x="100" y="337" text-anchor="middle" fill="#fff" font-size="14">AB</text>
 
-  <!-- ========================================== -->
-  <!-- Color Variations -->
-  <!-- ========================================== -->
-  <text x="850" y="310" text-anchor="middle" class="annotation" font-size="12">DEFAULT AVATAR COLORS</text>
+  <circle cx="170" cy="330" r="24" fill="#22c55e"/>
+  <text x="170" y="337" text-anchor="middle" fill="#fff" font-size="14">CD</text>
 
-  <rect x="600" y="330" width="550" height="100" rx="12" fill="#1e293b" stroke="#475569"/>
+  <circle cx="240" cy="330" r="24" fill="#3b82f6"/>
+  <text x="240" y="337" text-anchor="middle" fill="#fff" font-size="14">EF</text>
 
-  <!-- Color palette for default avatars -->
-  <circle cx="670" cy="380" r="28" fill="#8b5cf6"/>
-  <text x="670" y="386" text-anchor="middle" fill="white" font-size="14">AB</text>
+  <circle cx="310" cy="330" r="24" fill="#ef4444"/>
+  <text x="310" y="337" text-anchor="middle" fill="#fff" font-size="14">GH</text>
 
-  <circle cx="750" cy="380" r="28" fill="#059669"/>
-  <text x="750" y="386" text-anchor="middle" fill="white" font-size="14">CD</text>
+  <!-- Image Avatar Section -->
+  <text x="420" y="270" class="heading">Image Avatars</text>
+  <rect x="420" y="280" width="350" height="100" rx="6" fill="#1e293b" stroke="#475569"/>
 
-  <circle cx="830" cy="380" r="28" fill="#dc2626"/>
-  <text x="830" y="386" text-anchor="middle" fill="white" font-size="14">EF</text>
+  <!-- With image -->
+  <circle cx="470" cy="330" r="24" fill="#334155"/>
+  <circle cx="470" cy="330" r="22" fill="url(#accentGrad)" opacity="0.3"/>
+  <text x="470" y="325" text-anchor="middle" fill="#94a3b8" font-size="8">IMG</text>
+  <text x="470" y="340" text-anchor="middle" fill="#64748b" font-size="6">loaded</text>
 
-  <circle cx="910" cy="380" r="28" fill="#d97706"/>
-  <text x="910" y="386" text-anchor="middle" fill="white" font-size="14">GH</text>
+  <!-- Loading -->
+  <circle cx="550" cy="330" r="24" fill="#334155"/>
+  <circle cx="550" cy="330" r="18" fill="none" stroke="#475569" stroke-width="3"/>
+  <path d="M 550 312 A 18 18 0 0 1 568 330" fill="none" stroke="#8b5cf6" stroke-width="3" stroke-linecap="round"/>
+  <text x="550" y="370" text-anchor="middle" class="text-muted">Loading</text>
 
-  <circle cx="990" cy="380" r="28" fill="#0891b2"/>
-  <text x="990" y="386" text-anchor="middle" fill="white" font-size="14">IJ</text>
+  <!-- Error fallback -->
+  <circle cx="630" cy="330" r="24" fill="#334155"/>
+  <text x="630" y="337" text-anchor="middle" fill="#94a3b8" font-size="14">JD</text>
+  <text x="630" y="370" text-anchor="middle" class="text-muted">Fallback</text>
 
-  <circle cx="1070" cy="380" r="28" fill="#7c3aed"/>
-  <text x="1070" y="386" text-anchor="middle" fill="white" font-size="14">KL</text>
-
-  <text x="870" y="420" text-anchor="middle" class="text-muted">Color derived from user ID hash for consistency</text>
-
-  <!-- ========================================== -->
-  <!-- Usage Contexts -->
-  <!-- ========================================== -->
-  <text x="300" y="470" text-anchor="middle" class="annotation" font-size="12">USAGE CONTEXTS</text>
-
-  <rect x="50" y="490" width="500" height="250" rx="12" fill="#1e293b" stroke="#475569"/>
-
-  <!-- Navigation header context -->
-  <rect x="70" y="510" width="220" height="50" rx="6" fill="#334155"/>
-  <circle cx="100" cy="535" r="16" fill="#8b5cf6"/>
-  <text x="100" y="540" text-anchor="middle" fill="white" font-size="10">JD</text>
-  <text x="125" y="530" class="text-md">John Doe</text>
-  <text x="125" y="548" class="text-muted">View profile</text>
-  <text x="70" y="580" class="text-sm">Navigation header</text>
-
-  <!-- Chat/messaging context -->
-  <rect x="70" y="600" width="220" height="60" rx="6" fill="#0f172a"/>
-  <circle cx="100" cy="630" r="18" fill="#059669"/>
-  <text x="100" y="636" text-anchor="middle" fill="white" font-size="10">AS</text>
-  <rect x="125" y="615" width="150" height="30" rx="6" fill="#334155"/>
-  <text x="135" y="635" class="text-sm">Hey, how's it going?</text>
-  <text x="70" y="680" class="text-sm">Chat message</text>
-
-  <!-- Comment context -->
-  <rect x="310" y="510" width="220" height="80" rx="6" fill="#0f172a"/>
-  <circle cx="340" cy="540" r="14" fill="#dc2626"/>
-  <text x="340" y="545" text-anchor="middle" fill="white" font-size="8">BW</text>
-  <text x="360" y="538" class="text-md">Bob Wilson</text>
-  <text x="360" y="555" class="text-muted">2 hours ago</text>
-  <text x="360" y="575" class="text-sm">Great work on this!</text>
-  <text x="310" y="610" class="text-sm">Comment thread</text>
-
-  <!-- Profile page context -->
-  <rect x="310" y="630" width="220" height="90" rx="6" fill="#0f172a"/>
-  <circle cx="420" cy="665" r="30" fill="#8b5cf6"/>
-  <text x="420" y="673" text-anchor="middle" fill="white" font-size="18">JD</text>
-  <text x="420" y="710" text-anchor="middle" class="heading">John Doe</text>
-  <text x="310" y="738" class="text-sm">Profile page hero</text>
-
-  <!-- ========================================== -->
-  <!-- Accessibility -->
-  <!-- ========================================== -->
-  <text x="850" y="470" text-anchor="middle" class="annotation" font-size="12">ACCESSIBILITY FEATURES</text>
-
-  <rect x="600" y="490" width="550" height="250" rx="12" fill="#1e293b" stroke="#475569"/>
+  <!-- Accessibility Section -->
+  <text x="50" y="405" class="heading">Accessibility Features</text>
+  <rect x="50" y="415" width="350" height="140" rx="6" fill="#1e293b" stroke="#475569"/>
 
   <!-- Focus state -->
-  <text x="700" y="525" class="text-muted">Focus Ring</text>
-  <circle cx="700" cy="580" r="35" fill="#8b5cf6"/>
-  <text x="700" y="588" text-anchor="middle" fill="white" font-size="18">JD</text>
-  <circle cx="700" cy="580" r="42" fill="none" stroke="#60a5fa" stroke-width="3"/>
-  <text x="700" y="640" text-anchor="middle" class="text-sm">3px outline offset</text>
-  <text x="700" y="658" text-anchor="middle" class="text-muted">for keyboard nav</text>
+  <circle cx="100" cy="465" r="24" fill="#8b5cf6" stroke="#fff" stroke-width="3"/>
+  <text x="100" y="472" text-anchor="middle" fill="#fff" font-size="14">JD</text>
+  <text x="100" y="510" text-anchor="middle" class="text-muted">Focus Ring</text>
 
-  <!-- Screen reader text -->
-  <rect x="780" y="510" width="200" height="80" rx="6" fill="#0f172a"/>
-  <text x="800" y="535" class="text-muted">Screen Reader:</text>
-  <text x="800" y="560" class="text-sm">"Profile picture for</text>
-  <text x="800" y="578" class="text-sm">John Doe. Button."</text>
+  <!-- High contrast -->
+  <circle cx="190" cy="465" r="24" fill="#000" stroke="#fff" stroke-width="2"/>
+  <text x="190" y="472" text-anchor="middle" fill="#fff" font-size="14">JD</text>
+  <text x="190" y="510" text-anchor="middle" class="text-muted">High Contrast</text>
 
-  <rect x="780" y="600" width="200" height="60" rx="6" fill="#0f172a"/>
-  <text x="800" y="625" class="text-muted">Alt text (custom):</text>
-  <text x="800" y="648" class="text-sm">"John Doe's avatar"</text>
+  <!-- With badge -->
+  <circle cx="280" cy="465" r="24" fill="#8b5cf6"/>
+  <text x="280" y="472" text-anchor="middle" fill="#fff" font-size="14">JD</text>
+  <rect x="294" y="445" width="20" height="16" rx="8" fill="#ef4444"/>
+  <text x="304" y="457" text-anchor="middle" fill="#fff" font-size="10">3</text>
+  <text x="280" y="510" text-anchor="middle" class="text-muted">With Badge</text>
 
-  <!-- Touch target -->
-  <rect x="1000" y="510" width="130" height="150" rx="6" fill="#0f172a"/>
-  <text x="1065" y="535" text-anchor="middle" class="text-muted">Touch Target</text>
-  <rect x="1020" y="555" width="90" height="90" rx="4" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <circle cx="1065" cy="600" r="30" fill="#8b5cf6"/>
-  <text x="1065" y="608" text-anchor="middle" fill="white" font-size="16">JD</text>
-  <text x="1065" y="665" text-anchor="middle" class="text-sm">Min 44x44px</text>
+  <!-- Use Cases Section -->
+  <text x="420" y="405" class="heading">Common Use Cases</text>
+  <rect x="420" y="415" width="350" height="140" rx="6" fill="#1e293b" stroke="#475569"/>
 
-  <!-- ========================================== -->
-  <!-- Annotations -->
-  <!-- ========================================== -->
-  <rect x="50" y="755" width="350" height="40" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <text x="60" y="773" class="annotation">FR-014: Default avatar shows initials from display name</text>
-  <text x="60" y="788" class="annotation">FR-010: Avatar displays immediately after upload (no refresh)</text>
+  <!-- Header nav -->
+  <rect x="440" y="435" width="150" height="40" rx="4" fill="#0f172a"/>
+  <circle cx="460" cy="455" r="14" fill="#8b5cf6"/>
+  <text x="460" y="460" text-anchor="middle" fill="#fff" font-size="10">JD</text>
+  <text x="540" y="460" text-anchor="end" class="text-sm">Header Nav</text>
 
-  <rect x="420" y="755" width="350" height="40" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <text x="430" y="773" class="annotation">FR-015: WCAG 2.1 AA - keyboard nav, screen reader support</text>
-  <text x="430" y="788" class="annotation">Constraint-3: 44px minimum touch targets (mobile)</text>
+  <!-- Comment -->
+  <rect x="440" y="485" width="150" height="40" rx="4" fill="#0f172a"/>
+  <circle cx="460" cy="505" r="12" fill="#22c55e"/>
+  <text x="460" y="510" text-anchor="middle" fill="#fff" font-size="8">AS</text>
+  <text x="540" y="510" text-anchor="end" class="text-sm">Comment</text>
 
-  <rect x="790" y="755" width="350" height="40" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <text x="800" y="773" class="annotation">SC-005: Avatar displays consistently across all pages</text>
-  <text x="800" y="788" class="annotation">FR-007: Served from Supabase Storage (CDN cached)</text>
+  <!-- Profile card -->
+  <rect x="610" y="435" width="140" height="90" rx="4" fill="#0f172a"/>
+  <circle cx="680" cy="475" r="28" fill="#8b5cf6"/>
+  <text x="680" y="483" text-anchor="middle" fill="#fff" font-size="16">JD</text>
+  <text x="680" y="515" text-anchor="middle" class="text-sm">John Doe</text>
+
+  <!-- ==================== MOBILE VIEW ==================== -->
+  <text x="917" y="48" text-anchor="middle" class="section-label">MOBILE</text>
+
+  <!-- Phone Frame -->
+  <rect x="820" y="55" width="195" height="422" rx="24" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+  <rect x="875" y="55" width="85" height="20" rx="10" fill="#0f172a"/>
+  <rect x="826" y="61" width="183" height="410" rx="20" fill="#1e293b"/>
+
+  <!-- Status Bar -->
+  <text x="846" y="80" class="text-muted" font-size="9">9:41</text>
+  <g transform="translate(970, 72)">
+    <rect x="0" y="0" width="18" height="9" rx="2" stroke="#64748b" stroke-width="1" fill="none"/>
+    <rect x="2" y="2" width="12" height="5" rx="1" fill="#64748b"/>
+  </g>
+
+  <!-- Mobile Header -->
+  <rect x="826" y="90" width="183" height="40" fill="#0f172a"/>
+  <text x="917" y="115" text-anchor="middle" class="heading" font-size="12">Avatar States</text>
+
+  <!-- Mobile Size Row -->
+  <text x="846" y="150" class="text-sm">Sizes</text>
+  <rect x="836" y="160" width="163" height="55" rx="4" fill="#0f172a"/>
+  <circle cx="865" cy="187" r="12" fill="#8b5cf6"/>
+  <text x="865" y="192" text-anchor="middle" fill="#fff" font-size="8">XS</text>
+  <circle cx="905" cy="187" r="16" fill="#8b5cf6"/>
+  <text x="905" y="192" text-anchor="middle" fill="#fff" font-size="10">SM</text>
+  <circle cx="955" cy="187" r="20" fill="#8b5cf6"/>
+  <text x="955" y="194" text-anchor="middle" fill="#fff" font-size="12">MD</text>
+
+  <!-- Mobile Status Row -->
+  <text x="846" y="235" class="text-sm">Status</text>
+  <rect x="836" y="245" width="163" height="55" rx="4" fill="#0f172a"/>
+  <circle cx="865" cy="272" r="16" fill="#8b5cf6"/>
+  <circle cx="877" cy="284" r="5" fill="#22c55e" stroke="#0f172a" stroke-width="2"/>
+  <circle cx="917" cy="272" r="16" fill="#8b5cf6"/>
+  <circle cx="929" cy="284" r="5" fill="#eab308" stroke="#0f172a" stroke-width="2"/>
+  <circle cx="969" cy="272" r="16" fill="#334155"/>
+  <circle cx="981" cy="284" r="5" fill="#475569" stroke="#0f172a" stroke-width="2"/>
+
+  <!-- Mobile Colors Row -->
+  <text x="846" y="320" class="text-sm">Colors</text>
+  <rect x="836" y="330" width="163" height="55" rx="4" fill="#0f172a"/>
+  <circle cx="865" cy="357" r="16" fill="#8b5cf6"/>
+  <circle cx="905" cy="357" r="16" fill="#22c55e"/>
+  <circle cx="945" cy="357" r="16" fill="#3b82f6"/>
+  <circle cx="985" cy="357" r="16" fill="#ef4444"/>
+
+  <!-- Mobile Touch Target -->
+  <text x="846" y="405" class="text-sm">Touch Target (44px min)</text>
+  <rect x="836" y="415" width="163" height="40" rx="4" fill="#0f172a"/>
+  <rect x="873" y="420" width="44" height="44" rx="4" fill="none" stroke="#8b5cf6" stroke-dasharray="4" opacity="0.5"/>
+  <circle cx="895" cy="442" r="16" fill="#8b5cf6"/>
+
+  <!-- Phone Home Indicator -->
+  <rect x="880" y="458" width="75" height="4" rx="2" fill="#475569"/>
+
+  <!-- ==================== ANNOTATIONS ==================== -->
+  <text x="30" y="590" class="section-label">SPECIFICATIONS</text>
+
+  <rect x="30" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="42" y="618" class="annotation">FR-001: Four size variants (XS/SM/MD/LG)</text>
+  <text x="42" y="632" class="annotation">FR-002: Status indicators (online/away/busy)</text>
+  <text x="42" y="646" class="annotation">FR-003: Color generated from name hash</text>
+  <text x="42" y="660" class="annotation">FR-004: Fallback to initials on img error</text>
+  <text x="42" y="674" class="annotation">FR-005: Loading state with spinner</text>
+
+  <rect x="320" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="332" y="618" class="annotation">FR-006: Focus ring for keyboard nav</text>
+  <text x="332" y="632" class="annotation">FR-007: High contrast mode support</text>
+  <text x="332" y="646" class="annotation">FR-008: Badge/notification overlay</text>
+  <text x="332" y="660" class="annotation">FR-009: Lazy load images</text>
+  <text x="332" y="674" class="annotation">FR-010: srcSet for responsive images</text>
+
+  <rect x="610" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="622" y="618" class="annotation">NFR-001: 44x44px min touch target</text>
+  <text x="622" y="632" class="annotation">NFR-002: WCAG AA color contrast</text>
+  <text x="622" y="646" class="annotation">NFR-003: Alt text for screen readers</text>
+  <text x="622" y="660" class="annotation">NFR-004: Skeleton loader on slow load</text>
+  <text x="622" y="674" class="annotation">NFR-005: Optimized WebP/AVIF images</text>
+
+  <rect x="900" y="600" width="275" height="80" rx="4" fill="#8b5cf6" opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4"/>
+  <text x="912" y="618" class="annotation">SC-001: Storybook stories for all states</text>
+  <text x="912" y="632" class="annotation">SC-002: Unit tests for color generation</text>
+  <text x="912" y="646" class="annotation">SC-003: Visual regression tests</text>
+  <text x="912" y="660" class="annotation">SC-004: a11y tests with axe-core</text>
+  <text x="912" y="674" class="annotation">SC-005: Component composition tests</text>
 
 </svg>

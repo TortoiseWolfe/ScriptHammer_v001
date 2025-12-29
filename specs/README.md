@@ -2,6 +2,102 @@
 
 Extracted from ScriptHammer v1 for v2 wireframing.
 
+## All Specifications (23 total)
+
+```
+/speckit.workflow specs/001-prp-methodology.md
+```
+
+```
+/speckit.workflow specs/002-component-structure.md
+```
+
+```
+/speckit.workflow specs/003-e2e-testing-framework.md
+```
+
+```
+/speckit.workflow specs/004-mobile-first-design.md
+```
+
+```
+/speckit.workflow specs/005-security-hardening.md
+```
+
+```
+/speckit.workflow specs/020-user-authentication.md
+```
+
+```
+/speckit.workflow specs/021-signup-e2e-tests.md
+```
+
+```
+/speckit.workflow specs/030-account-settings.md
+```
+
+```
+/speckit.workflow specs/040-user-messaging-system.md
+```
+
+```
+/speckit.workflow specs/041-unified-messaging-sidebar.md
+```
+
+```
+/speckit.workflow specs/050-blog-social-features.md
+```
+
+```
+/speckit.workflow specs/051-unified-blog-content.md
+```
+
+```
+/speckit.workflow specs/052-seo-editorial-assistant.md
+```
+
+```
+/speckit.workflow specs/053-markdown-first-content.md
+```
+
+```
+/speckit.workflow specs/060-payment-integration.md
+```
+
+```
+/speckit.workflow specs/080-calendar-integration.md
+```
+
+```
+/speckit.workflow specs/090-geolocation-map.md
+```
+
+```
+/speckit.workflow specs/100-wcag-aa-compliance.md
+```
+
+```
+/speckit.workflow specs/101-colorblind-mode.md
+```
+
+```
+/speckit.workflow specs/102-font-switcher.md
+```
+
+```
+/speckit.workflow specs/110-cookie-consent.md
+```
+
+```
+/speckit.workflow specs/111-google-analytics.md
+```
+
+```
+/speckit.workflow specs/120-web3forms-integration.md
+```
+
+---
+
 ## Wireframing Priority
 
 ### High Priority (Core Features)
