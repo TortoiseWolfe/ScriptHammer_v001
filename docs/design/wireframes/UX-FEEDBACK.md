@@ -192,8 +192,22 @@ Comprehensive visual review of ALL wireframes for overlap issues and UI element 
 
 | Severity | Count | Wireframes |
 |----------|-------|------------|
-| ✅ FIXED | 7 | pricing-plans (badge + annotations), calendar-view, billing-history, chat-window, content-dashboard, checkout-flow |
+| ✅ FIXED | 8 | pricing-plans (badge + annotations), calendar-view, billing-history, chat-window, content-dashboard, checkout-flow, install-prompt |
 | ✅ OK | 7 | account-settings, blog-editor, animated-logo, landing-hero, landing-features, public-blog, sign-in, sign-up, offline-mode |
+
+---
+
+#### 10. Install Prompt (install-prompt.svg) - Content Cutoff
+**Problem**: Annotations cut off at bottom of SVG
+**Location**: Bottom annotation boxes at y=780
+**Details**:
+- ViewBox was 800px tall
+- Annotations at y=780 with height 55 end at y=835
+- 35px of content cut off
+**Solution**: Increased viewBox and backgrounds from 800 to 860
+**Status**: ✅ FIXED
+
+---
 
 **All issues resolved.** Common fixes applied:
 1. Increased vertical spacing between annotation rows to 15-17px
