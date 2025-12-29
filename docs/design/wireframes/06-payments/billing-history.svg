@@ -384,60 +384,55 @@
 
   <!-- ==================== ANNOTATIONS ==================== -->
 
-  <!-- Transaction ID Search Annotation -->
-  <g transform="translate(30, 620)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">🔍 Transaction Search (FR-023)</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Query by transaction ID</text>
-    <text x="10" y="44" class="text-muted" font-size="8">from any payment provider</text>
+  <!-- Row 1: Desktop feature annotations (5 boxes spread across) -->
+  <g transform="translate(30, 625)">
+    <rect x="0" y="0" width="130" height="48" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">🔍 Search (FR-023)</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Query by transaction</text>
+    <text x="10" y="42" class="text-muted" font-size="8">ID from any provider</text>
   </g>
 
-  <!-- Webhook Status Annotation -->
-  <g transform="translate(220, 620)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">✓ Webhook Status (FR-024)</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Shows if payment was</text>
-    <text x="10" y="44" class="text-muted" font-size="8">verified by webhook callback</text>
+  <g transform="translate(170, 625)">
+    <rect x="0" y="0" width="130" height="48" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">✓ Webhook (FR-024)</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Verified by webhook</text>
+    <text x="10" y="42" class="text-muted" font-size="8">callback status</text>
   </g>
 
-  <!-- Multi-Currency Annotation -->
-  <g transform="translate(410, 620)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">💱 Multi-Currency (FR-005)</text>
-    <text x="10" y="32" class="text-muted" font-size="8">USD, EUR, GBP, CAD, AUD</text>
-    <text x="10" y="44" class="text-muted" font-size="8">displayed per transaction</text>
+  <g transform="translate(310, 625)">
+    <rect x="0" y="0" width="130" height="48" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">💱 Multi-Currency</text>
+    <text x="10" y="30" class="text-muted" font-size="8">USD, EUR, GBP, CAD</text>
+    <text x="10" y="42" class="text-muted" font-size="8">AUD per transaction</text>
   </g>
 
-  <!-- Audit Trail Annotation -->
-  <g transform="translate(30, 685)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">📋 Audit Trail (FR-022)</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Full history of all payment</text>
-    <text x="10" y="44" class="text-muted" font-size="8">events with timestamps</text>
+  <g transform="translate(450, 625)">
+    <rect x="0" y="0" width="130" height="48" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">📋 Audit (FR-022)</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Full payment event</text>
+    <text x="10" y="42" class="text-muted" font-size="8">history + timestamps</text>
   </g>
 
-  <!-- Receipt/Invoice Annotation -->
-  <g transform="translate(220, 685)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">📄 Receipts/Invoices</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Downloadable for each</text>
-    <text x="10" y="44" class="text-muted" font-size="8">successful transaction</text>
+  <g transform="translate(590, 625)">
+    <rect x="0" y="0" width="130" height="48" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">📄 Receipts</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Downloadable for</text>
+    <text x="10" y="42" class="text-muted" font-size="8">each transaction</text>
   </g>
 
-  <!-- Mobile Cards Annotation -->
-  <g transform="translate(760, 760)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">📱 Mobile: Card Layout</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Condensed transaction info</text>
-    <text x="10" y="44" class="text-muted" font-size="8">with swipe actions</text>
+  <!-- Mobile annotations -->
+  <g transform="translate(760, 770)">
+    <rect x="0" y="0" width="180" height="48" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">📱 Mobile: Card Layout</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Condensed transaction info</text>
+    <text x="10" y="42" class="text-muted" font-size="8">with swipe actions</text>
   </g>
 
-  <!-- Failed Payment Annotation -->
-  <g transform="translate(950, 760)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">⚠️ Failed Payments</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Red highlight + retry button</text>
-    <text x="10" y="44" class="text-muted" font-size="8">for actionable items</text>
+  <g transform="translate(950, 770)">
+    <rect x="0" y="0" width="180" height="48" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">⚠️ Failed Payments</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Red highlight + retry</text>
+    <text x="10" y="42" class="text-muted" font-size="8">button for actionable</text>
   </g>
 
   <!-- Spec Reference -->

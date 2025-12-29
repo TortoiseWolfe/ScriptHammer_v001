@@ -291,55 +291,56 @@
   </g>
 
   <!-- ==================== ANNOTATIONS ==================== -->
+  <!-- Row 1: 3 boxes at y=625 with 50px height -->
 
   <!-- Consent Modal Annotation -->
-  <g transform="translate(410, 620)">
-    <rect x="0" y="0" width="180" height="65" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">🔒 GDPR Consent (FR-018)</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Required before loading any</text>
-    <text x="10" y="44" class="text-muted" font-size="8">payment provider scripts</text>
-    <text x="10" y="56" class="text-muted" font-size="8">(Stripe, PayPal external JS)</text>
-  </g>
-
-  <!-- Fallback Options Annotation -->
-  <g transform="translate(410, 695)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">💵 No-Script Fallbacks</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Cash App + Chime links work</text>
-    <text x="10" y="44" class="text-muted" font-size="8">without external scripts</text>
+  <g transform="translate(410, 625)">
+    <rect x="0" y="0" width="180" height="50" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="15" class="annotation">🔒 GDPR Consent (FR-018)</text>
+    <text x="10" y="28" class="text-muted" font-size="8">Required before loading any</text>
+    <text x="10" y="40" class="text-muted" font-size="8">payment provider scripts</text>
   </g>
 
   <!-- Webhook Verification Annotation -->
-  <g transform="translate(600, 620)">
-    <rect x="0" y="0" width="180" height="65" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">✓ Webhook Verification</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Payment marked "Verified"</text>
-    <text x="10" y="44" class="text-muted" font-size="8">only after webhook confirms</text>
-    <text x="10" y="56" class="text-muted" font-size="8">(FR-007, FR-010)</text>
-  </g>
-
-  <!-- Offline Queue Annotation -->
-  <g transform="translate(600, 695)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">📡 Offline-First Queue</text>
-    <text x="10" y="32" class="text-muted" font-size="8">IndexedDB persistence</text>
-    <text x="10" y="44" class="text-muted" font-size="8">Auto-sync when online (FR-039)</text>
+  <g transform="translate(600, 625)">
+    <rect x="0" y="0" width="180" height="50" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="15" class="annotation">✓ Webhook Verification</text>
+    <text x="10" y="28" class="text-muted" font-size="8">Payment marked "Verified"</text>
+    <text x="10" y="40" class="text-muted" font-size="8">after webhook (FR-007, FR-010)</text>
   </g>
 
   <!-- Mobile Touch Target Annotation -->
-  <g transform="translate(790, 620)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">👆 Mobile: 44px+ Targets</text>
-    <text x="10" y="32" class="text-muted" font-size="8">All buttons meet WCAG</text>
-    <text x="10" y="44" class="text-muted" font-size="8">touch target requirements</text>
+  <g transform="translate(790, 625)">
+    <rect x="0" y="0" width="180" height="50" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="15" class="annotation">👆 Mobile: 44px+ Targets</text>
+    <text x="10" y="28" class="text-muted" font-size="8">All buttons meet WCAG</text>
+    <text x="10" y="40" class="text-muted" font-size="8">touch target requirements</text>
+  </g>
+
+  <!-- Row 2: 3 boxes at y=690 (15px gap) with 50px height -->
+
+  <!-- Fallback Options Annotation -->
+  <g transform="translate(410, 690)">
+    <rect x="0" y="0" width="180" height="50" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="15" class="annotation">💵 No-Script Fallbacks</text>
+    <text x="10" y="28" class="text-muted" font-size="8">Cash App + Chime links work</text>
+    <text x="10" y="40" class="text-muted" font-size="8">without external scripts</text>
+  </g>
+
+  <!-- Offline Queue Annotation -->
+  <g transform="translate(600, 690)">
+    <rect x="0" y="0" width="180" height="50" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="15" class="annotation">📡 Offline-First Queue</text>
+    <text x="10" y="28" class="text-muted" font-size="8">IndexedDB persistence</text>
+    <text x="10" y="40" class="text-muted" font-size="8">Auto-sync online (FR-039)</text>
   </g>
 
   <!-- Security Annotation -->
-  <g transform="translate(790, 685)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">🛡️ Security Badges</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Stripe handles card data</text>
-    <text x="10" y="44" class="text-muted" font-size="8">No PCI scope for template</text>
+  <g transform="translate(790, 690)">
+    <rect x="0" y="0" width="180" height="50" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="15" class="annotation">🛡️ Security Badges</text>
+    <text x="10" y="28" class="text-muted" font-size="8">Stripe handles card data</text>
+    <text x="10" y="40" class="text-muted" font-size="8">No PCI scope for template</text>
   </g>
 
   <!-- Spec Reference -->

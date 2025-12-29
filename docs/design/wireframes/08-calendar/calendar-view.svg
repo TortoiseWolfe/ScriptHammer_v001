@@ -396,68 +396,63 @@
 
   <!-- ==================== ANNOTATIONS ==================== -->
 
-  <!-- Provider Toggle Annotation -->
-  <g transform="translate(30, 620)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">Provider Abstraction</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Supports both Calendly</text>
-    <text x="10" y="44" class="text-muted" font-size="8">and Cal.com embeds</text>
+  <!-- Row 1: Desktop feature annotations (6 boxes spread across full width) -->
+  <g transform="translate(30, 625)">
+    <rect x="0" y="0" width="170" height="48" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">Provider Abstraction</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Calendly + Cal.com</text>
+    <text x="10" y="42" class="text-muted" font-size="8">embed support</text>
   </g>
 
-  <!-- Theme Integration Annotation -->
-  <g transform="translate(220, 620)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">Theme-Aware Styling</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Auto-detects dark/light</text>
-    <text x="10" y="44" class="text-muted" font-size="8">from data-theme attribute</text>
+  <g transform="translate(210, 625)">
+    <rect x="0" y="0" width="170" height="48" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">Theme-Aware</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Auto dark/light from</text>
+    <text x="10" y="42" class="text-muted" font-size="8">data-theme attribute</text>
   </g>
 
-  <!-- Event Types Annotation -->
-  <g transform="translate(410, 620)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">Event Type Selection</text>
-    <text x="10" y="32" class="text-muted" font-size="8">30min, 60min, custom</text>
-    <text x="10" y="44" class="text-muted" font-size="8">configurable durations</text>
+  <g transform="translate(390, 625)">
+    <rect x="0" y="0" width="170" height="48" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">Event Types</text>
+    <text x="10" y="30" class="text-muted" font-size="8">30min, 60min, custom</text>
+    <text x="10" y="42" class="text-muted" font-size="8">configurable durations</text>
   </g>
 
-  <!-- Consent Required Annotation -->
-  <g transform="translate(30, 685)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">GDPR Consent (FR)</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Functional consent required</text>
-    <text x="10" y="44" class="text-muted" font-size="8">before loading embed</text>
+  <g transform="translate(570, 625)">
+    <rect x="0" y="0" width="150" height="48" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">GDPR Consent</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Functional consent</text>
+    <text x="10" y="42" class="text-muted" font-size="8">before embed load</text>
   </g>
 
-  <!-- UTM Tracking Annotation -->
-  <g transform="translate(220, 685)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">UTM Analytics</text>
-    <text x="10" y="32" class="text-muted" font-size="8">source, medium, campaign</text>
-    <text x="10" y="44" class="text-muted" font-size="8">tracked for attribution</text>
+  <!-- Row 2: Additional features -->
+  <g transform="translate(30, 690)">
+    <rect x="0" y="0" width="170" height="48" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">UTM Analytics</text>
+    <text x="10" y="30" class="text-muted" font-size="8">source, medium, campaign</text>
+    <text x="10" y="42" class="text-muted" font-size="8">tracked for attribution</text>
   </g>
 
-  <!-- Timezone Annotation -->
-  <g transform="translate(410, 685)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">Timezone Support</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Auto-detect user timezone</text>
-    <text x="10" y="44" class="text-muted" font-size="8">with manual override</text>
+  <g transform="translate(210, 690)">
+    <rect x="0" y="0" width="170" height="48" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">Timezone Support</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Auto-detect user TZ</text>
+    <text x="10" y="42" class="text-muted" font-size="8">with manual override</text>
   </g>
 
-  <!-- Mobile Annotation -->
-  <g transform="translate(760, 760)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">Mobile: Responsive</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Stacked layout with</text>
-    <text x="10" y="44" class="text-muted" font-size="8">scrollable time grid</text>
+  <!-- Mobile annotations -->
+  <g transform="translate(760, 770)">
+    <rect x="0" y="0" width="180" height="48" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">Mobile: Responsive</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Stacked layout with</text>
+    <text x="10" y="42" class="text-muted" font-size="8">scrollable time grid</text>
   </g>
 
-  <!-- Dynamic Loading Annotation -->
-  <g transform="translate(950, 760)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">Dynamic Import</text>
-    <text x="10" y="32" class="text-muted" font-size="8">SSR disabled, client-only</text>
-    <text x="10" y="44" class="text-muted" font-size="8">with loading spinner</text>
+  <g transform="translate(950, 770)">
+    <rect x="0" y="0" width="180" height="48" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">Dynamic Import</text>
+    <text x="10" y="30" class="text-muted" font-size="8">SSR disabled, client-only</text>
+    <text x="10" y="42" class="text-muted" font-size="8">with loading spinner</text>
   </g>
 
   <!-- Spec Reference -->

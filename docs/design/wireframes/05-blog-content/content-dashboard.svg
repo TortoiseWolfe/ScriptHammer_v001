@@ -359,7 +359,7 @@
 
   <!-- ==================== ANNOTATIONS ==================== -->
 
-  <!-- Stats Cards Annotation -->
+  <!-- Row 1: Desktop annotations (3 boxes spread across) -->
   <g transform="translate(30, 580)">
     <rect x="0" y="0" width="200" height="50" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
     <text x="10" y="18" class="annotation">📊 Quick Stats Overview</text>
@@ -367,10 +367,16 @@
     <text x="10" y="44" class="text-muted" font-size="8">and aggregate view count</text>
   </g>
 
-  <!-- Status Colors Annotation -->
-  <g transform="translate(30, 640)">
-    <rect x="0" y="0" width="200" height="70" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">🎨 Status Color Coding</text>
+  <g transform="translate(245, 580)">
+    <rect x="0" y="0" width="180" height="50" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="18" class="annotation">⚡ Quick Actions</text>
+    <text x="10" y="32" class="text-muted" font-size="8">✏️ Edit • 📊 Analytics</text>
+    <text x="10" y="44" class="text-muted" font-size="8">📅 Reschedule • 🗑 Delete</text>
+  </g>
+
+  <g transform="translate(440, 580)">
+    <rect x="0" y="0" width="150" height="65" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="18" class="annotation">🎨 Status Colors</text>
     <rect x="10" y="26" width="10" height="10" fill="#22c55e"/>
     <text x="25" y="35" class="text-muted" font-size="8">Green = Published</text>
     <rect x="10" y="40" width="10" height="10" fill="#eab308"/>
@@ -379,45 +385,33 @@
     <text x="25" y="63" class="text-muted" font-size="8">Violet = Scheduled</text>
   </g>
 
-  <!-- Actions Annotation -->
-  <g transform="translate(245, 580)">
-    <rect x="0" y="0" width="180" height="60" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">⚡ Quick Actions</text>
-    <text x="10" y="32" class="text-muted" font-size="8">✏️ Edit • 📊 Analytics</text>
-    <text x="10" y="44" class="text-muted" font-size="8">📅 Reschedule • 🗑 Delete</text>
-    <text x="10" y="56" class="text-muted" font-size="8">👁 Preview (drafts only)</text>
+  <!-- Mobile annotations (2 rows) -->
+  <g transform="translate(760, 750)">
+    <rect x="0" y="0" width="170" height="45" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">📱 FAB for New Post</text>
+    <text x="10" y="30" class="text-muted" font-size="8">44px touch target</text>
+    <text x="10" y="42" class="text-muted" font-size="8">always visible</text>
   </g>
 
-  <!-- Mobile FAB Annotation -->
-  <g transform="translate(760, 740)">
-    <rect x="0" y="0" width="180" height="45" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">📱 Mobile: FAB for New Post</text>
-    <text x="10" y="32" class="text-muted" font-size="8">44px touch target, always visible</text>
-    <text x="10" y="42" class="text-muted" font-size="8">in bottom-right corner</text>
+  <g transform="translate(940, 750)">
+    <rect x="0" y="0" width="170" height="45" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">🔍 Filter &amp; Search</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Status tabs + search</text>
+    <text x="10" y="42" class="text-muted" font-size="8">All/Published/Drafts</text>
   </g>
 
-  <!-- Mobile Cards Annotation -->
-  <g transform="translate(760, 795)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">📦 Mobile: Card Layout</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Swipe-friendly card design</text>
-    <text x="10" y="44" class="text-muted" font-size="8">⋮ overflow menu for actions</text>
+  <g transform="translate(760, 810)">
+    <rect x="0" y="0" width="170" height="45" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">📦 Card Layout</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Swipe-friendly design</text>
+    <text x="10" y="42" class="text-muted" font-size="8">⋮ overflow menu</text>
   </g>
 
-  <!-- Filter Annotation -->
-  <g transform="translate(950, 740)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">🔍 Filter &amp; Search</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Status tabs: All/Published/</text>
-    <text x="10" y="44" class="text-muted" font-size="8">Drafts/Scheduled + search</text>
-  </g>
-
-  <!-- Offline Support Annotation -->
-  <g transform="translate(950, 805)">
-    <rect x="0" y="0" width="180" height="45" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">🔄 Offline Support</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Cached list, sync indicator</text>
-    <text x="10" y="42" class="text-muted" font-size="8">when back online</text>
+  <g transform="translate(940, 810)">
+    <rect x="0" y="0" width="170" height="45" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">🔄 Offline Support</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Cached list, sync</text>
+    <text x="10" y="42" class="text-muted" font-size="8">indicator when online</text>
   </g>
 
   <!-- Spec Reference -->

@@ -68,8 +68,8 @@
       <text x="60" y="23" fill="#64748b" font-size="10">▼</text>
     </g>
 
-    <!-- Pricing Cards Row -->
-    <g transform="translate(20, 145)">
+    <!-- Pricing Cards Row (moved down to avoid badge overlap with toggle) -->
+    <g transform="translate(20, 160)">
 
       <!-- FREE Plan -->
       <g transform="translate(0, 0)">
@@ -296,60 +296,56 @@
 
   <!-- ==================== ANNOTATIONS ==================== -->
 
-  <!-- Billing Toggle Annotation -->
-  <g transform="translate(30, 590)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">🔄 Billing Toggle</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Monthly/Yearly switch with</text>
-    <text x="10" y="44" class="text-muted" font-size="8">20% annual discount badge</text>
+  <!-- Row 1: Desktop feature annotations -->
+  <g transform="translate(30, 600)">
+    <rect x="0" y="0" width="170" height="50" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">🔄 Billing Toggle</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Monthly/Yearly switch</text>
+    <text x="10" y="42" class="text-muted" font-size="8">20% annual discount</text>
   </g>
 
-  <!-- Currency Selector Annotation -->
-  <g transform="translate(220, 590)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">💱 Multi-Currency</text>
-    <text x="10" y="32" class="text-muted" font-size="8">USD, EUR, GBP, CAD, AUD</text>
-    <text x="10" y="44" class="text-muted" font-size="8">Per FR-005 requirement</text>
+  <g transform="translate(210, 600)">
+    <rect x="0" y="0" width="170" height="50" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">💱 Multi-Currency</text>
+    <text x="10" y="30" class="text-muted" font-size="8">USD, EUR, GBP, CAD, AUD</text>
+    <text x="10" y="42" class="text-muted" font-size="8">Per FR-005</text>
   </g>
 
-  <!-- Feature Comparison Annotation -->
-  <g transform="translate(410, 590)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">✅ Feature Comparison</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Clear checkmarks for included</text>
-    <text x="10" y="44" class="text-muted" font-size="8">✗ for excluded features</text>
+  <g transform="translate(390, 600)">
+    <rect x="0" y="0" width="170" height="50" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">✅ Feature Comparison</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Clear checkmarks for</text>
+    <text x="10" y="42" class="text-muted" font-size="8">included/excluded</text>
   </g>
 
-  <!-- Mobile Swipe Annotation -->
-  <g transform="translate(760, 765)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">👆 Mobile: Swipeable Cards</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Horizontal swipe between</text>
-    <text x="10" y="44" class="text-muted" font-size="8">plans, dot indicators</text>
+  <g transform="translate(570, 600)">
+    <rect x="0" y="0" width="150" height="50" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">⭐ Featured Plan</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Border + badge for</text>
+    <text x="10" y="42" class="text-muted" font-size="8">recommended tier</text>
   </g>
 
-  <!-- CTA Button Annotation -->
-  <g transform="translate(950, 765)">
-    <rect x="0" y="0" width="180" height="55" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">🎯 CTA Buttons</text>
-    <text x="10" y="32" class="text-muted" font-size="8">50px height on mobile</text>
-    <text x="10" y="44" class="text-muted" font-size="8">44px min touch target</text>
+  <!-- Row 2: Plan tier annotations -->
+  <g transform="translate(30, 665)">
+    <rect x="0" y="0" width="170" height="50" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">🏢 Enterprise Tier</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Gold accent, priority</text>
+    <text x="10" y="42" class="text-muted" font-size="8">support, Contact Sales</text>
   </g>
 
-  <!-- Popular Badge Annotation -->
-  <g transform="translate(30, 655)">
-    <rect x="0" y="0" width="180" height="45" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">⭐ Featured Plan</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Highlighted border + badge</text>
-    <text x="10" y="42" class="text-muted" font-size="8">for recommended tier</text>
+  <!-- Mobile annotations -->
+  <g transform="translate(760, 770)">
+    <rect x="0" y="0" width="180" height="50" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">👆 Mobile: Swipeable</text>
+    <text x="10" y="30" class="text-muted" font-size="8">Horizontal swipe between</text>
+    <text x="10" y="42" class="text-muted" font-size="8">plans, dot indicators</text>
   </g>
 
-  <!-- Enterprise Tier Annotation -->
-  <g transform="translate(220, 655)">
-    <rect x="0" y="0" width="180" height="45" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="10" y="18" class="annotation">🏢 Enterprise Tier</text>
-    <text x="10" y="32" class="text-muted" font-size="8">Gold accent, priority support</text>
-    <text x="10" y="42" class="text-muted" font-size="8">"Contact Sales" CTA</text>
+  <g transform="translate(950, 770)">
+    <rect x="0" y="0" width="180" height="50" rx="4" fill="#8b5cf610" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="10" y="16" class="annotation">🎯 CTA Buttons</text>
+    <text x="10" y="30" class="text-muted" font-size="8">50px height mobile</text>
+    <text x="10" y="42" class="text-muted" font-size="8">44px min touch target</text>
   </g>
 
   <!-- Spec Reference -->

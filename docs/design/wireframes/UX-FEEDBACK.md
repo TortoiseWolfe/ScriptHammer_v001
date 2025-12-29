@@ -73,3 +73,130 @@ Adding 4 utility icons to wireframe SVG headers:
 
 ## Verification
 All wireframes verified for proper icon positioning with adequate gaps (16px minimum) between utility icons and adjacent UI elements.
+
+---
+
+## UX Review - December 28, 2025
+
+Comprehensive visual review of ALL wireframes for overlap issues and UI element spacing.
+
+---
+
+### 🔴 ISSUES FOUND
+
+#### 1. Pricing Plans (pricing-plans.svg)
+**Problem**: "MOST POPULAR" badge overlaps/crowds billing toggle
+**Location**: Desktop view - Pro card badge vs billing toggle above
+**Details**:
+- Billing toggle at `translate(260, 90)` ends at y≈126
+- Pro card badge at y=-12 relative to card row at y=145 → badge at y≈133
+- **Gap: Only ~7px** - badge visually overlaps toggle area
+**Solution**: Moved card row from y=145 to y=160, creating ~22px gap
+**Status**: ✅ FIXED
+
+---
+
+#### 2. Pricing Plans (pricing-plans.svg) - Annotation Overlap
+**Problem**: Bottom annotation boxes cramped/overlapping
+**Location**: Desktop annotation area (y=590-700)
+**Details**:
+- "Billing Toggle" annotation at x=30
+- "Multi-Currency" annotation at x=220
+- "Feature Comparison" annotation at x=410
+- "Featured Plan" and "Enterprise Tier" annotations below
+- Boxes positioned too close, text may overlap at boundaries
+**Solution**: Reorganized into 4-across layout at y=600 with 15px row gap to y=665
+**Status**: ✅ FIXED
+
+---
+
+#### 3. Billing History (billing-history.svg) - Annotation Cramping
+**Problem**: Annotation boxes overlapping at bottom
+**Location**: Desktop view bottom annotation section
+**Details**:
+- Multiple annotation boxes positioned with insufficient spacing
+- Text descriptions cramped together
+**Solution**: Reorganized to 5-across single row at y=625, mobile at y=770
+**Status**: ✅ FIXED
+
+---
+
+#### 4. Calendar View (calendar-view.svg) - Annotation Overlap
+**Problem**: Bottom annotations severely cramped
+**Location**: Desktop annotation area below calendar
+**Details**:
+- Multiple feature annotations stacked too tightly
+- Text overlapping between adjacent boxes
+**Solution**: Reorganized into 4+2 layout at y=625/690 with 17px row gap, reduced box heights
+**Status**: ✅ FIXED
+
+---
+
+#### 5. Chat Window (chat-window.svg) - Annotation Cramping
+**Problem**: Bottom-left annotations cramped
+**Location**: Desktop view, annotation section below chat
+**Details**:
+- FR-xxx spec reference annotations overlapping
+- Insufficient spacing between annotation boxes
+**Solution**: Adjusted row spacing to y=590 (65h) and y=670 (55h) with 15px gap
+**Status**: ✅ FIXED
+
+---
+
+#### 6. Content Dashboard (content-dashboard.svg) - Annotation Overlap
+**Problem**: Annotation boxes at bottom overlap
+**Location**: Desktop view bottom section
+**Details**:
+- Spec reference boxes positioned too close together
+**Solution**: Desktop reorganized to 3-across at y=580, mobile to 2x2 grid at y=750/810
+**Status**: ✅ FIXED
+
+---
+
+#### 7. Checkout Flow (checkout-flow.svg) - Annotation Cramping
+**Problem**: Multiple annotation boxes overlap
+**Location**: Bottom annotation section spanning full width
+**Details**:
+- Dense annotation boxes with spec references
+- Text potentially overlapping at box boundaries
+**Solution**: Reorganized to 3-across at y=625 and y=690 with 15px row gap, reduced box heights to 50px
+**Status**: ✅ FIXED
+
+---
+
+#### 8. Account Settings (account-settings.svg) - Annotation Overlap
+**Problem**: Three annotation boxes at bottom cramped
+**Location**: y=650-740 area
+**Details**:
+- Left annotation box (x=50-330)
+- Middle annotation box (x=350-630)
+- Right annotation box (x=650-850)
+- Boxes have minimal gaps, content may overlap
+**Review**: Horizontal layout with 20px gaps between boxes - acceptable spacing
+**Status**: ✅ OK (no changes needed)
+
+---
+
+#### 9. Blog Editor (blog-editor.svg) - Annotation Spacing
+**Problem**: Annotation section cramped
+**Location**: Bottom of desktop view
+**Details**:
+- Multiple FR-xxx and spec annotations
+- Tight spacing between boxes
+**Review**: Uses text annotations (not boxes) with 15px line spacing - appropriate for 10px font
+**Status**: ✅ OK (no changes needed)
+
+---
+
+### Summary
+
+| Severity | Count | Wireframes |
+|----------|-------|------------|
+| ✅ FIXED | 7 | pricing-plans (badge + annotations), calendar-view, billing-history, chat-window, content-dashboard, checkout-flow |
+| ✅ OK | 7 | account-settings, blog-editor, animated-logo, landing-hero, landing-features, public-blog, sign-in, sign-up, offline-mode |
+
+**All issues resolved.** Common fixes applied:
+1. Increased vertical spacing between annotation rows to 15-17px
+2. Reduced annotation box heights to 45-50px
+3. Reorganized layouts to spread boxes horizontally
+4. Some files already had acceptable spacing (text annotations or proper horizontal gaps)

@@ -193,21 +193,21 @@
   <!-- ========================================== -->
   <!-- Annotations -->
   <!-- ========================================== -->
-  <rect x="650" y="590" width="240" height="75" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <text x="660" y="610" class="annotation">FR-048: 44×44px touch targets</text>
-  <text x="660" y="625" class="annotation">FR-052: Scroll-to-bottom button</text>
-  <text x="660" y="640" class="annotation">FR-055: ARIA live regions</text>
-  <text x="660" y="655" class="annotation">for screen reader announcements</text>
+  <rect x="650" y="590" width="250" height="65" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
+  <text x="660" y="608" class="annotation">FR-048: 44×44px touch targets</text>
+  <text x="660" y="622" class="annotation">FR-052: Scroll-to-bottom button</text>
+  <text x="660" y="636" class="annotation">FR-055: ARIA live regions for</text>
+  <text x="660" y="650" class="annotation">screen reader announcements</text>
 
-  <rect x="910" y="590" width="240" height="75" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <text x="920" y="610" class="annotation">FR-066: Deleted messages show</text>
-  <text x="920" y="625" class="annotation">"[Message deleted]" placeholder</text>
-  <text x="920" y="640" class="annotation">FR-027: Edited messages show</text>
-  <text x="920" y="655" class="annotation">"Edited" indicator</text>
+  <rect x="910" y="590" width="250" height="65" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
+  <text x="920" y="608" class="annotation">FR-066: Deleted messages show</text>
+  <text x="920" y="622" class="annotation">"[Message deleted]" placeholder</text>
+  <text x="920" y="636" class="annotation">FR-027: Edited messages show</text>
+  <text x="920" y="650" class="annotation">"Edited" indicator</text>
 
-  <rect x="650" y="685" width="500" height="60" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
-  <text x="660" y="705" class="annotation">FR-012, FR-013: Client-side encryption/decryption using Web Crypto API</text>
-  <text x="660" y="720" class="annotation">FR-014: Zero-knowledge - server sees only ciphertext + IV</text>
-  <text x="660" y="735" class="annotation">FR-060: Encrypt &lt;100ms | FR-061: Decrypt &lt;50ms with cached keys</text>
+  <rect x="650" y="670" width="510" height="55" rx="4" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-dasharray="4"/>
+  <text x="660" y="688" class="annotation">FR-012, FR-013: Client-side encryption/decryption using Web Crypto API</text>
+  <text x="660" y="702" class="annotation">FR-014: Zero-knowledge - server sees only ciphertext + IV</text>
+  <text x="660" y="716" class="annotation">FR-060: Encrypt &lt;100ms | FR-061: Decrypt &lt;50ms with cached keys</text>
 
 </svg>
